@@ -1,1 +1,107 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0 none;
+}
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #f4f7fc;
+  line-height: 16px;
+  font-weight: 500;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: content-box;
+}
+.container_for_content {
+  padding-top: 120px;
+  width: 100%;
+  /*background-color: #33205e;*/
+  background-color: #62a4a0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 36.25rem;
+}
+
+/*Заголовки h1*/
+.header {
+  font-size: 36px;
+  line-height: 40px;
+  /*font-weight: bold;*/
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  color: #60bbb5;
+  margin-top: 80px;
+}
+/*Все красные кнопки*/
+.button {
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  border: 2px solid #e55749;
+  background: #e55749;
+}
+
+/*Текст*/
+.info {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  color: #464a55;
+}
+a {
+  text-decoration: none;
+}
+
+/*Основной логотип сайта*/
+.logo {
+  display: inline-block;
+  width: 130px;
+  color: #e55749;
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/*Логотипы систем интеграции*/
+.systems {
+  display: flex;
+  align-items: center;
+  min-width: 512px;
+  justify-content: space-between;
+}
+.systems img {
+  border-radius: 10px;
+}
+.systems span {
+  font-size: 40px;
+  font-weight: bold;
+}
+.systems p {
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+}
+/*==============================================*/
+
+/*svg иконка с галочкой*/
+object {
+  width: 60px;
+  /*fill: #60bbb5;*/
+  filter: invert(86%) sepia(84%) saturate(2022%) hue-rotate(153deg) brightness(78%) contrast(82%);
+}

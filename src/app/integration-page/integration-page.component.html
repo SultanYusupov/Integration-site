@@ -1,0 +1,3001 @@
+<!--Блок с логотипами систем интеграций-->
+<div class="container_for_content">
+  <div class="systems">
+    <!--    <img src="assets/klientiks_ru.png" alt="Клиентикс интеграция" title="Клиентикс интеграция"/>-->
+    <!-- <img
+      [src]="system.image"
+      alt="{{ system.title }}"
+      title="{{ system.title }}"
+    /> -->
+    <img
+      *ngFor="let item of items"
+      src="{{ item.image }}"
+      alt="{{ item.title }}"
+      title="{{ item.title }}"
+    />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+      class="fill--purple--t2"
+    >
+      <g id="bf995fa3-3bf6-420d-8cf8-445688c874dc" data-name="Content">
+        <path
+          d="M83.06372.80432,98.40227,16.14276a5.45493,5.45493,0,0,1,0,7.71448L83.06372,39.19568a2.72747,2.72747,0,0,1-4.65608-1.92862V28.18242H2.37505A2.72748,2.72748,0,0,1-.35242,25.45494V14.54506a2.72748,2.72748,0,0,1,2.72747-2.72748H78.40764V2.73294A2.72747,2.72747,0,0,1,83.06372.80432Z"
+        ></path>
+        <path
+          d="M16.58386,60.80432,1.24531,76.14276a5.455,5.455,0,0,0,0,7.71448L16.58386,99.19568a2.72747,2.72747,0,0,0,4.65608-1.92862V88.18242H97.27253A2.72748,2.72748,0,0,0,100,85.45494V74.54506a2.72748,2.72748,0,0,0-2.72747-2.72748H21.23994V62.73294A2.72747,2.72747,0,0,0,16.58386,60.80432Z"
+        ></path>
+      </g>
+    </svg>
+    <img *ngIf="system" src="{{ system.image }}" alt="{{ system.title }}" title="{{ system.title }}"/>
+  </div>
+  <h1 class="title">{{ system.name }} + {{ system.name }}</h1>
+  <p class="subtitle">
+    Свяжите <a href="/ru/klientiks" title="Клиентикс интеграция">Клиентикс</a> и
+    <a href="/ru/turbosms" title="TurboSMS интеграция">TurboSMS</a> за 5 минут.
+    Без программистов. Готовы начать прямо сейчас?
+  </p>
+  <a href="#" title="Начать сейчас" class="button start_now_btn"
+  >Начать сейчас</a
+  >
+</div>
+
+<!--Блок с инструкцией как интегрировать системы-->
+<div class="howto container">
+  <h1 class="header">
+    Как интегрировать Клиентикс и TurboSMS<br />
+    c помощью ApiX Drive
+  </h1>
+  <p class="info">
+    Теперь Вам не нужно привлекать программистов или интеграторов для
+    автоматизации Клиентикс и TurboSMS. С нашим сайтом вы свяжете и
+    автоматизируете работу этих систем за 5 минут, самостоятельно.
+  </p>
+  <div class="instruction">
+    <div class="step">
+      <span class="icon">Шаг 1</span>
+      Выберите онлайн системы которые нужно «связать»
+    </div>
+    <div class="step">
+      <span class="icon">Шаг 2</span>
+      Укажите какие действия будут происходить между системами
+    </div>
+    <div class="step">
+      <span class="icon">Шаг 3</span>
+      Включите автообновление
+    </div>
+    <div class="step">
+      <span class="icon">
+        <object data="assets/checked.svg"></object>
+      </span>
+      Вся настройка займет не более 5-ти минут
+    </div>
+  </div>
+</div>
+
+<!--Блок с настройками связки-->
+<div class="container">
+  <h1 class="settings_header">
+    Создайте интеграцию Клиентикс и TurboSMS самостоятельно, без программистов
+  </h1>
+</div>
+<div class="settings_container">
+  <div class="data_source">
+    <h2>Откуда</h2>
+    <div class="control system">
+      <select>
+        <option>-выберите систему-</option>
+        <option>Agile CRM</option>
+        <option>Битрикс24</option>
+        <option selected>Клиентикс</option>
+      </select>
+    </div>
+    <div class="control action">
+      <select>
+        <option>Загрузить компании (новые)</option>
+        <option>Загрузить контакты (новые)</option>
+        <option selected>Получить данные</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="data_receiver">
+    <h2>Куда</h2>
+    <div class="control system">
+      <select>
+        <option>-выберите систему-</option>
+        <option>Agile CRM</option>
+        <option>Битрикс24</option>
+        <option selected>TurboSMS</option>
+      </select>
+    </div>
+    <div class="control action">
+      <select>
+        <option>Добавить примечание к сделке</option>
+        <option>Редактировать сделку</option>
+        <option selected>Отправить SMS</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="continue_settings">
+  <p class="info">14 дней бесплатно</p>
+  <a href="#" class="button settings_btn">Продолжить настройки</a>
+</div>
+
+<!--Список систем для интеграции-->
+<h1 class="header">Другие готовые интеграции</h1>
+<div class="container">
+  <!--wrapper was here-->
+  <div class="source">
+    <div class="systems_list">
+      <!--Список 1-->
+      <div class="integrations_title">
+        Клиентикс <span>(197 готовых коннекторов)</span>
+      </div>
+      <ul class="lists">
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=zoho.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/zoho" title="Клиентикс и Zoho CRM интеграция"
+        >Zoho CRM</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sheets.google.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/google-sheets"
+          title="Клиентикс и Google Sheets интеграция"
+        >Google Sheets</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=skysms.com.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/skysms" title="Клиентикс и SkySMS интеграция"
+        >SkySMS</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=bsg.world) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/bsg-world"
+          title="Клиентикс и BSG world интеграция"
+        >BSG world</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=greensms.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/greensms" title="Клиентикс и GREENSMS интеграция"
+        >GREENSMS</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="display: block; float: left; width: 16px; height: 16px; margin-right: 5px; background: url(https://www.google.com/s2/favicons?domain=slack.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/slack" title="Клиентикс и Slack интеграция"
+        >Slack</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=crm-onebox.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/crm-onebox" title="Клиентикс и OneBox интеграция"
+        >OneBox</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=hubspot.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/hubspot" title="Клиентикс и Hubspot интеграция"
+        >Hubspot</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smartsender.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/smartsender"
+          title="Клиентикс и Smart Sender интеграция"
+        >Smart Sender</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=intercom.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/intercom" title="Клиентикс и Intercom интеграция"
+        >Intercom</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=icloud.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/icloud" title="Клиентикс и iCloud интеграция"
+        >iCloud</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sms48.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/sms48" title="Клиентикс и SMS 48 интеграция"
+        >SMS 48</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=avito.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/avito" title="Клиентикс и Avito интеграция"
+        >Avito</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=imobis.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/imobis" title="Клиентикс и Imobis интеграция"
+        >Imobis</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smsaero.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/sms-aero" title="Клиентикс и SMS Aero интеграция"
+        >SMS Aero</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=unipost.com.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/unipost" title="Клиентикс и Unipost интеграция"
+        >Unipost</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="display: block; float: left; width: 16px; height: 16px; margin-right: 5px; background: url(https://www.google.com/s2/favicons?domain=inbox.lv) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/inbox-lv" title="Клиентикс и INBOX.LV интеграция"
+        >INBOX.LV</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smsclub.mobi) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/sms-club" title="Клиентикс и SMS Club интеграция"
+        >SMS Club</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=todoist.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/todoist" title="Клиентикс и Todoist интеграция"
+        >Todoist</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.insales.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/insales" title="Клиентикс и InSales интеграция"
+        >InSales</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smsgorod.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/sms-gorod"
+          title="Клиентикс и SMS GOROD интеграция"
+        >SMS GOROD</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="display: block; float: left; width: 16px; height: 16px; margin-right: 5px; background: url(https://www.google.com/s2/favicons?domain=1000sms.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/1000sms" title="Клиентикс и 1000SMS интеграция"
+        >1000SMS</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="display: block; float: left; width: 16px; height: 16px; margin-right: 5px; background: url(https://www.google.com/s2/favicons?domain=intel-tele.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/intel-tele"
+          title="Клиентикс и Intel Telecom интеграция"
+        >Intel Telecom</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="display: block; float: left; width: 16px; height: 16px; margin-right: 5px; background: url(https://www.google.com/s2/favicons?domain=smstraffic.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/smstraffic"
+          title="Клиентикс и SMS Traffic интеграция"
+        >SMS Traffic</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="display: block; float: left; width: 16px; height: 16px; margin-right: 5px; background: url(https://www.google.com/s2/favicons?domain=sendinblue.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/sendinblue"
+          title="Клиентикс и Sendinblue интеграция"
+        >Sendinblue</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=atlassian.com/ru/software/jira/service-desk) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/jira-service-desk"
+          title="Клиентикс и Jira Serviсe Desk интеграция"
+        >Jira Serviсe Desk</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smsdar.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/smsdar" title="Клиентикс и SMS Дар интеграция"
+        >SMS Дар</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=twilio.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/twilio" title="Клиентикс и Twilio интеграция"
+        >Twilio</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=atlassian.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/jira"
+          title="Клиентикс и Jira Software Cloud интеграция"
+        >Jira Software Cloud</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smscourier.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/smscourier"
+          title="Клиентикс и SMS Курьер интеграция"
+        >SMS Курьер</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=stripe.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/stripe" title="Клиентикс и Stripe интеграция"
+        >Stripe</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=justin.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/justin" title="Клиентикс и Justin интеграция"
+        >Justin</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smspobeda.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/smspobeda"
+          title="Клиентикс и SMS Победа интеграция"
+        >SMS Победа</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=copper.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/copper" title="Клиентикс и Copper интеграция"
+        >Copper</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=kupisms.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/kupisms" title="Клиентикс и Kupisms интеграция"
+        >Kupisms</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smsukraine.com.ua) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/smsukraine"
+          title="Клиентикс и SMS Украина интеграция"
+        >SMS Украина</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=lamoda.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/lamoda" title="Клиентикс и Lamoda интеграция"
+        >Lamoda</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=letsads.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/letsads" title="Клиентикс и LetsAds интеграция"
+        >LetsAds</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sms-fly.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/sms-fly" title="Клиентикс и SMS-fly интеграция"
+        >SMS-fly</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=clickup.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/clickup" title="Клиентикс и ClickUp интеграция"
+        >ClickUp</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=liqpay.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/liqpay" title="Клиентикс и LiqPay интеграция"
+        >LiqPay</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sms-manager.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/sms-manager"
+          title="Клиентикс и SMS-Manager интеграция"
+        >SMS-Manager</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=messaggio.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/messaggio"
+          title="Клиентикс и Messaggio интеграция"
+        >Messaggio</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=lp-crm.biz) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/lp-crm" title="Клиентикс и LP-CRM интеграция"
+        >LP-CRM</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sms-assistent.by) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/sms-assistent"
+          title="Клиентикс и SMS-Ассистент интеграция"
+        >SMS-Ассистент</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=telnyx.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/telnyx" title="Клиентикс и Telnyx интеграция"
+        >Telnyx</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mail.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/mail-ru" title="Клиентикс и Mail.ru интеграция"
+        >Mail.ru</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smsc.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/smsc" title="Клиентикс и SMS-Центр интеграция"
+        >SMS-Центр</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=messente.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/messente" title="Клиентикс и Messente интеграция"
+        >Messente</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mail365.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/mail365" title="Клиентикс и Mail365 интеграция"
+        >Mail365</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sms.by) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/sms-by" title="Клиентикс и SMS.BY интеграция"
+        >SMS.BY</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=goreminders.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/goreminders"
+          title="Клиентикс и GoReminders интеграция"
+        >GoReminders</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mailchimp.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/mailchimp"
+          title="Клиентикс и Mailchimp интеграция"
+        >Mailchimp</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sms.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/sms-ru" title="Клиентикс и SMS.RU интеграция"
+        >SMS.RU</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=moosend.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/moosend" title="Клиентикс и Moosend интеграция"
+        >Moosend</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mailerlite.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/mailerlite"
+          title="Клиентикс и MailerLite интеграция"
+        >MailerLite</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sms.su) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/sms-su" title="Клиентикс и SMS.su интеграция"
+        >SMS.su</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mailjet.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/mailjet" title="Клиентикс и Mailjet интеграция"
+        >Mailjet</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mailganer.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/mailganer"
+          title="Клиентикс и Mailganer интеграция"
+        >Mailganer</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sms4b.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/sms4b" title="Клиентикс и SMS4B интеграция"
+        >SMS4B</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mailgun.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/mailgun" title="Клиентикс и Mailgun интеграция"
+        >Mailgun</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mailopost.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/mailopost"
+          title="Клиентикс и Mailo Post  интеграция"
+        >Mailo Post
+        </a>
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smsbliss.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/smsbliss" title="Клиентикс и SmsBliss интеграция"
+        >SmsBliss</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=moonmail.io) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/moonmail" title="Клиентикс и MoonMail интеграция"
+        >MoonMail</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mango-office.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/mango-office"
+          title="Клиентикс и MangoOffice интеграция"
+        >MangoOffice</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smsfeedback.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/smsfeedback"
+          title="Клиентикс и SMSfeedback интеграция"
+        >SMSfeedback</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=ontraport.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/ontraport"
+          title="Клиентикс и Ontraport интеграция"
+        >Ontraport</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=massdelivery.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/massdelivery"
+          title="Клиентикс и MassDelivery интеграция"
+        >MassDelivery</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smsgold.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/smsgold" title="Клиентикс и SMSGold интеграция"
+        >SMSGold</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=benchmarkemail.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/benchmarkemail"
+          title="Клиентикс и Benchmark Email интеграция"
+        >Benchmark Email</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=meistertask.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/meistertask"
+          title="Клиентикс и Meistertask интеграция"
+        >Meistertask</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smsimple.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/smsimple" title="Клиентикс и SMSimple интеграция"
+        >SMSimple</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=activecampaign.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/activecampaign"
+          title="Клиентикс и ActiveCampaign интеграция"
+        >ActiveCampaign</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=messagebird.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/messagebird"
+          title="Клиентикс и MessageBird интеграция"
+        >MessageBird</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smsint.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/smsint" title="Клиентикс и SMSint интеграция"
+        >SMSint</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=agilecrm.com) 0px 0px no-repeat;"
+          ></span
+          ><a routerLink="/" title="Клиентикс и Agile CRM интеграция"
+        >Agile CRM</a
+        >
+        </li>
+        <!-----------------Добавлена маршрутизация в главный компонент. Главным компонентом является agile-crm------------------->
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=messedo.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/messedo" title="Клиентикс и Messedo интеграция"
+        >Messedo</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smsp.by ) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/smsp-by" title="Клиентикс и SMSP.BY  интеграция"
+        >SMSP.BY
+        </a>
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=alohasms.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/alohasms" title="Клиентикс и AlohaSMS интеграция"
+        >AlohaSMS</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=outlook.live.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/outlook"
+          title="Клиентикс и Microsoft Outlook интеграция"
+        >Microsoft Outlook</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smspilot.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/smspilot" title="Клиентикс и SMSPILOT интеграция"
+        >SMSPILOT</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=alphasms.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/alphasms" title="Клиентикс и AlphaSMS интеграция"
+        >AlphaSMS</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mirsms.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/mirsms" title="Клиентикс и MIRSMS.RU интеграция"
+        >MIRSMS.RU</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smsprofi.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/smsprofi" title="Клиентикс и SMSprofi интеграция"
+        >SMSprofi</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=amocrm.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/amocrm" title="Клиентикс и AmoCRM интеграция"
+        >AmoCRM</a
+        >
+        </li>
+        <div class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mobile-text-alerts.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/mobile-text-alert"
+          title="Клиентикс и Mobile Text Alerts интеграция"
+        >Mobile Text Alerts</a
+        >
+        </div>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smstraf.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/smstraf" title="Клиентикс и SMStraf интеграция"
+        >SMStraf</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=aol.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/aol" title="Клиентикс и AOL интеграция">AOL</a>
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mobiniti.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/mobiniti" title="Клиентикс и Mobiniti интеграция"
+        >Mobiniti</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sprintsms.com.ua) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/sprintsms"
+          title="Клиентикс и SprintSMS интеграция"
+        >SprintSMS</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=asana.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/asana" title="Клиентикс и Asana интеграция"
+        >Asana</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mobizon.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/mobizvon" title="Клиентикс и Mobizon интеграция"
+        >Mobizon</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=ssms.su) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/ssms" title="Клиентикс и SSMS.SU интеграция"
+        >SSMS.SU</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=autopilothq.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/autopilot"
+          title="Клиентикс и Autopilot интеграция"
+        >Autopilot</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=monday.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/monday-com"
+          title="Клиентикс и Monday.com интеграция"
+        >Monday.com</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=startsend.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/startsend"
+          title="Клиентикс и StartSend интеграция"
+        >StartSend</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=avochato.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/avochato" title="Клиентикс и Avochato интеграция"
+        >Avochato</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mysql.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/mysql" title="Клиентикс и MySQL интеграция"
+        >MySQL</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=svitsms.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/svitsms" title="Клиентикс и SvitSMS интеграция"
+        >SvitSMS</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=aweber.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/aweber" title="Клиентикс и Aweber интеграция"
+        >Aweber</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=notion.so) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/notion" title="Клиентикс и Notion интеграция"
+        >Notion</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=targetsms.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/targetsms"
+          title="Клиентикс и TargetSMS интеграция"
+        >TargetSMS</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=cloud.google.com/bigquery) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/bigquery" title="Клиентикс и BigQuery интеграция"
+        >BigQuery</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=notisend.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/notisend" title="Клиентикс и NotiSend интеграция"
+        >NotiSend</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=terasms.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/terasms" title="Клиентикс и TeraSMS интеграция"
+        >TeraSMS</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=binotel.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/binotel" title="Клиентикс и Binotel интеграция"
+        >Binotel</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.olx.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/olx" title="Клиентикс и OLX интеграция">OLX</a>
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=topvisor.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/topvisor" title="Клиентикс и TopVisor интеграция"
+        >TopVisor</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=brandsms.kz) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/brandsms"
+          title="Клиентикс и BrandSMS  интеграция"
+        >BrandSMS
+        </a>
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=omnicell.com.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/omnicell" title="Клиентикс и Omnicell интеграция"
+        >Omnicell</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=cpa.tl) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/traffic-light"
+          title="Клиентикс и Traffic Light интеграция"
+        >Traffic Light</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=bulksms.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/bulksms" title="Клиентикс и BulkSMS интеграция"
+        >BulkSMS</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=online-sms.pro) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/online-sms-pro"
+          title="Клиентикс и Online-sms.pro интеграция"
+        >Online-sms.pro</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=trello.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/trello" title="Клиентикс и Trello интеграция"
+        >Trello</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=bytehand.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/bytehand" title="Клиентикс и BYTEHAND интеграция"
+        >BYTEHAND</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.opencart.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/opencart" title="Клиентикс и Opencart интеграция"
+        >Opencart</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=u-on.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/uon-travel"
+          title="Клиентикс и U-ON.Travel интеграция"
+        >U-ON.Travel</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=clicksend.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/clicksend"
+          title="Клиентикс и ClickSend интеграция"
+        >ClickSend</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=p1sms.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/p1sms" title="Клиентикс и P1SMS интеграция"
+        >P1SMS</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=ukr.net) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/ukr-net" title="Клиентикс и UKR.NET интеграция"
+        >UKR.NET</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=cloff.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/cloff" title="Клиентикс и CLOFF интеграция"
+        >CLOFF</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=pdl-profit.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/pdl-profit"
+          title="Клиентикс и PDL-profit интеграция"
+        >PDL-profit</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.unisender.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/unisender"
+          title="Клиентикс и Unisender интеграция"
+        >Unisender</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=constantcontact.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/constant-contact"
+          title="Клиентикс и Constant Contact интеграция"
+        >Constant Contact</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=pipedrive.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/pipedrive"
+          title="Клиентикс и Pipedrive интеграция"
+        >Pipedrive</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=verticalresponse.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/verticalresponse"
+          title="Клиентикс и VerticalResponse интеграция"
+        >VerticalResponse</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style=" background: url(https://www.google.com/s2/favicons?domain=convertkit.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/convertkit"
+          title="Клиентикс и ConvertKit интеграция"
+        >ConvertKit</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=planfix.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/planfix" title="Клиентикс и Planfix интеграция"
+        >Planfix</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=viber.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/viber" title="Клиентикс и Viber интеграция"
+        >Viber</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style=" background: url(https://www.google.com/s2/favicons?domain=creatio.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/bpm-online"
+          title="Клиентикс и Creatio интеграция"
+        >Creatio</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=portmone.com.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/portmone" title="Клиентикс и Portmone интеграция"
+        >Portmone</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/webhook" title="Клиентикс и Webhook интеграция"
+        >Webhook</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=dashamail.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/dashamail"
+          title="Клиентикс и DashaMail интеграция"
+        >DashaMail</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=postgresql.org) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/postgresql"
+          title="Клиентикс и PostgreSQL интеграция"
+        >PostgreSQL</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=websms.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/websms" title="Клиентикс и WebSMS интеграция"
+        >WebSMS</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=dclite.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/dclite" title="Клиентикс и DC Lite интеграция"
+        >DC Lite</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=potoksms.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/potoksms" title="Клиентикс и PotokSMS интеграция"
+        >PotokSMS</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=wirecrm.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/wirecrm" title="Клиентикс и WireCRM интеграция"
+        >WireCRM</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=ecwid.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/ecwid" title="Клиентикс и Ecwid интеграция"
+        >Ecwid</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=prestashop.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/prestashop"
+          title="Клиентикс и PrestaShop интеграция"
+        >PrestaShop</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=worksection.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/worksection"
+          title="Клиентикс и Worksection интеграция"
+        >Worksection</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=http://e-vostok.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/e-vostok"
+          title="Клиентикс и Electronic Vostok интеграция"
+        >Electronic Vostok</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=prom.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/prom" title="Клиентикс и Prom интеграция"
+        >Prom</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=wrike.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/wrike" title="Клиентикс и Wrike интеграция"
+        >Wrike</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=envybox.io) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/envycrm" title="Клиентикс и EnvyCRM интеграция"
+        >EnvyCRM</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=prostor-sms.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/prostor-sms"
+          title="Клиентикс и Prostor SMS интеграция"
+        >Prostor SMS</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mail.yahoo.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/yahoo-mail" title="Клиентикс и Yahoo! интеграция"
+        >Yahoo!</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=epochta.com.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/epochta" title="Клиентикс и ePochta интеграция"
+        >ePochta</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=falconsender.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/falconsender"
+          title="Клиентикс и FalconSender интеграция"
+        >FalconSender</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=reply.io) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/replyio" title="Клиентикс и Reply.io интеграция"
+        >Reply.io</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=мир-смс.рф) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/mir-sms-rf"
+          title="Клиентикс и Мир-смс.рф интеграция"
+        >Мир-смс.рф</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=iqsms.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/iqsms" title="Клиентикс и СМС Дисконт интеграция"
+        >СМС Дисконт</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=analytics.google.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/gmail" title="Клиентикс и Gmail интеграция"
+        >Gmail</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=salesforce.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/salesforce-crm"
+          title="Клиентикс и Salesforce CRM интеграция"
+        >Salesforce CRM</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sms-uslugi.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/sms-uslugi"
+          title="Клиентикс и СМС Услуги интеграция"
+        >СМС Услуги</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=analytics.google.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/google-ads"
+          title="Клиентикс и Google Ads интеграция"
+        >Google Ads</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sendgrid.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/sendgrid" title="Клиентикс и SendGrid интеграция"
+        >SendGrid</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=telegram.org) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/telegram" title="Клиентикс и Телеграм интеграция"
+        >Телеграм</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=analytics.google.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/google-analytics"
+          title="Клиентикс и Google Analytics интеграция"
+        >Google Analytics</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sendpulse.ua) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/sendpulse"
+          title="Клиентикс и SendPulse интеграция"
+        >SendPulse</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=metrika.yandex.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/yandex-metrika"
+          title="Клиентикс и Яндекс.Метрика интеграция"
+        >Яндекс.Метрика</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=calendar.google.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/google-calendar"
+          title="Клиентикс и Google Calendar интеграция"
+        >Google Calendar</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sendsay.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/klientiks/sendsay" title="Клиентикс и Sendsay интеграция"
+        >Sendsay</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mail.yandex.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/yandex-mail"
+          title="Клиентикс и Яндекс Почта интеграция"
+        >Яндекс Почта</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=contacts.google.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/google-contacts"
+          title="Клиентикс и Google Contacts интеграция"
+        >Google Contacts</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sigmasms.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/klientiks/sigma-sms"
+          title="Клиентикс и SigmaSMS интеграция"
+        >SigmaSMS</a
+        >
+        </li>
+      </ul>
+    </div>
+
+    <div class="systems_list">
+      <!--Список 2-->
+      <div class="integrations_title">
+        TurboSMS <span>(181 готовый коннектор)</span>
+      </div>
+      <ul class="lists">
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=zoho.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/zoho/turbosms" title="Zoho CRM и TurboSMS интеграция"
+        >Zoho CRM</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=horoshop.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/horoshop/turbosms" title="Horoshop и TurboSMS интеграция"
+        >Horoshop</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=recreativ.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/recreativ/turbosms" title="Recreativ и TurboSMS интеграция"
+        >Recreativ</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=crm-onebox.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/crm-onebox/turbosms" title="OneBox и TurboSMS интеграция"
+        >OneBox</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=hotline.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/hotline/turbosms" title="Hotline и TurboSMS интеграция"
+        >Hotline</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=reply.io) 0px 0px no-repeat;"
+          ></span
+          ><a href="/replyio/turbosms" title="Reply.io и TurboSMS интеграция"
+        >Reply.io</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=intercom.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/intercom/turbosms" title="Intercom и TurboSMS интеграция"
+        >Intercom</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=hubspot.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/hubspot/turbosms" title="Hubspot и TurboSMS интеграция"
+        >Hubspot</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=retailcrm.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/retail-crm/turbosms"
+          title="Retail CRM и TurboSMS интеграция"
+        >Retail CRM</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=avito.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/avito/turbosms" title="Avito и TurboSMS интеграция"
+        >Avito</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=icloud.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/icloud/turbosms" title="iCloud и TurboSMS интеграция"
+        >iCloud</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=ringostat.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/ringostat/turbosms" title="Ringostat и TurboSMS интеграция"
+        >Ringostat</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://apix-drive.com/ru/img/vtiger-crm_ru_icon.png) 0px 0px no-repeat; background-size: 16px 16px;"
+          ></span
+          ><a
+          href="/vtiger-crm/turbosms"
+          title="vTiger CRM и TurboSMS интеграция"
+        >vTiger CRM</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=inbox.lv) 0px 0px no-repeat;"
+          ></span
+          ><a href="/inbox-lv/turbosms" title="INBOX.LV и TurboSMS интеграция"
+        >INBOX.LV</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://apix-drive.com/ru/img/rozetka_ru_icon.png) 0px 0px no-repeat; background-size: 16px 16px;"
+          ></span
+          ><a href="/rozetka/turbosms" title="Rozetka и TurboSMS интеграция"
+        >Rozetka</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=snatchbot.me) 0px 0px no-repeat;"
+          ></span
+          ><a href="/snatchbot/turbosms" title="SnatchBot и TurboSMS интеграция"
+        >SnatchBot</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=infobot.pro) 0px 0px no-repeat;"
+          ></span
+          ><a href="/infobot/turbosms" title="Инфобот и TurboSMS интеграция"
+        >Инфобот</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://apix-drive.com/ru/img/rss_ru_icon.png) 0px 0px no-repeat; background-size: 16px 16px;"
+          ></span
+          ><a href="/rss/turbosms" title="RSS и TurboSMS интеграция">RSS</a>
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=todoist.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/todoist/turbosms" title="Todoist и TurboSMS интеграция"
+        >Todoist</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.insales.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/insales/turbosms" title="InSales и TurboSMS интеграция"
+        >InSales</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=salebot.pro) 0px 0px no-repeat;"
+          ></span
+          ><a href="/salebot/turbosms" title="SaleBot и TurboSMS интеграция"
+        >SaleBot</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=bukza.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/bukza/turbosms" title="Bukza и TurboSMS интеграция"
+        >Bukza</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=senler.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/senler/turbosms" title="Senler и TurboSMS интеграция"
+        >Senler</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=clickup.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/clickup/turbosms" title="ClickUp и TurboSMS интеграция"
+        >ClickUp</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=json.org) 0px 0px no-repeat;"
+          ></span
+          ><a href="/json/turbosms" title="json и TurboSMS интеграция">json</a>
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sensei.plus) 0px 0px no-repeat;"
+          ></span
+          ><a href="/sensei/turbosms" title="Sensei и TurboSMS интеграция"
+        >Sensei</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=goreminders.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/goreminders/turbosms"
+          title="GoReminders и TurboSMS интеграция"
+        >GoReminders</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=justclick.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/justclick/turbosms" title="JustClick и TurboSMS интеграция"
+        >JustClick</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=landingi.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/landingi/turbosms" title="Landingi и TurboSMS интеграция"
+        >Landingi</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smartcallback.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/smartcallback/turbosms"
+          title="SmartCallBack и TurboSMS интеграция"
+        >SmartCallBack</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=admitad.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/admitad/turbosms" title="Admitad и TurboSMS интеграция"
+        >Admitad</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=leadback.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/leadback/turbosms" title="LeadBack и TurboSMS интеграция"
+        >LeadBack</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=smartloop.ai) 0px 0px no-repeat;"
+          ></span
+          ><a href="/smartloop/turbosms" title="Smartloop и TurboSMS интеграция"
+        >Smartloop</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=agilecrm.com) 0px 0px no-repeat;"
+          ></span
+          ><a routerLink="/" title="Agile CRM и TurboSMS интеграция"
+        >Agile CRM</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://apix-drive.com/ru/img/leadforms_ru_icon.png) 0px 0px no-repeat; background-size: 16px 16px;"
+          ></span
+          ><a href="/leadforms/turbosms" title="LeadForms и TurboSMS интеграция"
+        >LeadForms</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=streamtele.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/stream-telecom/turbosms"
+          title="Stream Telecom и TurboSMS интеграция"
+        >Stream Telecom</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=tap2pay.me) 0px 0px no-repeat;"
+          ></span
+          ><a href="/tap2pay/turbosms" title="Tap2pay и TurboSMS интеграция"
+        >Tap2pay</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=amocrm.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/amocrm/turbosms" title="AmoCRM и TurboSMS интеграция"
+        >AmoCRM</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=livechatinc.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/livechat/turbosms" title="LiveChat и TurboSMS интеграция"
+        >LiveChat</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=lpmotor.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/lpmotor/turbosms" title="LPMotor и TurboSMS интеграция"
+        >LPMotor</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=topvisor.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/topvisor/turbosms" title="TopVisor и TurboSMS интеграция"
+        >TopVisor</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=bloxy.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/bloxy/turbosms" title="Bloxy и TurboSMS интеграция"
+        >Bloxy</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mail.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/mail-ru/turbosms" title="Mail.ru и TurboSMS интеграция"
+        >Mail.ru</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=cpa.tl) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/traffic-light/turbosms"
+          title="Traffic Light и TurboSMS интеграция"
+        >Traffic Light</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=bothelp.io) 0px 0px no-repeat;"
+          ></span
+          ><a href="/bot-help/turbosms" title="BotHelp и TurboSMS интеграция"
+        >BotHelp</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mailigen.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/mailigen/turbosms" title="Mailigen и TurboSMS интеграция"
+        >Mailigen</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=trello.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/trello/turbosms" title="Trello и TurboSMS интеграция"
+        >Trello</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=botmother.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/botmother/turbosms" title="Botmother и TurboSMS интеграция"
+        >Botmother</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mango-office.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/mango-office/turbosms"
+          title="MangoOffice и TurboSMS интеграция"
+        >MangoOffice</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.typeform.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/typeform/turbosms" title="Typeform и TurboSMS интеграция"
+        >Typeform</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.bpium.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/bpium/turbosms" title="Bpium и TurboSMS интеграция"
+        >Bpium</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=manychat.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/manychat/turbosms" title="ManyChat и TurboSMS интеграция"
+        >ManyChat</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=u-on.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/uon-travel/turbosms"
+          title="U-ON.Travel и TurboSMS интеграция"
+        >U-ON.Travel</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=callbackhunter.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/callbackhunter/turbosms"
+          title="CallbackHunter и TurboSMS интеграция"
+        >CallbackHunter</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=marquiz.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/marquiz/turbosms" title="Marquiz и TurboSMS интеграция"
+        >Marquiz</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.uiscom.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/uis/turbosms" title="UIS и TurboSMS интеграция">UIS</a>
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=callcpa.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/callcpa/turbosms" title="Callcpa и TurboSMS интеграция"
+        >Callcpa</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://apix-drive.com/ru/img/mcn_ru_icon.png) 0px 0px no-repeat; background-size: 16px 16px;"
+          ></span
+          ><a href="/mcn/turbosms" title="MCN Telecom и TurboSMS интеграция"
+        >MCN Telecom</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style=" background: url(https://www.google.com/s2/favicons?domain=userecho.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/userecho/turbosms" title="UserEcho и TurboSMS интеграция"
+        >UserEcho</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=callkeeper.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/callkeeper/turbosms"
+          title="CallKeeper и TurboSMS интеграция"
+        >CallKeeper</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=outlook.live.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/outlook/turbosms"
+          title="Microsoft Outlook и TurboSMS интеграция"
+        >Microsoft Outlook</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=useresponse.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/useresponse/turbosms"
+          title="UseResponse и TurboSMS интеграция"
+        >UseResponse</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.calltouch.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/calltouch/turbosms" title="CallTouch и TurboSMS интеграция"
+        >CallTouch</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=moclients.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/moclients/turbosms" title="Moclients и TurboSMS интеграция"
+        >Moclients</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=venyoo.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/venyoo/turbosms" title="Venyoo и TurboSMS интеграция"
+        >Venyoo</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=calltracking.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/calltracking-ru/turbosms"
+          title="CallTrackingRU и TurboSMS интеграция"
+        >CallTrackingRU</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://apix-drive.com/ru/img/monday-com_ru_icon.png) 0px 0px no-repeat; background-size: 16px 16px;"
+          ></span
+          ><a
+          href="/monday-com/turbosms"
+          title="Monday.com и TurboSMS интеграция"
+        >Monday.com</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=verbox.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/verbox/turbosms" title="Verbox и TurboSMS интеграция"
+        >Verbox</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=carrotquest.io) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/carrotquest/turbosms"
+          title="Carrot quest и TurboSMS интеграция"
+        >Carrot quest</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=monsterleads.pro) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/monster-leads/turbosms"
+          title="Monster Leads и TurboSMS интеграция"
+        >Monster Leads</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=wayforpay.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/wayforpay/turbosms" title="WayForPay и TurboSMS интеграция"
+        >WayForPay</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://apix-drive.com/ru/img/cartprotector_ru_icon.png) 0px 0px no-repeat; background-size: 16px 16px;"
+          ></span
+          ><a
+          href="/cartprotector/turbosms"
+          title="CartProtector и TurboSMS интеграция"
+        >CartProtector</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mysql.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/mysql/turbosms" title="MySQL и TurboSMS интеграция"
+        >MySQL</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=webim.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/webim/turbosms" title="Webim и TurboSMS интеграция"
+        >Webim</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=chatforma.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/chatforma/turbosms"
+          title="ChatForma  и TurboSMS интеграция"
+        >ChatForma
+        </a>
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=target.my.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/mytarget/turbosms" title="myTarget и TurboSMS интеграция"
+        >myTarget</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=wirecrm.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/wirecrm/turbosms" title="WireCRM и TurboSMS интеграция"
+        >WireCRM</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=chatfuel.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/chatfuel/turbosms" title="Chatfuel и TurboSMS интеграция"
+        >Chatfuel</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=nadavi.net) 0px 0px no-repeat;"
+          ></span
+          ><a href="/nadavi/turbosms" title="Nadavi и TurboSMS интеграция"
+        >Nadavi</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=wix.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/wix-com/turbosms" title="Wix и TurboSMS интеграция">Wix</a>
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://apix-drive.com/ru/img/chatra_ru_icon.png) 0px 0px no-repeat; background-size: 16px 16px;"
+          ></span
+          ><a href="/chatra/turbosms" title="Chatra и TurboSMS интеграция"
+        >Chatra</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=nethouse.ua) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/nethouse/turbosms"
+          title="Nethouse.События и TurboSMS интеграция"
+        >Nethouse.События</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=woocommerce.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/woocommerce/turbosms"
+          title="WooCommerce и TurboSMS интеграция"
+        >WooCommerce</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=contactform7.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/contact-form7/turbosms"
+          title="Contact Form 7 и TurboSMS интеграция"
+        >Contact Form 7</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=new-tel.net) 0px 0px no-repeat;"
+          ></span
+          ><a href="/newtel/turbosms" title="New-Tel и TurboSMS интеграция"
+        >New-Tel</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=work.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/work-ua/turbosms" title="Work.ua и TurboSMS интеграция"
+        >Work.ua</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=creatio.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/bpm-online/turbosms" title="Creatio и TurboSMS интеграция"
+        >Creatio</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=nextel.com.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/nextel/turbosms" title="Nextel и TurboSMS интеграция"
+        >Nextel</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=worksection.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/worksection/turbosms"
+          title="Worksection и TurboSMS интеграция"
+        >Worksection</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=criteo.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/criteo/turbosms" title="Criteo и TurboSMS интеграция"
+        >Criteo</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://apix-drive.com/ru/img/notion_ru_icon.png) 0px 0px no-repeat; background-size: 16px 16px;"
+          ></span
+          ><a href="/notion/turbosms" title="Notion и TurboSMS интеграция"
+        >Notion</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=wrike.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/wrike/turbosms" title="Wrike и TurboSMS интеграция"
+        >Wrike</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.cs-cart.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/cscart/turbosms" title="CS-Cart и TurboSMS интеграция"
+        >CS-Cart</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.olx.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/olx/turbosms" title="OLX и TurboSMS интеграция">OLX</a>
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mail.yahoo.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/yahoo-mail/turbosms" title="Yahoo! и TurboSMS интеграция"
+        >Yahoo!</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=e-autopay.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/e-autopay/turbosms" title="E-Autopay и TurboSMS интеграция"
+        >E-Autopay</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.onlinepbx.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/onlinepbx/turbosms" title="OnlinePBX и TurboSMS интеграция"
+        >OnlinePBX</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=zadarma.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/zadarma/turbosms" title="Zadarma и TurboSMS интеграция"
+        >Zadarma</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=ecwid.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/ecwid/turbosms" title="Ecwid и TurboSMS интеграция"
+        >Ecwid</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.opencart.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/opencart/turbosms" title="Opencart и TurboSMS интеграция"
+        >Opencart</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=bizon365.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/bizon365/turbosms" title="Бизон 365 и TurboSMS интеграция"
+        >Бизон 365</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=enquiz.io) 0px 0px no-repeat;"
+          ></span
+          ><a href="/enquiz/turbosms" title="Enquiz и TurboSMS интеграция"
+        >Enquiz</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=pact.im) 0px 0px no-repeat;"
+          ></span
+          ><a href="/pact/turbosms" title="Pact и TurboSMS интеграция">Pact</a>
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=bitrix24.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/bitrix/turbosms" title="Битрикс24 и TurboSMS интеграция"
+        >Битрикс24</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=envybox.io) 0px 0px no-repeat;"
+          ></span
+          ><a href="/envybox/turbosms" title="Envybox и TurboSMS интеграция"
+        >Envybox</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=perezvoni.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/perezvoni/turbosms" title="Perezvoni и TurboSMS интеграция"
+        >Perezvoni</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=vk.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/vkontakte/turbosms" title="Вконтакте и TurboSMS интеграция"
+        >Вконтакте</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=envybox.io) 0px 0px no-repeat;"
+          ></span
+          ><a href="/envycrm/turbosms" title="EnvyCRM и TurboSMS интеграция"
+        >EnvyCRM</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=phonet.com.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/phonet/turbosms" title="Phonet и TurboSMS интеграция"
+        >Phonet</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=conversus.pro) 0px 0px no-repeat;"
+          ></span
+          ><a href="/conversus/turbosms" title="Конверсус и TurboSMS интеграция"
+        >Конверсус</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=facebook.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/facebook/turbosms" title="Facebook и TurboSMS интеграция"
+        >Facebook</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=pipedrive.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/pipedrive/turbosms" title="Pipedrive и TurboSMS интеграция"
+        >Pipedrive</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=megaplan.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/megaplan/turbosms" title="Мегаплан и TurboSMS интеграция"
+        >Мегаплан</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=flexbe.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/flexbe/turbosms" title="Flexbe и TurboSMS интеграция"
+        >Flexbe</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=planfix.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/planfix/turbosms" title="Planfix и TurboSMS интеграция"
+        >Planfix</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=moyklass.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/moyklass/turbosms" title="Мой Класс и TurboSMS интеграция"
+        >Мой Класс</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://apix-drive.com/ru/img/fondy_ru_icon.png) 0px 0px no-repeat; background-size: 16px 16px;"
+          ></span
+          ><a href="/fondy/turbosms" title="Fondy и TurboSMS интеграция"
+        >Fondy</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=platformalp.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/platformalp/turbosms"
+          title="PlatformaLP и TurboSMS интеграция"
+        >PlatformaLP</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.moysklad.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/moysklad/turbosms" title="МойСклад и TurboSMS интеграция"
+        >МойСклад</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=formdesigner.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/form-designer/turbosms"
+          title="FormDesigner и TurboSMS интеграция"
+        >FormDesigner</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=portmone.com.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/portmone/turbosms" title="Portmone и TurboSMS интеграция"
+        >Portmone</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://apix-drive.com/ru/img/novaya-pochta_ru_icon.png) 0px 0px no-repeat; background-size: 16px 16px;"
+          ></span
+          ><a
+          href="/novaya-pochta/turbosms"
+          title="Новая Почта и TurboSMS интеграция"
+        >Новая Почта</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=freshoffice.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/freshoffice/turbosms"
+          title="FreshOffice и TurboSMS интеграция"
+        >FreshOffice</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=postgresql.org) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/postgresql/turbosms"
+          title="PostgreSQL и TurboSMS интеграция"
+        >PostgreSQL</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=www.oki-toki.net) 0px 0px no-repeat;"
+          ></span
+          ><a href="/oki-toki/turbosms" title="ОКИ-ТОКИ и TurboSMS интеграция"
+        >ОКИ-ТОКИ</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=freshworks.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/freshworks/turbosms"
+          title="Freshworks и TurboSMS интеграция"
+        >Freshworks</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=prestashop.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/prestashop/turbosms"
+          title="PrestaShop и TurboSMS интеграция"
+        >PrestaShop</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://apix-drive.com/ru/img/remonline_ru_icon.png) 0px 0px no-repeat; background-size: 16px 16px;"
+          ></span
+          ><a href="/remonline/turbosms" title="РемОнлайн и TurboSMS интеграция"
+        >РемОнлайн</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=analytics.google.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/gmail/turbosms" title="Gmail и TurboSMS интеграция"
+        >Gmail</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=privatbank.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/privatbank/turbosms" title="Приват24 и TurboSMS интеграция"
+        >Приват24</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=telphin.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/telphin/turbosms" title="Телфин и TurboSMS интеграция"
+        >Телфин</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=analytics.google.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/google-ads/turbosms"
+          title="Google Ads и TurboSMS интеграция"
+        >Google Ads</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=prom.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/prom/turbosms" title="Prom и TurboSMS интеграция">Prom</a>
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://apix-drive.com/ru/img/yandex-direct_ru_icon.png) 0px 0px no-repeat; background-size: 16px 16px;"
+          ></span
+          ><a
+          href="/yandex-direct/turbosms"
+          title="Яндекс.Директ и TurboSMS интеграция"
+        >Яндекс.Директ</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=analytics.google.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/google-analytics/turbosms"
+          title="Google Analytics и TurboSMS интеграция"
+        >Google Analytics</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=puzzlebot.top) 0px 0px no-repeat;"
+          ></span
+          ><a href="/puzzlebot/turbosms" title="Puzzlebot и TurboSMS интеграция"
+        >Puzzlebot</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=market.yandex.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/market-yandex/turbosms"
+          title="Яндекс Маркет и TurboSMS интеграция"
+        >Яндекс Маркет</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=calendar.google.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/google-calendar/turbosms"
+          title="Google Calendar и TurboSMS интеграция"
+        >Google Calendar</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=pyrus.com) 0px 0px no-repeat;"
+          ></span
+          ><a href="/pyrus/turbosms" title="Pyrus и TurboSMS интеграция"
+        >Pyrus</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=metrika.yandex.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/yandex-metrika/turbosms"
+          title="Яндекс.Метрика и TurboSMS интеграция"
+        >Яндекс.Метрика</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=contacts.google.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/google-contacts/turbosms"
+          title="Google Contacts и TurboSMS интеграция"
+        >Google Contacts</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=quizgo.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/quizgo/turbosms" title="QuizGO и TurboSMS интеграция"
+        >QuizGO</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=mail.yandex.ru) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/yandex-mail/turbosms"
+          title="Яндекс Почта и TurboSMS интеграция"
+        >Яндекс Почта</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=analytics.google.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/google-lead-form/turbosms"
+          title="Google Lead Form и TurboSMS интеграция"
+        >Google Lead Form</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=rabota.ua) 0px 0px no-repeat;"
+          ></span
+          ><a href="/rabota-ua/turbosms" title="rabota.ua и TurboSMS интеграция"
+        >rabota.ua</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=sheets.google.com) 0px 0px no-repeat;"
+          ></span
+          ><a
+          href="/google-sheets/turbosms"
+          title="Google Sheets и TurboSMS интеграция"
+        >Google Sheets</a
+        >
+        </li>
+        <li class="system_item">
+          <span
+            style="background: url(https://www.google.com/s2/favicons?domain=rambler.ru) 0px 0px no-repeat;"
+          ></span
+          ><a href="/rambler/turbosms" title="Rambler и TurboSMS интеграция"
+        >Rambler</a
+        >
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!--Блок с часто задаваемыми вопросами и краткое описание систем-->
+  <div class="questions_container container">
+    <h4 class="questions">
+      Популярные вопросы про интеграцию Клиентикс и TurboSMS
+    </h4>
+    <details>
+      <summary>
+        <span></span>
+        <p>Как происходит интеграция Клиентикс и TurboSMS?</p>
+      </summary>
+      <ul class="answer">
+        <li>Для начала нужно зарегистрироваться на нашем сайте</li>
+        <li>Выбираете какие данные передавать из Клиентикс в TurboSMS</li>
+        <li>Выбираете какие данные из одной системы передавать в другую</li>
+        <li>Включаете автообновление</li>
+        <li>
+          Теперь данные будут автоматически передаваться из Клиентикс в TurboSMS
+        </li>
+      </ul>
+    </details>
+    <details>
+      <summary>
+        <span></span>
+        <p>Сколько времени нужно на интеграцию?</p>
+      </summary>
+      <p class="answer">
+        В зависимости от системы, с которой вы будете делать интеграцию, время
+        настройки может отличаться и составлять от 5-ти до 30-минут. В среднем
+        настройка занимает 10-15 минут.
+      </p>
+    </details>
+    <details>
+      <summary>
+        <span></span>
+        <p>Сколько стоит интеграция Клиентикс с TurboSMS?</p>
+      </summary>
+      <p class="answer">
+        За саму интеграцию ничего платить не нужно и на всех тарифах доступен
+        полностью весь функционал. Вы оплачиваете только количество данных,
+        которые по факту передаются из одной вашей системы в другую через наш
+        сервис. Если у вас количество данных в месяц небольшое, можете смело
+        пользоваться бесплатным тарифом или перейти на платный, при
+        необходимости. Подробнее о <a href="#">тарифах</a>.
+      </p>
+    </details>
+    <details>
+      <summary>
+        <span></span>
+        <p>Сколько готовых интеграций доступно на нашем сайте?</p>
+      </summary>
+      <p class="answer">
+        На данный момент у нас готово 298+ интеграций помимо Клиентикс и
+        TurboSMS
+      </p>
+    </details>
+    <div class="about">
+      <h4 class="about_header">Информация об Agile CRM</h4>
+      <p>
+        Сервис “Клиентикс” представляет собой облачную CRM-систему. Она будет
+        особенно полезна компаниям, предоставляющим различные услуги, базисом
+        работы которых является организация записи клиентов на оказание услуг.
+        Основой системы является Журнал записи клиентов, куда можно легко и
+        быстро внести необходимые изменения, также доступен сервис
+        SMS-уведомлений. Удобными функциями являются Лист ожиданий, наличие
+        готовых скриптов продаж, возможность вести документацию, организовывать
+        работу сотрудников, отслеживать динамику работы в режиме реального
+        времени через Кабинет директора и многое другое.
+        <a href="/ru/klientiks" title="Подробнее о Клиентикс">Подробнее</a>
+      </p>
+      <h4 class="about_header">Информация о TurboSMS</h4>
+      <p>
+        TurboSMS представляет собой сервис отправки SMS-сообщений. С ростом
+        популярности Viber, к услугам также была добавлена возможность рассылки
+        сообщений в этом мессенджере. С помощью TurboSMS маркетологи могут
+        создавать и гибко настраивать рекламные рассылки. Сервис гарантирует
+        защиту конфиденциальных данных пользователей. Надежность доставки
+        сообщений также обеспечивается и прямыми договорами со всеми основными
+        мобильными операторами Украины и других стран.
+        <a href="/ru/turbosms" title="Подробнее о TurboSMS">Подробнее</a>
+      </p>
+    </div>
+    <div class="try_btn_container">
+      <a class="button try_button" title="Попробовать">Попробовать</a>
+    </div>
+  </div>
+
+  <!--Блок со статьями-->
+  <h3 class="new_articles">Наши статьи в блоге</h3>
+  <div class="articles">
+    <article class="article">
+      <div class="article_img img1"></div>
+      <div class="link_container">
+        <p class="article_header">
+          10 бизнес-книг для предпринимателей и тех, кто хочет ими стать
+        </p>
+        <a href="" class="link">Читать далее &rarr;</a>
+      </div>
+    </article>
+    <article class="article">
+      <div class="article_img img2"></div>
+      <div class="link_container">
+        <p class="article_header">
+          Битрикс24 – популярная CRM-система в подробностях
+        </p>
+        <a href="" class="link">Читать далее &rarr;</a>
+      </div>
+    </article>
+    <article class="article">
+      <div class="article_img img3"></div>
+      <div class="link_container">
+        <p class="article_header">
+          Как появился Instagram, почему он стал интересен бизнесу и
+          пользователям
+        </p>
+        <a href="" class="link">Читать далее &rarr;</a>
+      </div>
+    </article>
+    <article class="article">
+      <div class="article_img img4"></div>
+      <div class="link_container">
+        <p class="article_header">
+          Подборки телеграм-каналов для профессионалов и любителейм
+        </p>
+        <a href="" class="link">Читать далее &rarr;</a>
+      </div>
+    </article>
+    <article class="article">
+      <div class="article_img img5"></div>
+      <div class="link_container">
+        <p class="article_header">
+          Как выбрать надежного фрилансера-профессионала
+        </p>
+        <a href="" class="link">Читать далее &rarr;</a>
+      </div>
+    </article>
+    <article class="article">
+      <div class="article_img img6"></div>
+      <div class="link_container">
+        <p class="article_header">
+          Обзор SaveMyLeads — сервиса для автоматического экспорта лидов из
+          Facebook
+        </p>
+        <a href="" class="link">Читать далее &rarr;</a>
+      </div>
+    </article>
+  </div>
+</div>
+<div class="request">
+  <h1 class="header">
+    Вы собственник или разработчик сервиса<br />
+    которого у нас нет?
+  </h1>
+  <p>
+    Узнайте на каких условиях мы можем реализовать интеграцию<br />
+    с Вашим сервисом <a href="#">на этой странице</a>
+  </p>
+</div>

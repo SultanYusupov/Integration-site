@@ -1,0 +1,1272 @@
+<!--Блок с логотипами систем интеграций-->
+<div class="container_for_content" *ngIf="product">
+  <div class="systems">
+    <!-- <img
+      src="assets/agilecrm_ru.png"
+      alt="Agile CRM интеграция"
+      title="Agile CRM интеграция"
+    /> -->
+    <img
+      *ngIf="product"
+      src="{{ product.image }}"
+      alt="{{ product.title }}"
+      title="{{ product.title }}"
+    />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+      class="fill--purple--t2"
+    >
+      <g id="bf995fa3-3bf6-420d-8cf8-445688c874dc" data-name="Content">
+        <path
+          d="M83.06372.80432,98.40227,16.14276a5.45493,5.45493,0,0,1,0,7.71448L83.06372,39.19568a2.72747,2.72747,0,0,1-4.65608-1.92862V28.18242H2.37505A2.72748,2.72748,0,0,1-.35242,25.45494V14.54506a2.72748,2.72748,0,0,1,2.72747-2.72748H78.40764V2.73294A2.72747,2.72747,0,0,1,83.06372.80432Z"
+        ></path>
+        <path
+          d="M16.58386,60.80432,1.24531,76.14276a5.455,5.455,0,0,0,0,7.71448L16.58386,99.19568a2.72747,2.72747,0,0,0,4.65608-1.92862V88.18242H97.27253A2.72748,2.72748,0,0,0,100,85.45494V74.54506a2.72748,2.72748,0,0,0-2.72747-2.72748H21.23994V62.73294A2.72747,2.72747,0,0,0,16.58386,60.80432Z"
+        ></path>
+      </g>
+    </svg>
+    <p *ngIf="product">
+      <span>{{ product.amount }}</span
+      ><br />
+      готовых систем
+    </p>
+  </div>
+  <p class="subtitle">
+    Свяжите {{ product.name }} с одной из <b>216</b> готовых систем за 5 минут,
+    без программистов. Готовы начать прямо сейчас?
+  </p>
+  <a href="#" title="Начать сейчас" class="button start_now_btn"
+  >Начать сейчас</a
+  >
+</div>
+
+<!--Блок с инструкцией как интегрировать системы-->
+<div class="howto container">
+  <h1 class="header">Как интегрировать {{ product.name }} и другие системы</h1>
+  <p class="info">
+    Теперь Вам не нужно привлекать программистов или интеграторов для
+    автоматизации {{ product.name }} и другие системы. С нашим сайтом вы свяжете
+    и автоматизируете работу этих систем за 5 минут, самостоятельно.
+  </p>
+  <div class="instruction">
+    <div class="step">
+      <span class="icon">Шаг 1</span>
+      Выберите онлайн системы которые нужно «связать»
+    </div>
+    <div class="step">
+      <span class="icon">Шаг 2</span>
+      Укажите какие действия будут происходить между системами
+    </div>
+    <div class="step">
+      <span class="icon">Шаг 3</span>
+      Включите автообновление
+    </div>
+    <div class="step">
+      <span class="icon">
+        <object data="assets/checked.svg"></object>
+      </span>
+      Вся настройка займет не более 5-ти минут
+    </div>
+  </div>
+</div>
+
+<!--Блок с настройками связки-->
+<div class="container">
+  <h1 class="settings_header">
+    Создайте интеграцию с {{ product.name }} самостоятельно, без программистов
+  </h1>
+</div>
+<div class="settings_container">
+  <div class="data_source">
+    <h2>Откуда</h2>
+    <div class="control system">
+      <select>
+        <option>-выберите систему-</option>
+        <option selected>Agile CRM</option>
+        <option>Битрикс24</option>
+      </select>
+    </div>
+    <div class="control action">
+      <select>
+        <option>-выберите действие-</option>
+        <option selected>Загрузить компании (новые)</option>
+        <option>Загрузить контакты (новые)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="data_receiver">
+    <h2>Куда</h2>
+    <div class="control system">
+      <select>
+        <option>-выберите систему-</option>
+        <option selected>Agile CRM</option>
+        <option>Битрикс24</option>
+      </select>
+    </div>
+    <div class="control action">
+      <select>
+        <option>-выберите действие-</option>
+        <option selected>Добавить примечание к сделке</option>
+        <option>Редактировать сделку</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="continue_settings">
+  <p class="info">14 дней бесплатно</p>
+  <a href="#" class="button settings_btn">Продолжить настройки</a>
+</div>
+
+<!--Список систем для интеграции-->
+<div class="container">
+  <h1 class="header">Готовые интеграции</h1>
+  <div class="integrations_title">
+    {{ product.name }} <span>({{ product.amount }} готовых коннекторов)</span>
+  </div>
+  <div id="lists">
+    <ul class="list">
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=zoho.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/zoho" title="Клиентикс и Zoho CRM интеграция"
+      >Zoho CRM</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=sheets.google.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/google-sheets"
+        title="Клиентикс и Google Sheets интеграция"
+      >Google Sheets</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=skysms.com.ua) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/skysms" title="Клиентикс и SkySMS интеграция"
+      >SkySMS</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=bsg.world) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/bsg-world" title="Клиентикс и BSG world интеграция"
+      >BSG world</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=intel-tele.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/intel-tele"
+        title="Клиентикс и Intel Telecom интеграция"
+      >Intel Telecom</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="display: block; float: left; width: 16px; height: 16px; margin-right: 5px; background: url(https://www.google.com/s2/favicons?domain=smstraffic.ru) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/smstraffic"
+        title="Клиентикс и SMS Traffic интеграция"
+      >SMS Traffic</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=sendinblue.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/sendinblue"
+        title="Клиентикс и Sendinblue интеграция"
+      >Sendinblue</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=atlassian.com/ru/software/jira/service-desk) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/jira-service-desk"
+        title="Клиентикс и Jira Serviсe Desk интеграция"
+      >Jira Serviсe Desk</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=smsdar.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/smsdar" title="Клиентикс и SMS Дар интеграция"
+      >SMS Дар</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=twilio.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/twilio" title="Клиентикс и Twilio интеграция"
+      >Twilio</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=atlassian.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/jira"
+        title="Клиентикс и Jira Software Cloud интеграция"
+      >Jira Software Cloud</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=smscourier.ru) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/smscourier"
+        title="Клиентикс и SMS Курьер интеграция"
+      >SMS Курьер</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=stripe.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/stripe" title="Клиентикс и Stripe интеграция"
+      >Stripe</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=justin.ua) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/justin" title="Клиентикс и Justin интеграция"
+      >Justin</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=smspobeda.ru) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/smspobeda"
+        title="Клиентикс и SMS Победа интеграция"
+      >SMS Победа</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=copper.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/copper" title="Клиентикс и Copper интеграция"
+      >Copper</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=kupisms.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/kupisms" title="Клиентикс и Kupisms интеграция"
+      >Kupisms</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=smsukraine.com.ua) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/smsukraine"
+        title="Клиентикс и SMS Украина интеграция"
+      >SMS Украина</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=lamoda.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/lamoda" title="Клиентикс и Lamoda интеграция"
+      >Lamoda</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=letsads.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/letsads" title="Клиентикс и LetsAds интеграция"
+      >LetsAds</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=sms-fly.ua) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/sms-fly" title="Клиентикс и SMS-fly интеграция"
+      >SMS-fly</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=clickup.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/clickup" title="Клиентикс и ClickUp интеграция"
+      >ClickUp</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=liqpay.ua) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/liqpay" title="Клиентикс и LiqPay интеграция"
+      >LiqPay</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=sms-manager.ru) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/sms-manager"
+        title="Клиентикс и SMS-Manager интеграция"
+      >SMS-Manager</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=messaggio.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/messaggio" title="Клиентикс и Messaggio интеграция"
+      >Messaggio</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=lp-crm.biz) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/lp-crm" title="Клиентикс и LP-CRM интеграция"
+      >LP-CRM</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=sms-assistent.by) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/sms-assistent"
+        title="Клиентикс и SMS-Ассистент интеграция"
+      >SMS-Ассистент</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=telnyx.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/telnyx" title="Клиентикс и Telnyx интеграция"
+      >Telnyx</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=mail.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/mail-ru" title="Клиентикс и Mail.ru интеграция"
+      >Mail.ru</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=smsc.ua) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/smsc" title="Клиентикс и SMS-Центр интеграция"
+      >SMS-Центр</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=messente.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/messente" title="Клиентикс и Messente интеграция"
+      >Messente</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=mail365.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/mail365" title="Клиентикс и Mail365 интеграция"
+      >Mail365</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=sms.by) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/sms-by" title="Клиентикс и SMS.BY интеграция"
+      >SMS.BY</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=goreminders.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/goreminders"
+        title="Клиентикс и GoReminders интеграция"
+      >GoReminders</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=mailchimp.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/mailchimp" title="Клиентикс и Mailchimp интеграция"
+      >Mailchimp</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=sms.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/sms-ru" title="Клиентикс и SMS.RU интеграция"
+      >SMS.RU</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=moosend.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/moosend" title="Клиентикс и Moosend интеграция"
+      >Moosend</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=mailerlite.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/mailerlite"
+        title="Клиентикс и MailerLite интеграция"
+      >MailerLite</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=sms.su) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/sms-su" title="Клиентикс и SMS.su интеграция"
+      >SMS.su</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=mailjet.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/mailjet" title="Клиентикс и Mailjet интеграция"
+      >Mailjet</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=mailganer.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/mailganer" title="Клиентикс и Mailganer интеграция"
+      >Mailganer</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=sms4b.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/sms4b" title="Клиентикс и SMS4B интеграция"
+      >SMS4B</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=mailgun.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/mailgun" title="Клиентикс и Mailgun интеграция"
+      >Mailgun</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=mailopost.ru) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/mailopost"
+        title="Клиентикс и Mailo Post  интеграция"
+      >Mailo Post
+      </a>
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=smsbliss.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/smsbliss" title="Клиентикс и SmsBliss интеграция"
+      >SmsBliss</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=moonmail.io) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/moonmail" title="Клиентикс и MoonMail интеграция"
+      >MoonMail</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=mango-office.ru) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/mango-office"
+        title="Клиентикс и MangoOffice интеграция"
+      >MangoOffice</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=smsfeedback.ru) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/smsfeedback"
+        title="Клиентикс и SMSfeedback интеграция"
+      >SMSfeedback</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=ontraport.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/ontraport" title="Клиентикс и Ontraport интеграция"
+      >Ontraport</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=massdelivery.ru) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/massdelivery"
+        title="Клиентикс и MassDelivery интеграция"
+      >MassDelivery</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=smsgold.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/smsgold" title="Клиентикс и SMSGold интеграция"
+      >SMSGold</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=benchmarkemail.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/benchmarkemail"
+        title="Клиентикс и Benchmark Email интеграция"
+      >Benchmark Email</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=meistertask.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/meistertask"
+        title="Клиентикс и Meistertask интеграция"
+      >Meistertask</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=smsimple.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/smsimple" title="Клиентикс и SMSimple интеграция"
+      >SMSimple</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=activecampaign.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/activecampaign"
+        title="Клиентикс и ActiveCampaign интеграция"
+      >ActiveCampaign</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=messagebird.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/messagebird"
+        title="Клиентикс и MessageBird интеграция"
+      >MessageBird</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=smsint.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/smsint" title="Клиентикс и SMSint интеграция"
+      >SMSint</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=messedo.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/messedo" title="Клиентикс и Messedo интеграция"
+      >Messedo</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=smsp.by ) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/smsp-by" title="Клиентикс и SMSP.BY  интеграция"
+      >SMSP.BY
+      </a>
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=alohasms.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/alohasms" title="Клиентикс и AlohaSMS интеграция"
+      >AlohaSMS</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=outlook.live.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/outlook"
+        title="Клиентикс и Microsoft Outlook интеграция"
+      >Microsoft Outlook</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=smspilot.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/smspilot" title="Клиентикс и SMSPILOT интеграция"
+      >SMSPILOT</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=alphasms.ua) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/alphasms" title="Клиентикс и AlphaSMS интеграция"
+      >AlphaSMS</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=mirsms.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/mirsms" title="Клиентикс и MIRSMS.RU интеграция"
+      >MIRSMS.RU</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=smsprofi.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/smsprofi" title="Клиентикс и SMSprofi интеграция"
+      >SMSprofi</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=amocrm.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/amocrm" title="Клиентикс и AmoCRM интеграция"
+      >AmoCRM</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=mobile-text-alerts.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/mobile-text-alert"
+        title="Клиентикс и Mobile Text Alerts интеграция"
+      >Mobile Text Alerts</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=smstraf.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/smstraf" title="Клиентикс и SMStraf интеграция"
+      >SMStraf</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=aol.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/aol" title="Клиентикс и AOL интеграция">AOL</a>
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=mobiniti.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/mobiniti" title="Клиентикс и Mobiniti интеграция"
+      >Mobiniti</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=sprintsms.com.ua) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/sprintsms" title="Клиентикс и SprintSMS интеграция"
+      >SprintSMS</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=asana.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/asana" title="Клиентикс и Asana интеграция"
+      >Asana</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=mobizon.ua) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/mobizvon" title="Клиентикс и Mobizon интеграция"
+      >Mobizon</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=ssms.su) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/ssms" title="Клиентикс и SSMS.SU интеграция"
+      >SSMS.SU</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=autopilothq.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/autopilot" title="Клиентикс и Autopilot интеграция"
+      >Autopilot</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=monday.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/monday-com"
+        title="Клиентикс и Monday.com интеграция"
+      >Monday.com</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=startsend.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/startsend" title="Клиентикс и StartSend интеграция"
+      >StartSend</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=avochato.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/avochato" title="Клиентикс и Avochato интеграция"
+      >Avochato</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=mysql.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/mysql" title="Клиентикс и MySQL интеграция"
+      >MySQL</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=svitsms.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/svitsms" title="Клиентикс и SvitSMS интеграция"
+      >SvitSMS</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=aweber.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/aweber" title="Клиентикс и Aweber интеграция"
+      >Aweber</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=notion.so) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/notion" title="Клиентикс и Notion интеграция"
+      >Notion</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=targetsms.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/targetsms" title="Клиентикс и TargetSMS интеграция"
+      >TargetSMS</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=cloud.google.com/bigquery) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/bigquery" title="Клиентикс и BigQuery интеграция"
+      >BigQuery</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=notisend.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/notisend" title="Клиентикс и NotiSend интеграция"
+      >NotiSend</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=terasms.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/terasms" title="Клиентикс и TeraSMS интеграция"
+      >TeraSMS</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=binotel.ua) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/binotel" title="Клиентикс и Binotel интеграция"
+      >Binotel</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=www.olx.ua) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/olx" title="Клиентикс и OLX интеграция">OLX</a>
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=topvisor.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/topvisor" title="Клиентикс и TopVisor интеграция"
+      >TopVisor</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=brandsms.kz) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/brandsms" title="Клиентикс и BrandSMS  интеграция"
+      >BrandSMS
+      </a>
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=omnicell.com.ua) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/omnicell" title="Клиентикс и Omnicell интеграция"
+      >Omnicell</a
+      >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=cpa.tl) 0px 0px no-repeat;"
+        ></span
+        ><a
+        href="/klientiks/traffic-light"
+        title="Клиентикс и Traffic Light интеграция"
+      >Traffic Light</a
+      >
+      </li>
+      <!-- <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=bulksms.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/bulksms" title="Клиентикс и BulkSMS интеграция"
+          >BulkSMS</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=online-sms.pro) 0px 0px no-repeat;"
+        ></span
+        ><a
+          href="/klientiks/online-sms-pro"
+          title="Клиентикс и Online-sms.pro интеграция"
+          >Online-sms.pro</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=trello.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/trello" title="Клиентикс и Trello интеграция"
+          >Trello</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=bytehand.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/bytehand" title="Клиентикс и BYTEHAND интеграция"
+          >BYTEHAND</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=www.opencart.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/opencart" title="Клиентикс и Opencart интеграция"
+          >Opencart</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=u-on.ru) 0px 0px no-repeat;"
+        ></span
+        ><a
+          href="/klientiks/uon-travel"
+          title="Клиентикс и U-ON.Travel интеграция"
+          >U-ON.Travel</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=clicksend.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/clicksend" title="Клиентикс и ClickSend интеграция"
+          >ClickSend</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=p1sms.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/p1sms" title="Клиентикс и P1SMS интеграция"
+          >P1SMS</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=ukr.net) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/ukr-net" title="Клиентикс и UKR.NET интеграция"
+          >UKR.NET</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=cloff.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/cloff" title="Клиентикс и CLOFF интеграция"
+          >CLOFF</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=pdl-profit.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+          href="/klientiks/pdl-profit"
+          title="Клиентикс и PDL-profit интеграция"
+          >PDL-profit</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=www.unisender.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/unisender" title="Клиентикс и Unisender интеграция"
+          >Unisender</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=constantcontact.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+          href="/klientiks/constant-contact"
+          title="Клиентикс и Constant Contact интеграция"
+          >Constant Contact</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=pipedrive.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/pipedrive" title="Клиентикс и Pipedrive интеграция"
+          >Pipedrive</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=verticalresponse.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+          href="/klientiks/verticalresponse"
+          title="Клиентикс и VerticalResponse интеграция"
+          >VerticalResponse</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=convertkit.com) 0px 0px no-repeat;"
+        ></span
+        ><a
+          href="/klientiks/convertkit"
+          title="Клиентикс и ConvertKit интеграция"
+          >ConvertKit</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=planfix.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/planfix" title="Клиентикс и Planfix интеграция"
+          >Planfix</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=viber.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/viber" title="Клиентикс и Viber интеграция"
+          >Viber</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=creatio.com) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/bpm-online" title="Клиентикс и Creatio интеграция"
+          >Creatio</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=portmone.com.ua) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/portmone" title="Клиентикс и Portmone интеграция"
+          >Portmone</a
+        >
+      </li>
+      <li class="system_item">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=sigmasms.ru) 0px 0px no-repeat;"
+        ></span
+        ><a href="/klientiks/sigma-sms" title="Клиентикс и SigmaSMS интеграция"
+          >SigmaSMS</a
+        >
+      </li> -->
+      <li class="system_item" *ngFor="let system of systems; index as systemId">
+        <span
+          style="background: url(https://www.google.com/s2/favicons?domain=turbosms.ua) 0 0 no-repeat;"
+        ></span
+        ><a [routerLink]="['/systems', systemId]" [title]="system.title">{{system.name}}</a>
+      </li>
+      <!--Добавлена маршрутизация в компонент clientix-turbosms-->
+    </ul>
+  </div>
+
+  <!--Блок с часто задаваемыми вопросами и краткое описание систем-->
+  <div class="questions_container container">
+    <h4 class="questions">
+      Часто задаваемые вопросы про интеграцию с {{ product.name }}
+    </h4>
+    <details>
+      <summary>
+        <span></span>
+        <p>Как происходит интеграция {{ product.name }}?</p>
+      </summary>
+      <ul class="answer">
+        <li>Для начала нужно зарегистрироваться на нашем сайте</li>
+        <li>
+          Далее выбираете в веб интерфейсе с каким сервисом нужно сделать
+          интеграцию {{ product.name }} (на данный момент доступно
+          {{ product.amount }} готовых коннекторов)
+        </li>
+        <li>Выбираете какие данные из одной системы передавать в другую</li>
+        <li>Включаете автообновление</li>
+        <li>
+          Теперь данные будут автоматически передаваться из одной системы в
+          другую
+        </li>
+      </ul>
+    </details>
+    <details>
+      <summary>
+        <span></span>
+        <p>Сколько времени нужно на интеграцию?</p>
+      </summary>
+      <p class="answer">
+        В зависимости от системы, с которой вы будете делать интеграцию, время
+        настройки может отличаться и составлять от 5-ти до 30-минут. В среднем
+        настройка занимает 10-15 минут.
+      </p>
+    </details>
+    <details>
+      <summary>
+        <span></span>
+        <p>Сколько стоит интеграция Agile CRM с другими системами?</p>
+      </summary>
+      <p class="answer">
+        За саму интеграцию ничего платить не нужно и на всех тарифах доступен
+        полностью весь функционал. Вы оплачиваете только количество данных,
+        которые по факту передаются из одной вашей системы в другую через наш
+        сервис. Если у вас количество данных в месяц небольшое, можете смело
+        пользоваться бесплатным тарифом или перейти на платный, при
+        необходимости. Подробнее о <a href="#">тарифах</a>.
+      </p>
+    </details>
+    <details>
+      <summary>
+        <span></span>
+        <p>Сколько готовых интеграций доступно для Agile CRM?</p>
+      </summary>
+      <p class="answer">
+        На данный момент у нас готово {{ product.amount }} интеграций
+        {{ product.name }} c другими системами
+      </p>
+    </details>
+    <div class="about">
+      <h4 class="about_header">Информация об {{ product.name }}</h4>
+      <p>
+        Agile CRM - это платформа, предназначенная для автоматизации продаж и
+        маркетинга. Данная CRM работает по принципу “всё включено”, предоставляя
+        инструменты для коммерции, маркетинга и обслуживания клиентов. Модуль
+        управления продажами включает в себя функционал по обработке контактов,
+        контроля сделок, планирования встреч и т.д. Отдельно стоит отметить
+        встроенные инструменты по управлению проектами и интеграции с телефонией
+        (звонки в один клик, поддержка скриптов и голосовой почты). Другой
+        важной частью Agile CRM выступает модуль управления маркетингом. Он
+        включает функции по автоматизации маркетинга, созданию целевых страниц,
+        интеграции с социальными медиа и т.д. Также в этом модуле представлены
+        инструменты по управлению e-mail маркетингом, мобильным маркетингом и
+        отслеживанию e-mail. Блок по управлению взаимоотношениями с клиентами в
+        составе Agile CRM включает встроенную helpdesk-систему, модуль для
+        организации обратной связи, создания базы знаний, систему тикетов и ряд
+        других методов. Agile CRM имеет гибкую панель управления, которая
+        позволяет добавлять, отслеживать и контролировать самые различные
+        процессы в деятельности компании/проекта при помощи принципа drag and
+        drop. К дополнительным возможностям платформы относятся широкие
+        возможности для интеграции с различными сервисами, включая Twitter,
+        Facebook, Google Apps, LinkedIn, Twilio и т.д. CRM предоставляет
+        обширный спектр инструментов аналитики и формирования отчетности по
+        множеству параметров эффективности выполнения проекта и успешности
+        бизнеса в целом.
+      </p>
+      <br />
+      <p>
+        Подробнее о работе с <a href="#">{{ product.name }} API</a>
+      </p>
+    </div>
+    <div class="try_btn_container">
+      <a class="button try_button" title="Попробовать">Попробовать</a>
+    </div>
+  </div>
+
+  <!--Блок со статьями-->
+  <h3 class="new_articles">Наши статьи в блоге</h3>
+  <div class="articles">
+    <article class="article">
+      <div class="article_img img1"></div>
+      <div class="link_container">
+        <p class="article_header">
+          Обзор SaveMyLeads — сервиса для автоматического экспорта лидов из
+          Facebook
+        </p>
+        <a href="" class="link">Читать далее &rarr;</a>
+      </div>
+    </article>
+    <article class="article">
+      <div class="article_img img2"></div>
+      <div class="link_container">
+        <p class="article_header">
+          Что такое формула AIDA и для чего ее нужно знать каждому интернет-
+          маркетологу
+        </p>
+        <a href="" class="link">Читать далее &rarr;</a>
+      </div>
+    </article>
+    <article class="article">
+      <div class="article_img img3"></div>
+      <div class="link_container">
+        <p class="article_header">
+          Как выгружать данные из Lamoda в виде сделок в Bitrix24?
+        </p>
+        <a href="" class="link">Читать далее &rarr;</a>
+      </div>
+    </article>
+    <article class="article">
+      <div class="article_img img4"></div>
+      <div class="link_container">
+        <p class="article_header">
+          Как оценить результаты рекламной кампании в Фейсбуке и оптимизировать
+          расходы
+        </p>
+        <a href="" class="link">Читать далее &rarr;</a>
+      </div>
+    </article>
+    <article class="article">
+      <div class="article_img img5"></div>
+      <div class="link_container">
+        <a class="article_header"
+        >Как выгружать данные из Work.ua в виде лидов в Bitrix24?</a
+        >
+        <a href="" class="link">Читать далее &rarr;</a>
+      </div>
+    </article>
+    <article class="article">
+      <div class="article_img img6"></div>
+      <div class="link_container">
+        <a class="article_header"
+        >Как повысить активность в соцсетях: 7 идей для вовлекающих постов</a
+        >
+        <a href="" class="link">Читать далее &rarr;</a>
+      </div>
+    </article>
+  </div>
+  <div class="request">
+    <h1 class="header">
+      Вы собственник или разработчик сервиса<br />
+      которого у нас нет?
+    </h1>
+    <p>
+      Узнайте на каких условиях мы можем реализовать интеграцию<br />
+      с Вашим сервисом <a href="#">на этой странице</a>
+    </p>
+  </div>
+</div>
+<!--content-->
+
