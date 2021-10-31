@@ -6,12 +6,12 @@
       alt="Agile CRM интеграция"
       title="Agile CRM интеграция"
     /> -->
-    <img
-      *ngIf="product"
+    <!-- <img *ngIf="product"
       src="{{ product.image }}"
       alt="{{ product.title }}"
       title="{{ product.title }}"
-    />
+    /> -->
+    <img *ngIf="product" src="{{product.image}}" alt="{{product.title}}" />
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
@@ -64,7 +64,7 @@
     </div>
     <div class="step">
       <span class="icon">
-        <object data="assets/checked.svg"></object>
+        <object data="assets/images/checked.svg"></object>
       </span>
       Вся настройка займет не более 5-ти минут
     </div>
@@ -129,7 +129,7 @@
     <ul class="list">
       <li class="system_item">
         <span
-          style="background: url(https://www.google.com/s2/favicons?domain=zoho.com) 0px 0px no-repeat;"
+          style="background: url(https://www.google.com/s2/favicons?domain=zoho.com) 0 0 no-repeat;"
         ></span
         ><a href="/klientiks/zoho" title="Клиентикс и Zoho CRM интеграция"
       >Zoho CRM</a
@@ -1091,9 +1091,9 @@
       </li> -->
       <li class="system_item" *ngFor="let system of systems; index as systemId">
         <span
-          style="background: url(https://www.google.com/s2/favicons?domain=turbosms.ua) 0 0 no-repeat;"
+          style="{{system.icon}}"
         ></span
-        ><a [routerLink]="['/systems', systemId]" [title]="system.title">{{system.name}}</a>
+        ><a [routerLink]="['/systems', systemId]" title="system.title">{{system.name}}</a>
       </li>
       <!--Добавлена маршрутизация в компонент clientix-turbosms-->
     </ul>
@@ -1161,31 +1161,7 @@
     </details>
     <div class="about">
       <h4 class="about_header">Информация об {{ product.name }}</h4>
-      <p>
-        Agile CRM - это платформа, предназначенная для автоматизации продаж и
-        маркетинга. Данная CRM работает по принципу “всё включено”, предоставляя
-        инструменты для коммерции, маркетинга и обслуживания клиентов. Модуль
-        управления продажами включает в себя функционал по обработке контактов,
-        контроля сделок, планирования встреч и т.д. Отдельно стоит отметить
-        встроенные инструменты по управлению проектами и интеграции с телефонией
-        (звонки в один клик, поддержка скриптов и голосовой почты). Другой
-        важной частью Agile CRM выступает модуль управления маркетингом. Он
-        включает функции по автоматизации маркетинга, созданию целевых страниц,
-        интеграции с социальными медиа и т.д. Также в этом модуле представлены
-        инструменты по управлению e-mail маркетингом, мобильным маркетингом и
-        отслеживанию e-mail. Блок по управлению взаимоотношениями с клиентами в
-        составе Agile CRM включает встроенную helpdesk-систему, модуль для
-        организации обратной связи, создания базы знаний, систему тикетов и ряд
-        других методов. Agile CRM имеет гибкую панель управления, которая
-        позволяет добавлять, отслеживать и контролировать самые различные
-        процессы в деятельности компании/проекта при помощи принципа drag and
-        drop. К дополнительным возможностям платформы относятся широкие
-        возможности для интеграции с различными сервисами, включая Twitter,
-        Facebook, Google Apps, LinkedIn, Twilio и т.д. CRM предоставляет
-        обширный спектр инструментов аналитики и формирования отчетности по
-        множеству параметров эффективности выполнения проекта и успешности
-        бизнеса в целом.
-      </p>
+      <p>{{product.description}}</p>
       <br />
       <p>
         Подробнее о работе с <a href="#">{{ product.name }} API</a>

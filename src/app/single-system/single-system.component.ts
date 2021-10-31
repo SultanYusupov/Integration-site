@@ -19,9 +19,18 @@ export class SingleSystemComponent implements OnInit {
     //   this.system = systems[+params.get('systemId')];
     // });
 
-    this.route.paramMap.subscribe((params) => {
-      this.product = systems[+params.get('id')];
-    });
+    // this.route.paramMap.subscribe((params) => {
+    //   this.product = systems[+params.get('id')];
+    // });
+
+    // здесь заменил queryParams на params
+    this.route.params.subscribe(params => {
+      this.system = +params['id'];
+      this.product = systems[this.system];
+    })
+    // this.route.params.subscribe((params)=>{
+    //   this.product = +params.get('id')
+    // })
   }
 // addToIntegrationList(product) {
   //   this.integrationService.addToIntegrationList(product);

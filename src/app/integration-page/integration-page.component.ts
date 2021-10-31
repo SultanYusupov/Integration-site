@@ -11,14 +11,21 @@ import { IntegrationService } from '../integration.service';
 export class IntegrationPageComponent implements OnInit {
   system: any;
   items: any;
+
   constructor(private route: ActivatedRoute, private integrationService: IntegrationService) {
-  this.items = integrationService.getItems();
+    this.items = integrationService.getItems();
   }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe((params)=>{
-      this.system = systems[+(params.get('systemId'))];
+    // this.route.paramMap.subscribe((params)=>{
+    //   this.system = systems[+(params.get('systemId'))];
+    // })
+    // this.route.queryParams.subscribe(params => {
+    //   this.system = params['systemId'];
+    // })
+    this.route.params.subscribe(params => {
+      this.system = systems[+params['systemId']];
+      // this.system = systems[this.systemId];
     })
   }
-
 }

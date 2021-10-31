@@ -161,13 +161,13 @@ footer {
   height: 30px;
 }
 .social_link:first-child {
-  background: url('/../assets/icon-facebook.png');
+  background: url('/../assets/images/icon-facebook.png');
 }
 .social_link:nth-child(2) {
-  background: url('/../assets/icon-telegram.png');
+  background: url('/../assets/images/icon-telegram.png');
 }
 .social_link:last-child {
-  background: url('/../assets/icon-vk.png');
+  background: url('/../assets/images/icon-vk.png');
 }
 .email,
 .telephone,
@@ -491,7 +491,7 @@ summary {
   padding-left: 30px;
 }
 summary span {
-  background: url('/../assets/expand.png') no-repeat;
+  background: url('/../assets/images/expand.png') no-repeat;
   width: 16px;
   transition: transform 400ms ease;
 }
@@ -561,22 +561,22 @@ details[open] {
   background-size: cover;
 }
 .img1 {
-  background-image: url(/../assets/1c860e638e3dd4654eaa90a3399a7013.png);
+  background-image: url(/../assets/images/1c860e638e3dd4654eaa90a3399a7013.png);
 }
 .img2 {
-  background-image: url(/../assets/5b334296382fcb9e86683078a774de1a.png);
+  background-image: url(/../assets/images/5b334296382fcb9e86683078a774de1a.png);
 }
 .img3 {
-  background-image: url(/../assets/cba110c2d52c3029c8844431690b9c32.png);
+  background-image: url(/../assets/images/cba110c2d52c3029c8844431690b9c32.png);
 }
 .img4 {
-  background-image: url(/../assets/e3ac0d78c9a0b9b1aa265f2a6d63b80b.png);
+  background-image: url(/../assets/images/e3ac0d78c9a0b9b1aa265f2a6d63b80b.png);
 }
 .img5 {
-  background-image: url(/../assets/73cab19a42031a94dbdafde71164a070.png);
+  background-image: url(/../assets/images/73cab19a42031a94dbdafde71164a070.png);
 }
 .img6 {
-  background-image: url(/../assets/fa14bd8af027c1df78b3abd1f112553d.png);
+  background-image: url(/../assets/images/fa14bd8af027c1df78b3abd1f112553d.png);
 }
 .link_container {
   padding: 15px;
