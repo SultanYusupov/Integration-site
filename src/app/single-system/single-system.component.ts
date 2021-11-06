@@ -26,7 +26,9 @@ export class SingleSystemComponent implements OnInit {
     // здесь заменил queryParams на params
     this.route.params.subscribe(params => {
       this.system = +params['id'];
+      console.log('params = '+ params['id']); // идёт из routerLink main-page.component. Сюда записывается номер id
       this.product = systems[this.system];
+      console.log('this.product = '+this.product); // идёт из params выше. Сюда записывается выбранный объект из массива systems
     })
     // this.route.params.subscribe((params)=>{
     //   this.product = +params.get('id')

@@ -9,7 +9,6 @@ export class IntegrationService {
     this.items.push(system);
   }
   getItems() {
-    console.log(this.items);
     return this.items;
   }
   constructor() { }

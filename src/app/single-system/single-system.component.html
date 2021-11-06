@@ -6,12 +6,7 @@
       alt="Agile CRM интеграция"
       title="Agile CRM интеграция"
     /> -->
-    <!-- <img *ngIf="product"
-      src="{{ product.image }}"
-      alt="{{ product.title }}"
-      title="{{ product.title }}"
-    /> -->
-    <img *ngIf="product" src="{{product.image}}" alt="{{product.title}}" />
+    <img *ngIf="product" src="{{product.image}}" alt="{{product.name}}" title="{{product.name}} интеграция" />
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
@@ -127,7 +122,7 @@
   </div>
   <div id="lists">
     <ul class="list">
-      <li class="system_item">
+      <!-- <li class="system_item">
         <span
           style="background: url(https://www.google.com/s2/favicons?domain=zoho.com) 0 0 no-repeat;"
         ></span
@@ -908,7 +903,7 @@
         title="Клиентикс и Traffic Light интеграция"
       >Traffic Light</a
       >
-      </li>
+      </li> -->
       <!-- <li class="system_item">
         <span
           style="background: url(https://www.google.com/s2/favicons?domain=bulksms.com) 0px 0px no-repeat;"
@@ -1091,7 +1086,7 @@
       </li> -->
       <li class="system_item" *ngFor="let system of systems; index as systemId">
         <span
-          style="{{system.icon}}"
+          [style]="' background: url('+ system.icon +') 0 0 no-repeat;' "
         ></span
         ><a [routerLink]="['/systems', systemId]" title="system.title">{{system.name}}</a>
       </li>
@@ -1138,7 +1133,7 @@
     <details>
       <summary>
         <span></span>
-        <p>Сколько стоит интеграция Agile CRM с другими системами?</p>
+        <p>Сколько стоит интеграция {{product.name}} с другими системами?</p>
       </summary>
       <p class="answer">
         За саму интеграцию ничего платить не нужно и на всех тарифах доступен
@@ -1152,7 +1147,7 @@
     <details>
       <summary>
         <span></span>
-        <p>Сколько готовых интеграций доступно для Agile CRM?</p>
+        <p>Сколько готовых интеграций доступно для {{product.name}}?</p>
       </summary>
       <p class="answer">
         На данный момент у нас готово {{ product.amount }} интеграций

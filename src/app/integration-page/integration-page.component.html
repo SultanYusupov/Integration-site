@@ -31,8 +31,8 @@
   </div>
   <h1 class="title">{{ system.name }} + {{ system.name }}</h1>
   <p class="subtitle">
-    Свяжите <a href="/ru/klientiks" title="Клиентикс интеграция">Клиентикс</a> и
-    <a href="/ru/turbosms" title="TurboSMS интеграция">TurboSMS</a> за 5 минут.
+    Свяжите <a *ngFor="let item of items" href="#" [title]="item.name + 'интеграция'">{{item.name}}</a> и
+    <a  *ngIf="system" href="#" [title]="system.name + 'интеграция'">{{system.name}}</a> за 5 минут.
     Без программистов. Готовы начать прямо сейчас?
   </p>
   <a href="#" title="Начать сейчас" class="button start_now_btn"
@@ -41,14 +41,14 @@
 </div>
 
 <!--Блок с инструкцией как интегрировать системы-->
-<div class="howto container">
-  <h1 class="header">
-    Как интегрировать Клиентикс и TurboSMS<br />
-    c помощью ApiX Drive
+<div class="howto container" *ngFor="let item of items">
+  <h1 class="header" *ngIf="system">
+    Как интегрировать {{item.name}} и {{system.name}}<br />
+    c помощью нашего сайта
   </h1>
-  <p class="info">
+  <p class="info" *ngIf="system">
     Теперь Вам не нужно привлекать программистов или интеграторов для
-    автоматизации Клиентикс и TurboSMS. С нашим сайтом вы свяжете и
+    автоматизации {{item.name}} и {{system.name}}. С нашим сайтом вы свяжете и
     автоматизируете работу этих систем за 5 минут, самостоятельно.
   </p>
   <div class="instruction">
@@ -74,9 +74,9 @@
 </div>
 
 <!--Блок с настройками связки-->
-<div class="container">
-  <h1 class="settings_header">
-    Создайте интеграцию Клиентикс и TurboSMS самостоятельно, без программистов
+<div class="container" *ngFor="let item of items">
+  <h1 class="settings_header" *ngIf="system">
+    Создайте интеграцию {{item.name}} и {{system.name}} самостоятельно, без программистов
   </h1>
 </div>
 <div class="settings_container">
@@ -125,13 +125,13 @@
 
 <!--Список систем для интеграции-->
 <h1 class="header">Другие готовые интеграции</h1>
-<div class="container">
+<div class="container" *ngFor="let item of items">
   <!--wrapper was here-->
-  <div class="source">
+  <div class="source" *ngIf="system">
     <div class="systems_list">
       <!--Список 1-->
       <div class="integrations_title">
-        Клиентикс <span>(197 готовых коннекторов)</span>
+        {{item.name}} <span>(197 готовых коннекторов)</span>
       </div>
       <ul class="lists">
         <li class="system_item">
@@ -1595,7 +1595,7 @@
     <div class="systems_list">
       <!--Список 2-->
       <div class="integrations_title">
-        TurboSMS <span>(181 готовый коннектор)</span>
+        {{system.name}} <span>(181 готовый коннектор)</span>
       </div>
       <ul class="lists">
         <li class="system_item">
@@ -2843,22 +2843,22 @@
   </div>
 
   <!--Блок с часто задаваемыми вопросами и краткое описание систем-->
-  <div class="questions_container container">
-    <h4 class="questions">
-      Популярные вопросы про интеграцию Клиентикс и TurboSMS
+  <div class="questions_container container"  *ngFor="let item of items">
+    <h4 class="questions"  *ngIf="system">
+      Популярные вопросы про интеграцию {{item.name}} и {{system.name}}
     </h4>
-    <details>
+    <details *ngIf="system">
       <summary>
         <span></span>
-        <p>Как происходит интеграция Клиентикс и TurboSMS?</p>
+        <p>Как происходит интеграция {{item.name}} и {{system.name}}?</p>
       </summary>
       <ul class="answer">
         <li>Для начала нужно зарегистрироваться на нашем сайте</li>
-        <li>Выбираете какие данные передавать из Клиентикс в TurboSMS</li>
+        <li>Выбираете какие данные передавать из {{item.name}} в {{system.name}}</li>
         <li>Выбираете какие данные из одной системы передавать в другую</li>
         <li>Включаете автообновление</li>
         <li>
-          Теперь данные будут автоматически передаваться из Клиентикс в TurboSMS
+          Теперь данные будут автоматически передаваться из {{item.name}} в {{system.name}}
         </li>
       </ul>
     </details>
@@ -2873,10 +2873,10 @@
         настройка занимает 10-15 минут.
       </p>
     </details>
-    <details>
+    <details *ngIf="system">
       <summary>
         <span></span>
-        <p>Сколько стоит интеграция Клиентикс с TurboSMS?</p>
+        <p>Сколько стоит интеграция {{item.name}} с {{system.name}}?</p>
       </summary>
       <p class="answer">
         За саму интеграцию ничего платить не нужно и на всех тарифах доступен
@@ -2887,40 +2887,26 @@
         необходимости. Подробнее о <a href="#">тарифах</a>.
       </p>
     </details>
-    <details>
+    <details *ngIf="system">
       <summary>
         <span></span>
         <p>Сколько готовых интеграций доступно на нашем сайте?</p>
       </summary>
       <p class="answer">
-        На данный момент у нас готово 298+ интеграций помимо Клиентикс и
-        TurboSMS
+        На данный момент у нас готово 298+ интеграций помимо {{item.name}} и
+        {{system.name}}
       </p>
     </details>
     <div class="about">
-      <h4 class="about_header">Информация об Agile CRM</h4>
+      <h4 class="about_header">Информация об {{item.name}}</h4>
       <p>
-        Сервис “Клиентикс” представляет собой облачную CRM-систему. Она будет
-        особенно полезна компаниям, предоставляющим различные услуги, базисом
-        работы которых является организация записи клиентов на оказание услуг.
-        Основой системы является Журнал записи клиентов, куда можно легко и
-        быстро внести необходимые изменения, также доступен сервис
-        SMS-уведомлений. Удобными функциями являются Лист ожиданий, наличие
-        готовых скриптов продаж, возможность вести документацию, организовывать
-        работу сотрудников, отслеживать динамику работы в режиме реального
-        времени через Кабинет директора и многое другое.
-        <a href="/ru/klientiks" title="Подробнее о Клиентикс">Подробнее</a>
+        {{item.description}}
+        <a href="#" title="Подробнее о {{item.name}}">Подробнее</a>
       </p>
-      <h4 class="about_header">Информация о TurboSMS</h4>
+      <h4 class="about_header" *ngIf="system">Информация о {{system.name}}</h4>
       <p>
-        TurboSMS представляет собой сервис отправки SMS-сообщений. С ростом
-        популярности Viber, к услугам также была добавлена возможность рассылки
-        сообщений в этом мессенджере. С помощью TurboSMS маркетологи могут
-        создавать и гибко настраивать рекламные рассылки. Сервис гарантирует
-        защиту конфиденциальных данных пользователей. Надежность доставки
-        сообщений также обеспечивается и прямыми договорами со всеми основными
-        мобильными операторами Украины и других стран.
-        <a href="/ru/turbosms" title="Подробнее о TurboSMS">Подробнее</a>
+        {{system.description}}
+        <a href="#" title="Подробнее о {{system.name}}">Подробнее</a>
       </p>
     </div>
     <div class="try_btn_container">

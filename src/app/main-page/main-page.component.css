@@ -1,6 +1,15 @@
-.list {
-  margin: 60px;
+div {
+  margin-top: 60px;
+  margin-left: 30px;
+  column-count: 5;
 }
-.system-item {
+.list {
+
+}
+.system_item {
+  list-style-type: none;
+  margin: 10px 0;
+}
+.system_item a {
   color: black;
 }

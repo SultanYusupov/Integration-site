@@ -1,10 +1,13 @@
-<ul class="list" *ngFor="let system of systems; index as id">
-  <li class="system_item">
-    <span></span><a
-    [routerLink]="['/product', id]"
-    [title]="system.title"
-    (click)="addToIntegrationList(system)"
-  >{{ system.name }}</a>
-  </li>
-</ul>
+<div>
+  <ul class="list" *ngFor="let system of systems; index as id">
+    <li class="system_item">
+      <span></span><a
+      routerLink="/product/{{id}}"
+      [title]="system.name + ' интеграция'"
+      (click)="addToIntegrationList(system)"
+    >{{ system.name }}</a>
+    </li>
+  </ul>
+</div>
+
 
