@@ -14,7 +14,7 @@ export class MainPageComponent implements OnInit {
   constructor(private integrationService: IntegrationService) { }
   addToIntegrationList(prod: any) {
     this.integrationService.addToIntegrationList(prod);
-    // console.log(prod);
+     console.log(prod);
   }
   ngOnInit(): void {
   }

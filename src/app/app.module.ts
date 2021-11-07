@@ -19,7 +19,7 @@ import { IntegrationPageComponent } from './integration-page/integration-page.co
     RouterModule.forRoot([
       { path: '', component: MainPageComponent },
       { path: 'product/:id', component: SingleSystemComponent },
-      { path: 'systems/:systemId', component: IntegrationPageComponent },
+      { path: 'product/:id/:systemId', component: IntegrationPageComponent },
     ]),
   ],
   providers: [],

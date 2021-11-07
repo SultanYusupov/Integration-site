@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { systems } from '../systems';
 import { IntegrationService } from '../integration.service';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-integration-page',
@@ -9,10 +10,15 @@ import { IntegrationService } from '../integration.service';
   styleUrls: ['./integration-page.component.css']
 })
 export class IntegrationPageComponent implements OnInit {
+  title: any;
   system: any;
   items: any;
+  number: any;
 
-  constructor(private route: ActivatedRoute, private integrationService: IntegrationService) {
+  constructor(private route: ActivatedRoute,
+              private integrationService: IntegrationService,
+              private titleService: Title,
+              private metaTagService: Meta) {
     this.items = integrationService.getItems();
   }
 
@@ -24,8 +30,19 @@ export class IntegrationPageComponent implements OnInit {
     //   this.system = params['systemId'];
     // })
     this.route.params.subscribe(params => {
-      this.system = systems[+params['systemId']];
-      // this.system = systems[this.systemId];
-    })
+      this.number = systems.findIndex((el)=>{
+        return el.title == params['systemId'];
+      });
+      this.system = systems[this.number];
+      // this.system = systems[+params['systemId']];
+    });
+
+    this.titleService.setTitle(this.title);
+    this.metaTagService.updateTag(
+      { name: 'description', content: 'Нужно объединить Клиентикс и TurboSMS? ApiX-Drive позволяет самостоятельно интегрировать и автоматизировать работу систем.' },
+    );
+    this.metaTagService.updateTag(
+      { name: 'keywords', content: 'Клиентикс TurboSMS, Клиентикс TurboSMS интеграция, Клиентикс TurboSMS автоматизация' }
+    );
   }
 }
