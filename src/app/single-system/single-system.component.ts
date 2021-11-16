@@ -10,7 +10,7 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrls: ['./single-system.component.css']
 })
 export class SingleSystemComponent implements OnInit {
-  title = `Agile CRM | Интеграция, Автоматизация за 5 минут`;
+  title: any; // мета тег <title>
   systems = systems; // for routerLink in <li> of AgileComponent. It was originally
   system: any; // for parameters below. for TurboComponent
   product: any; // for AgileComponent
@@ -24,25 +24,25 @@ export class SingleSystemComponent implements OnInit {
     this.route.params.subscribe(params => {
       // в значение params записывается то, что мы писали в routerLink="/product/{{system.title}}" из main-page.component.html
       this.idNumber = systems.findIndex((el, val)=>{
-        return el.title == params['id'];
+        return el.title == params['id']; // по свойству title ищем индекс элемента
       });
       this.system = this.idNumber; // идёт из routerLink main-page.component. Сюда записывается номер id
       this.product = systems[this.system]; // идёт из params выше. Сюда записывается выбранный объект из массива systems
+      this.title = `${this.product.name} интеграция, Автоматизация за 5 минут`; // мета тег <title>
       // this.system = +params['id'];
       // this.product = systems[this.system];
     })
-    // this.route.params.subscribe((params)=>{
-    //   this.product = +params.get('id')
-    // })
+
+
     this.titleService.setTitle(this.title);
     this.metaTagService.updateTag(
-      { name: 'description', content: 'Нужно объединить  с другими системами? Наш сайт позволяет самостоятельно интегрировать и автоматизировать бизнес процессы' },
+      { name: 'description', content: `Нужно объединить ${this.product.name} с другими системами? Наш сайт позволяет самостоятельно интегрировать и автоматизировать бизнес процессы` },
     );
     this.metaTagService.updateTag(
       { name: 'keywords', content: `${this.product.name}, ${this.product.name} интеграция, ${this.product.name} автоматизация` }
     );
   }
-// addToIntegrationList(product) {
-  //   this.integrationService.addToIntegrationList(product);
-  // }
+  addToEndList(i: any) {
+    this.integrationService.addToIntegrationList(i);
+  }
 }

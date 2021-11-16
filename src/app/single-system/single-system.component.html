@@ -1,11 +1,6 @@
 <!--Блок с логотипами систем интеграций-->
 <div class="container_for_content" *ngIf="product">
   <div class="systems">
-    <!-- <img
-      src="assets/agilecrm_ru.png"
-      alt="Agile CRM интеграция"
-      title="Agile CRM интеграция"
-    /> -->
     <img *ngIf="product" src="{{product.image}}" alt="{{product.name}}" title="{{product.name}} интеграция" />
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -126,9 +121,9 @@
         <span
           [style]="' background: url('+ system.icon +') 0 0 no-repeat;' "
         ></span
-        ><a [routerLink]="[system.title]" title="system.title">{{system.name}}</a>
+        ><a [routerLink]="[system.title]" title="system.title" (click)="addToEndList(system)">{{system.name}}</a>
       </li>
-      <!--Добавлена маршрутизация в компонент clientix-turbosms-->
+      <!--Маршрутизация в компонент integration-page-->
     </ul>
   </div>
 

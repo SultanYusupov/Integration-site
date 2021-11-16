@@ -202,7 +202,6 @@
 }
 .system-list {
   width: 45%;
-
 }
 .source {
   display: flex;
@@ -215,6 +214,9 @@
   list-style-type: none;
   column-count: 3;
 }
+.lists li {
+  padding: 6px 15px 6px 0;
+}
 
 @media screen and (max-width: 1027px) {
   .source {
@@ -225,9 +227,7 @@
     width: 50%;
   }
 }
-.lists .system_item {
-  padding: 6px 15px 6px 0;
-}
+
 .lists a {
   text-decoration: none;
   font-size: 13px;
