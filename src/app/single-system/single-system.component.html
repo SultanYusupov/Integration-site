@@ -1,7 +1,7 @@
 <!--Блок с логотипами систем интеграций-->
-<div class="container_for_content" *ngIf="product">
+<div class="container_for_content" *ngIf="product1">
   <div class="systems">
-    <img *ngIf="product" src="{{product.image}}" alt="{{product.name}}" title="{{product.name}} интеграция" />
+    <img *ngIf="product1" src="{{product1.image}}" alt="{{product1.name}}" title="{{product1.name}} интеграция" />
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
@@ -16,14 +16,14 @@
         ></path>
       </g>
     </svg>
-    <p *ngIf="product">
-      <span>{{ product.amount }}</span
+    <p *ngIf="product1">
+      <span>{{ product1.amount }}</span
       ><br />
       готовых систем
     </p>
   </div>
   <p class="subtitle">
-    Свяжите {{ product.name }} с одной из <b>216</b> готовых систем за 5 минут,
+    Свяжите {{ product1.name }} с одной из <b>216</b> готовых систем за 5 минут,
     без программистов. Готовы начать прямо сейчас?
   </p>
   <a href="#" title="Начать сейчас" class="button start_now_btn"
@@ -33,10 +33,10 @@
 
 <!--Блок с инструкцией как интегрировать системы-->
 <div class="howto container">
-  <h1 class="header">Как интегрировать {{ product.name }} и другие системы</h1>
+  <h1 class="header">Как интегрировать {{ product1.name }} и другие системы</h1>
   <p class="info">
     Теперь Вам не нужно привлекать программистов или интеграторов для
-    автоматизации {{ product.name }} и другие системы. С нашим сайтом вы свяжете
+    автоматизации {{ product1.name }} и другие системы. С нашим сайтом вы свяжете
     и автоматизируете работу этих систем за 5 минут, самостоятельно.
   </p>
   <div class="instruction">
@@ -64,7 +64,7 @@
 <!--Блок с настройками связки-->
 <div class="container">
   <h1 class="settings_header">
-    Создайте интеграцию с {{ product.name }} самостоятельно, без программистов
+    Создайте интеграцию с {{ product1.name }} самостоятельно, без программистов
   </h1>
 </div>
 <div class="settings_container">
@@ -113,15 +113,15 @@
 <div class="container">
   <h1 class="header">Готовые интеграции</h1>
   <div class="integrations_title">
-    {{ product.name }} <span>({{ product.amount }} готовых коннекторов)</span>
+    {{ product1.name }} <span>({{ product1.amount }} готовых коннекторов)</span>
   </div>
   <div id="lists">
     <ul class="list">
-      <li class="system_item" *ngFor="let system of systems; index as systemId">
+      <li class="system_item" *ngFor="let system of systems">
         <span
           [style]="' background: url('+ system.icon +') 0 0 no-repeat;' "
         ></span
-        ><a [routerLink]="[system.title]" title="system.title" (click)="addToEndList(system)">{{system.name}}</a>
+        ><a [routerLink]="[system.url]" title="system.title">{{system.name}}</a>
       </li>
       <!--Маршрутизация в компонент integration-page-->
     </ul>
@@ -130,19 +130,19 @@
   <!--Блок с часто задаваемыми вопросами и краткое описание систем-->
   <div class="questions_container container">
     <h4 class="questions">
-      Часто задаваемые вопросы про интеграцию с {{ product.name }}
+      Часто задаваемые вопросы про интеграцию с {{ product1.name }}
     </h4>
     <details>
       <summary>
         <span></span>
-        <p>Как происходит интеграция {{ product.name }}?</p>
+        <p>Как происходит интеграция {{ product1.name }}?</p>
       </summary>
       <ul class="answer">
         <li>Для начала нужно зарегистрироваться на нашем сайте</li>
         <li>
           Далее выбираете в веб интерфейсе с каким сервисом нужно сделать
-          интеграцию {{ product.name }} (на данный момент доступно
-          {{ product.amount }} готовых коннекторов)
+          интеграцию {{ product1.name }} (на данный момент доступно
+          {{ product1.amount }} готовых коннекторов)
         </li>
         <li>Выбираете какие данные из одной системы передавать в другую</li>
         <li>Включаете автообновление</li>
@@ -166,7 +166,7 @@
     <details>
       <summary>
         <span></span>
-        <p>Сколько стоит интеграция {{product.name}} с другими системами?</p>
+        <p>Сколько стоит интеграция {{product1.name}} с другими системами?</p>
       </summary>
       <p class="answer">
         За саму интеграцию ничего платить не нужно и на всех тарифах доступен
@@ -180,19 +180,19 @@
     <details>
       <summary>
         <span></span>
-        <p>Сколько готовых интеграций доступно для {{product.name}}?</p>
+        <p>Сколько готовых интеграций доступно для {{product1.name}}?</p>
       </summary>
       <p class="answer">
-        На данный момент у нас готово {{ product.amount }} интеграций
-        {{ product.name }} c другими системами
+        На данный момент у нас готово {{ product1.amount }} интеграций
+        {{ product1.name }} c другими системами
       </p>
     </details>
     <div class="about">
-      <h4 class="about_header">Информация об {{ product.name }}</h4>
-      <p>{{product.description}}</p>
+      <h4 class="about_header">Информация об {{ product1.name }}</h4>
+      <p>{{product1.description}}</p>
       <br />
       <p>
-        Подробнее о работе с <a href="#">{{ product.name }} API</a>
+        Подробнее о работе с <a href="#">{{ product1.name }} API</a>
       </p>
     </div>
     <div class="try_btn_container">

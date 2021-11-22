@@ -2,9 +2,8 @@
   <ul class="list" *ngFor="let system of systems; index as id">
     <li class="system_item">
       <span></span><a
-      routerLink="/product/{{system.title}}"
+      routerLink="/products/{{system.url}}"
       [title]="system.name + ' интеграция'"
-      (click)="addToIntegrationList(system)"
     >{{ system.name }}</a>
     </li>
   </ul>

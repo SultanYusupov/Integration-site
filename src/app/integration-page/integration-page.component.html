@@ -124,7 +124,7 @@
       </div>
       <ul class="lists" *ngIf="system2">
         <li class="system_item" *ngFor="let system of systems">
-          <span [style]="' background: url('+ system.icon +');' "></span><a routerLink="/product/{{system.title}}/{{system2.title}}" queryParamsHandling="merge" title='{{system.name}}' (click)="changeFirstSystem(system)">{{system.name}}</a>
+          <span [style]="' background: url('+ system.icon +');' "></span><a routerLink="/products/{{system.url}}/{{system2.url}}" queryParamsHandling="merge" title='{{system.name}}' (click)="changeSystem()">{{system.name}}</a>
         </li>
       </ul>
     </div>
@@ -136,7 +136,7 @@
       </div>
       <ul class="lists" *ngIf="system1">
         <li class="system_item" *ngFor="let system of systems">
-          <span [style]="' background: url('+ system.icon +') 0 0 no-repeat;' "></span><a routerLink="/product/{{system1.title}}/{{system.title}}" queryParamsHandling="merge" title='{{system.name}}' (click)="changeSecondSystem(system)">{{system.name}}</a>
+          <span [style]="' background: url('+ system.icon +') 0 0 no-repeat;' "></span><a routerLink="/products/{{system1.url}}/{{system.url}}" queryParamsHandling="merge" title='{{system.name}}' (click)="changeSystem()">{{system.name}}</a>
         </li>
       </ul>
     </div>

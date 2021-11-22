@@ -1,7 +1,7 @@
 export const systems = [
   {
     name: 'AgileCRM',
-    title: 'agilecrm',
+    url: 'agilecrm',
     image: 'https://apix-drive.com/ru/img/agilecrm_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=agilecrm.com',
     amount: 216,
@@ -14,7 +14,7 @@ export const systems = [
   },
   {
     name: 'Клиентикс',
-    title: 'klientiks',
+    url: 'klientiks',
     image: 'https://apix-drive.com/img/klientiks_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=klientiks.ru',
     amount: 238,
@@ -30,7 +30,7 @@ export const systems = [
   },
   {
     name: 'TurboSMS',
-    title: 'turbosms',
+    url: 'turbosms',
     image: 'https://apix-drive.com/img/turbosms_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=turbosms.ua',
     amount: 217,
@@ -44,7 +44,7 @@ export const systems = [
   },
   {
     name: '1000SMS',
-    title: '1000sms',
+    url: '1000sms',
     image: 'assets/images/1000sms_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=1000sms.ru',
     amount: 217,
@@ -56,7 +56,7 @@ export const systems = [
   },
   {
     name: 'AOL',
-    title: 'aol',
+    url: 'aol',
     image: 'assets/images/aol_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=aol.com',
     amount: 217,
@@ -69,7 +69,7 @@ export const systems = [
   },
   {
     name: 'Active Chat',
-    title: 'activechat',
+    url: 'activechat',
     image: 'assets/images/activechat_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=activechat.ai',
     amount: 238,
@@ -82,7 +82,7 @@ export const systems = [
   },
   {
     name: 'ActiveCampaign',
-    title: 'activecampaign',
+    url: 'activecampaign',
     image: 'assets/images/activecampaign_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=activecampaign.com',
     amount: 217,
@@ -90,7 +90,7 @@ export const systems = [
   },
   {
     name: 'Admitad',
-    title: 'admitad',
+    url: 'admitad',
     image: 'assets/images/admitad_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=admitad.com',
     amount: 238,
@@ -98,7 +98,7 @@ export const systems = [
   },
   {
     name: 'Aimylogic',
-    title: 'aimylogic',
+    url: 'aimylogic',
     image: 'assets/images/aimylogic_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=aimylogic.com',
     amount: 238,
@@ -106,7 +106,7 @@ export const systems = [
   },
   {
     name: 'Alloka',
-    title: 'alloka',
+    url: 'alloka',
     image: 'assets/images/alloka_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=alloka.ru',
     amount: 238,
@@ -114,7 +114,7 @@ export const systems = [
   },
   {
     name: 'AlohaSMS',
-    title: 'alohasms',
+    url: 'alohasms',
     image: 'assets/images/alohasms_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=alohasms.ru',
     amount: 217,
@@ -122,7 +122,7 @@ export const systems = [
   },
   {
     name: 'AlphaSMS',
-    title: 'alphasms',
+    url: 'alphasms',
     image: 'assets/images/alphasms_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=alphasms.ua',
     amount: 217,
@@ -130,7 +130,7 @@ export const systems = [
   },
   {
     name: 'AmoCRM',
-    title: 'amocrm',
+    url: 'amocrm',
     image: 'assets/images/amocrm_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=amocrm.ru',
     amount: 217,
@@ -138,7 +138,7 @@ export const systems = [
   },
   {
     name: 'Asana',
-    title: 'asana',
+    url: 'asana',
     image: 'assets/images/asana_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=asana.com',
     amount: 217,
@@ -146,7 +146,7 @@ export const systems = [
   },
   {
     name: 'Autopilot',
-    title: 'autopilot',
+    url: 'autopilot',
     image: 'assets/images/autopilot_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=autopilothq.com',
     amount: 217,
@@ -154,7 +154,7 @@ export const systems = [
   },
   {
     name: 'Avito',
-    title: 'avito',
+    url: 'avito',
     image: 'assets/images/avito_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=avito.ru',
     amount: 217,
@@ -162,7 +162,7 @@ export const systems = [
   },
   {
     name: 'Avochato',
-    title: 'avochato',
+    url: 'avochato',
     image: 'assets/images/avochato_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=avochato.com',
     amount: 217,
@@ -170,7 +170,7 @@ export const systems = [
   },
   {
     name: 'Aweber',
-    title: 'aweber',
+    url: 'aweber',
     image: 'assets/images/aweber_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=aweber.com',
     amount: 217,
@@ -178,7 +178,7 @@ export const systems = [
   },
   {
     name: 'BSG world',
-    title: 'bsg-world',
+    url: 'bsg-world',
     image: 'assets/images/bsg-world_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=bsg.world',
     amount: 217,
@@ -186,7 +186,7 @@ export const systems = [
   },
   {
     name: 'BYTEHAND',
-    title: 'bytehand',
+    url: 'bytehand',
     image: 'assets/images/bytehand_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=bytehand.com',
     amount: 217,
@@ -194,7 +194,7 @@ export const systems = [
   },
   {
     name: 'Benchmark Email',
-    title: 'benchmarkemail',
+    url: 'benchmarkemail',
     image: 'assets/images/benchmark-email_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=benchmarkemail.com',
     amount: 217,
@@ -202,7 +202,7 @@ export const systems = [
   },
   {
     name: 'BigQuery',
-    title: 'bigquery',
+    url: 'bigquery',
     image: 'assets/images/bigquery_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=cloud.google.com/bigquery',
     amount: 217,
@@ -210,7 +210,7 @@ export const systems = [
   },
   {
     name: 'Binotel',
-    title: 'binotel',
+    url: 'binotel',
     image: 'assets/images/binotel_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=binotel.ua',
     amount: 217,
@@ -218,7 +218,7 @@ export const systems = [
   },
   {
     name: 'Bloxy',
-    title: 'bloxy',
+    url: 'bloxy',
     image: 'assets/images/bloxy_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=bloxy.ru',
     amount: 217,
@@ -226,7 +226,7 @@ export const systems = [
   },
   {
     name: 'BotHelp',
-    title: 'bothelp',
+    url: 'bothelp',
     image: 'assets/images/bot-help_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=bothelp.io',
     amount: 238,
@@ -234,7 +234,7 @@ export const systems = [
   },
   {
     name: 'Botmother',
-    title: 'botmother',
+    url: 'botmother',
     image: 'assets/images/botmother_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=botmother.com',
     amount: 238,
@@ -242,7 +242,7 @@ export const systems = [
   },
   {
     name: 'Bpium',
-    title: 'bpium',
+    url: 'bpium',
     image: 'assets/images/bpium_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=www.bpium.ru',
     amount: 238,
@@ -250,7 +250,7 @@ export const systems = [
   },
   {
     name: 'BrandSMS',
-    title: 'brandsms',
+    url: 'brandsms',
     image: 'assets/images/brandsms_ru.png',
     icon: 'https://apix-drive.com/ru/img/brandsms_ru_icon.png',
     amount: 217,
@@ -258,7 +258,7 @@ export const systems = [
   },
   {
     name: 'Bukza',
-    title: 'bukza',
+    url: 'bukza',
     image: 'assets/images/bukza_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=bukza.ru',
     amount: 238,
@@ -266,7 +266,7 @@ export const systems = [
   },
   {
     name: 'BulkSMS',
-    title: 'bulksms',
+    url: 'bulksms',
     image: 'assets/images/bulksms_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=bulksms.com',
     amount: 217,
@@ -274,7 +274,7 @@ export const systems = [
   },
   {
     name: 'CLOFF',
-    title: 'cloff',
+    url: 'cloff',
     image: 'assets/images/cloff_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=cloff.ru',
     amount: 217,
@@ -282,7 +282,7 @@ export const systems = [
   },
   {
     name: 'CS-Cart',
-    title: 'cs-cart',
+    url: 'cs-cart',
     image: 'assets/images/cscart_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=www.cs-cart.ru',
     amount: 238,
@@ -290,7 +290,7 @@ export const systems = [
   },
   {
     name: 'CallKeeper',
-    title: 'callkeeper',
+    url: 'callkeeper',
     image: 'assets/images/callkeeper_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=callkeeper.ru',
     amount: 238,
@@ -298,7 +298,7 @@ export const systems = [
   },
   {
     name: 'CallTouch',
-    title: 'calltouch',
+    url: 'calltouch',
     image: 'assets/images/calltouch_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=www.calltouch.ru',
     amount: 238,
@@ -306,7 +306,7 @@ export const systems = [
   },
   {
     name: 'CallTrackingRU',
-    title: 'calltracking',
+    url: 'calltracking',
     image: 'assets/images/calltraking-ru_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=calltracking.ru',
     amount: 238,
@@ -314,7 +314,7 @@ export const systems = [
   },
   {
     name: 'CallbackHunter',
-    title: 'callbackhunter',
+    url: 'callbackhunter',
     image: 'assets/images/callbackhunter_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=callbackhunter.com',
     amount: 238,
@@ -322,7 +322,7 @@ export const systems = [
   },
   {
     name: 'Callcpa',
-    title: 'callcpa',
+    url: 'callcpa',
     image: 'assets/images/callpca_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=callcpa.ru',
     amount: 238,
@@ -330,7 +330,7 @@ export const systems = [
   },
   {
     name: 'Callibri',
-    title: 'callibri',
+    url: 'callibri',
     image: 'assets/images/callibri_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=callibri.ru',
     amount: 238,
@@ -338,7 +338,7 @@ export const systems = [
   },
   {
     name: 'Carrot quest',
-    title: 'carrotquest',
+    url: 'carrotquest',
     image: 'assets/images/carrotquest_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=carrotquest.io',
     amount: 238,
@@ -346,7 +346,7 @@ export const systems = [
   },
   {
     name: 'CartProtector',
-    title: 'cartprotector',
+    url: 'cartprotector',
     image: 'assets/images/cartprotector_ru.png',
     icon: 'assets/images/cartprotector_ru_icon.png',
     amount: 238,
@@ -354,7 +354,7 @@ export const systems = [
   },
   {
     name: 'ChatForma',
-    title: 'chatforma',
+    url: 'chatforma',
     image: 'assets/images/chatforma_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=chatforma.com',
     amount: 238,
@@ -362,7 +362,7 @@ export const systems = [
   },
   {
     name: 'Chatfuel',
-    title: 'chatfuel',
+    url: 'chatfuel',
     image: 'assets/images/chatfuel_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=chatfuel.com',
     amount: 238,
@@ -370,7 +370,7 @@ export const systems = [
   },
   {
     name: 'Chatra',
-    title: 'chatra',
+    url: 'chatra',
     image: 'assets/images/chatra_ru.png',
     icon: 'assets/images/chatra_ru_icon.png',
     amount: 238,
@@ -378,7 +378,7 @@ export const systems = [
   },
   {
     name: 'ClickSend',
-    title: 'clicksend',
+    url: 'clicksend',
     image: 'assets/images/clicksend_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=clicksend.com',
     amount: 217,
@@ -386,7 +386,7 @@ export const systems = [
   },
   {
     name: 'ClickUp',
-    title: 'clickup',
+    url: 'clickup',
     image: 'assets/images/clickup_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=clickup.com',
     amount: 217,
@@ -394,7 +394,7 @@ export const systems = [
   },
   {
     name: 'Constant Contact',
-    title: 'constantcontact',
+    url: 'constantcontact',
     image: 'assets/images/constant-contact_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=constantcontact.com',
     amount: 217,
@@ -402,7 +402,7 @@ export const systems = [
   },
   {
     name: 'Contact Form 7',
-    title: 'contactform7',
+    url: 'contactform7',
     image: 'assets/images/contact-form7_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=contactform7.com',
     amount: 238,
@@ -410,7 +410,7 @@ export const systems = [
   },
   {
     name: 'ConvertKit',
-    title: 'convertkit',
+    url: 'convertkit',
     image: 'assets/images/convertkit_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=convertkit.com',
     amount: 217,
@@ -418,7 +418,7 @@ export const systems = [
   },
   {
     name: 'Copper',
-    title: 'copper',
+    url: 'copper',
     image: 'assets/images/copper_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=copper.com',
     amount: 217,
@@ -426,7 +426,7 @@ export const systems = [
   },
   {
     name: 'Corezoid',
-    title: 'corezoid',
+    url: 'corezoid',
     image: 'assets/images/corezoid_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=corezoid.com',
     amount: 217,
@@ -435,7 +435,7 @@ export const systems = [
   },
   {
     name: 'Creatio',
-    title: 'creatio',
+    url: 'creatio',
     image: 'assets/images/creatio_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=creatio.com',
     amount: 217,
@@ -444,7 +444,7 @@ export const systems = [
   },
   {
     name: 'Creatium',
-    title: 'creatium',
+    url: 'creatium',
     image: 'assets/images/creatium_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=creatium.io',
     amount: 238,
@@ -453,7 +453,7 @@ export const systems = [
   },
   {
     name: 'Criteo',
-    title: 'criteo',
+    url: 'criteo',
     image: 'assets/images/criteo_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=criteo.com',
     amount: 238,
@@ -462,7 +462,7 @@ export const systems = [
   },
   {
     name: 'DC Lite',
-    title: 'dclite',
+    url: 'dclite',
     image: 'assets/images/dclite_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=dclite.ru',
     amount: 217,
@@ -471,7 +471,7 @@ export const systems = [
   },
   {
     name: 'DashaMail',
-    title: 'dashamail',
+    url: 'dashamail',
     image: 'assets/images/dashamail_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=dashamail.ru',
     amount: 217,
@@ -480,7 +480,7 @@ export const systems = [
   },
   {
     name: 'E-Autopay',
-    title: 'e-autopay',
+    url: 'e-autopay',
     image: 'assets/images/e-autopay_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=e-autopay.com',
     amount: 238,
@@ -489,7 +489,7 @@ export const systems = [
   },
   {
     name: 'Ecwid',
-    title: 'ecwid',
+    url: 'ecwid',
     image: 'assets/images/ecwid_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=ecwid.com',
     amount: 217,
@@ -498,7 +498,7 @@ export const systems = [
   },
   {
     name: 'Electronic Vostok',
-    title: 'e-vostok',
+    url: 'e-vostok',
     image: 'assets/images/e-vostok_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=http://e-vostok.ru',
     amount: 217,
@@ -507,7 +507,7 @@ export const systems = [
   },
   {
     name: 'Enquiz',
-    title: 'enquiz',
+    url: 'enquiz',
     image: 'assets/images/enquiz_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=enquiz.io',
     amount: 238,
@@ -516,7 +516,7 @@ export const systems = [
   },
   {
     name: 'EnvyCRM',
-    title: 'envybox',
+    url: 'envybox',
     image: 'assets/images/envycrm_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=envybox.io',
     amount: 217,
@@ -525,7 +525,7 @@ export const systems = [
   },
   {
     name: 'Envybox',
-    title: 'envybox',
+    url: 'envybox',
     image: 'assets/images/envybox_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=envybox.io',
     amount: 238,
@@ -534,7 +534,7 @@ export const systems = [
   },
   {
     name: 'Estismail',
-    title: 'estismail',
+    url: 'estismail',
     image: 'assets/images/estismail_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=estismail.com',
     amount: 217,
@@ -543,7 +543,7 @@ export const systems = [
   },
   {
     name: 'Evecalls',
-    title: 'evecalls',
+    url: 'evecalls',
     image: 'assets/images/evecalls_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=evecalls.com',
     amount: 217,
@@ -552,7 +552,7 @@ export const systems = [
   },
   {
     name: 'ExpertSender',
-    title: 'expertsender',
+    url: 'expertsender',
     image: 'assets/images/expertsender_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=expertsender.ru',
     amount: 217,
@@ -561,7 +561,7 @@ export const systems = [
   },
   {
     name: 'Facebook',
-    title: 'facebook',
+    url: 'facebook',
     image: 'assets/images/facebook_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=facebook.com',
     amount: 217,
@@ -570,7 +570,7 @@ export const systems = [
   },
   {
     name: 'FalconSender',
-    title: 'falconsender',
+    url: 'falconsender',
     image: 'assets/images/falconsender_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=falconsender.ru',
     amount: 217,
@@ -579,7 +579,7 @@ export const systems = [
   },
   {
     name: 'Feedgee',
-    title: 'feedgee',
+    url: 'feedgee',
     image: 'assets/images/feedgee_ru.png',
     icon: 'assets/images/feedgee_ru_icon.png',
     amount: 217,
@@ -588,7 +588,7 @@ export const systems = [
   },
   {
     name: 'Flexbe',
-    title: 'flexbe',
+    url: 'flexbe',
     image: 'assets/images/flexbe_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=flexbe.ru',
     amount: 238,
@@ -597,7 +597,7 @@ export const systems = [
   },
   {
     name: 'Fondy',
-    title: 'fondy',
+    url: 'fondy',
     image: 'assets/images/fondy_ru.png',
     icon: 'assets/images/fondy_ru_icon.png',
     amount: 238,
@@ -606,7 +606,7 @@ export const systems = [
   },
   {
     name: 'FormDesigner',
-    title: 'formdesigner',
+    url: 'formdesigner',
     image: 'assets/images/form-designer_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=formdesigner.ru',
     amount: 238,
@@ -615,7 +615,7 @@ export const systems = [
   },
   {
     name: 'FreshOffice',
-    title: 'freshoffice',
+    url: 'freshoffice',
     image: 'assets/images/freshoffice_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=freshoffice.ru',
     amount: 217,
@@ -624,7 +624,7 @@ export const systems = [
   },
   {
     name: 'Freshworks',
-    title: 'freshworks',
+    url: 'freshworks',
     image: 'assets/images/freshworks_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=freshworks.com',
     amount: 217,
@@ -633,7 +633,7 @@ export const systems = [
   },
   {
     name: 'GREENSMS',
-    title: 'greensms',
+    url: 'greensms',
     image: 'assets/images/greensms_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=greensms.ru',
     amount: 217,
@@ -642,7 +642,7 @@ export const systems = [
   },
   {
     name: 'GetCourse',
-    title: 'getcourse',
+    url: 'getcourse',
     image: 'assets/images/getcourse_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=getcourse.ru',
     amount: 217,
@@ -651,7 +651,7 @@ export const systems = [
   },
   {
     name: 'GetResponse',
-    title: 'getresponse',
+    url: 'getresponse',
     image: 'assets/images/getresponse_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=getresponse.com',
     amount: 217,
@@ -660,7 +660,7 @@ export const systems = [
   },
   {
     name: 'Gmail',
-    title: 'gmail',
+    url: 'gmail',
     image: 'assets/images/gmail_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=analytics.google.com',
     amount: 238,
@@ -669,7 +669,7 @@ export const systems = [
   },
   {
     name: 'GoReminders',
-    title: 'goreminders',
+    url: 'goreminders',
     image: 'assets/images/goreminders_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=goreminders.com',
     amount: 217,
@@ -678,7 +678,7 @@ export const systems = [
   },
   {
     name: 'Google Ads',
-    title: 'google-ads',
+    url: 'google-ads',
     image: 'assets/images/google-ads_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=analytics.google.com',
     amount: 217,
@@ -687,7 +687,7 @@ export const systems = [
   },
   {
     name: 'Google Analytics',
-    title: 'google-analytics',
+    url: 'google-analytics',
     image: 'assets/images/google-analytics_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=analytics.google.com',
     amount: 217,
@@ -696,7 +696,7 @@ export const systems = [
   },
   {
     name: 'Google Calendar',
-    title: 'google-calendar',
+    url: 'google-calendar',
     image: 'assets/images/google-calendar_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=analytics.google.com',
     amount: 217,
@@ -705,7 +705,7 @@ export const systems = [
   },
   {
     name: 'Google Contacts',
-    title: 'google-contacts',
+    url: 'google-contacts',
     image: 'assets/images/google-contacts_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=analytics.google.com',
     amount: 217,
@@ -714,7 +714,7 @@ export const systems = [
   },
   {
     name: 'Google Lead Form',
-    title: 'google-lead-form',
+    url: 'google-lead-form',
     image: 'assets/images/google-lead-form_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=analytics.google.com',
     amount: 238,
@@ -723,7 +723,7 @@ export const systems = [
   },
   {
     name: 'Google Sheets',
-    title: 'google-sheets',
+    url: 'google-sheets',
     image: 'assets/images/google-sheets_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=analytics.google.com',
     amount: 217,
@@ -732,7 +732,7 @@ export const systems = [
   },
   {
     name: 'Horoshop',
-    title: 'horoshop',
+    url: 'horoshop',
     image: 'assets/images/horoshop_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=horoshop.ua',
     amount: 238,
@@ -741,7 +741,7 @@ export const systems = [
   },
   {
     name: 'Hotline',
-    title: 'hotline',
+    url: 'hotline',
     image: 'assets/images/hotline_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=hotline.ua',
     amount: 238,
@@ -750,7 +750,7 @@ export const systems = [
   },
   {
     name: 'Hubspot',
-    title: 'hubspot',
+    url: 'hubspot',
     image: 'assets/images/hubspot_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=hubspot.com',
     amount: 217,
@@ -759,7 +759,7 @@ export const systems = [
   },
   {
     name: 'INBOX.LV',
-    title: 'inbox-lv',
+    url: 'inbox-lv',
     image: 'assets/images/inbox-lv_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=inbox.lv',
     amount: 217,
@@ -768,7 +768,7 @@ export const systems = [
   },
   {
     name: 'Imobis',
-    title: 'imobis',
+    url: 'imobis',
     image: 'assets/images/imobis_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=imobis.ru',
     amount: 217,
@@ -777,7 +777,7 @@ export const systems = [
   },
   {
     name: 'InSales',
-    title: 'insales',
+    url: 'insales',
     image: 'assets/images/insales_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=www.insales.ru',
     amount: 217,
@@ -786,7 +786,7 @@ export const systems = [
   },
   {
     name: 'Intel Telecom',
-    title: 'intel-telecom',
+    url: 'intel-telecom',
     image: 'assets/images/intel-tele_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=intel-tele.com',
     amount: 217,
@@ -795,7 +795,7 @@ export const systems = [
   },
   {
     name: 'Intercom',
-    title: 'intercom',
+    url: 'intercom',
     image: 'assets/images/intercom_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=intercom.com',
     amount: 217,
@@ -804,7 +804,7 @@ export const systems = [
   },
   {
     name: 'Intrum',
-    title: 'intrumnet',
+    url: 'intrumnet',
     image: 'assets/images/intrum_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=intrumnet.com',
     amount: 238,
@@ -813,7 +813,7 @@ export const systems = [
   },
   {
     name: 'Jira Serviсe Desk',
-    title: 'jira-service-desk',
+    url: 'jira-service-desk',
     image: 'assets/images/jira-service-desk_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=atlassian.com/ru/software/jira/service-desk',
     amount: 217,
@@ -822,7 +822,7 @@ export const systems = [
   },
   {
     name: 'Jira Software Cloud',
-    title: 'jira',
+    url: 'jira',
     image: 'assets/images/jira_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=atlassian.com/ru/software/jira/service-desk',
     amount: 217,
@@ -831,7 +831,7 @@ export const systems = [
   },
   {
     name: 'Jivosite',
-    title: 'jivosite',
+    url: 'jivosite',
     image: 'assets/images/jivosite_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=jivochat.com',
     amount: 238,
@@ -840,7 +840,7 @@ export const systems = [
   },
   {
     name: 'JustClick',
-    title: 'justclick',
+    url: 'justclick',
     image: 'assets/images/justclick_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=justclick.ru',
     amount: 238,
@@ -849,7 +849,7 @@ export const systems = [
   },
   {
     name: 'Justin',
-    title: 'justin',
+    url: 'justin',
     image: 'assets/images/justin_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=justin.ua',
     amount: 217,
@@ -858,7 +858,7 @@ export const systems = [
   },
   {
     name: 'Kupisms',
-    title: 'kupisms',
+    url: 'kupisms',
     image: 'assets/images/kupisms_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=kupisms.ru',
     amount: 217,
@@ -867,7 +867,7 @@ export const systems = [
   },
   {
     name: 'LP-CRM',
-    title: 'lp-crm_',
+    url: 'lp-crm_',
     image: 'assets/images/lp-crm_ru.png',
     icon: 'assets/images/lp-crm_ru_icon.png',
     amount: 217,
@@ -876,7 +876,7 @@ export const systems = [
   },
   {
     name: 'LPMotor',
-    title: 'lpmotor',
+    url: 'lpmotor',
     image: 'assets/images/lpmotor_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=lpmotor.ru',
     amount: 238,
@@ -885,7 +885,7 @@ export const systems = [
   },
   {
     name: 'LPgenerator',
-    title: 'lpgenerator',
+    url: 'lpgenerator',
     image: 'assets/images/lpgenerator_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=lpgenerator.ru',
     amount: 238,
@@ -894,7 +894,7 @@ export const systems = [
   },
   {
     name: 'Lamoda',
-    title: 'lamoda',
+    url: 'lamoda',
     image: 'assets/images/lamoda_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=lamoda.ru',
     amount: 217,
@@ -903,7 +903,7 @@ export const systems = [
   },
   {
     name: 'Landingi',
-    title: 'landingi',
+    url: 'landingi',
     image: 'assets/images/landingi_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=landingi.com',
     amount: 238,
@@ -912,7 +912,7 @@ export const systems = [
   },
   {
     name: 'LeadBack',
-    title: 'leadback',
+    url: 'leadback',
     image: 'assets/images/leadback_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=leadback.ru',
     amount: 238,
@@ -921,7 +921,7 @@ export const systems = [
   },
   {
     name: 'LeadForms',
-    title: 'leadforms',
+    url: 'leadforms',
     image: 'assets/images/leadforms_ru.png',
     icon: 'assets/images/leadforms_ru_icon.png',
     amount: 238,
@@ -930,7 +930,7 @@ export const systems = [
   },
   {
     name: 'Leeloo',
-    title: 'leeloo',
+    url: 'leeloo',
     image: 'assets/images/leeloo_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=leeloo.ai',
     amount: 238,
@@ -939,7 +939,7 @@ export const systems = [
   },
   {
     name: 'LetsAds',
-    title: 'letsads',
+    url: 'letsads',
     image: 'assets/images/letsads_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=letsads.com',
     amount: 217,
@@ -948,7 +948,7 @@ export const systems = [
   },
   {
     name: 'LiqPay',
-    title: 'liqpay',
+    url: 'liqpay',
     image: 'assets/images/liqpay_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=liqpay.ua',
     amount: 217,
@@ -957,7 +957,7 @@ export const systems = [
   },
   {
     name: 'Livetex',
-    title: 'livetex',
+    url: 'livetex',
     image: 'assets/images/_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=livetex.ru',
     amount: 238,
@@ -966,7 +966,7 @@ export const systems = [
   },
   {
     name: 'MCN Telecom',
-    title: 'mcn',
+    url: 'mcn',
     image: 'assets/images/mcn_ru.png',
     icon: 'assets/images/mcn_ru_icon.png',
     amount: 238,
@@ -975,7 +975,7 @@ export const systems = [
   },
   {
     name: 'MIRSMS.RU',
-    title: 'mirsms',
+    url: 'mirsms',
     image: 'assets/images/mirsms_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mirsms.ru',
     amount: 217,
@@ -984,7 +984,7 @@ export const systems = [
   },
   {
     name: 'MSG91',
-    title: 'msg91',
+    url: 'msg91',
     image: 'assets/images/msg91_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=msg91.com',
     amount: 217,
@@ -993,7 +993,7 @@ export const systems = [
   },
   {
     name: 'Mail.ru',
-    title: 'mail-ru',
+    url: 'mail-ru',
     image: 'assets/images/mail-ru_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mail.ru',
     amount: 217,
@@ -1002,7 +1002,7 @@ export const systems = [
   },
   {
     name: 'Mail365',
-    title: 'mail365',
+    url: 'mail365',
     image: 'assets/images/mail365_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mail365.ru',
     amount: 217,
@@ -1011,7 +1011,7 @@ export const systems = [
   },
   {
     name: 'Mailchimp',
-    title: 'mailchimp',
+    url: 'mailchimp',
     image: 'assets/images/mailchimp_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mailchimp.com',
     amount: 217,
@@ -1020,7 +1020,7 @@ export const systems = [
   },
   {
     name: 'MailerLite',
-    title: '',
+    url: '',
     image: 'assets/images/mailerlite_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mailerlite.com',
     amount: 217,
@@ -1029,7 +1029,7 @@ export const systems = [
   },
   {
     name: 'Mailganer',
-    title: 'mailganer',
+    url: 'mailganer',
     image: 'assets/images/mailganer_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mailganer.com',
     amount: 217,
@@ -1038,7 +1038,7 @@ export const systems = [
   },
   {
     name: 'Mailgun',
-    title: 'mailgun',
+    url: 'mailgun',
     image: 'assets/images/mailgun_ru.png',
     icon: 'assets/images/mailgun_ru_icon.png',
     amount: 217,
@@ -1047,7 +1047,7 @@ export const systems = [
   },
   {
     name: 'Mailigen',
-    title: 'mailigen',
+    url: 'mailigen',
     image: 'assets/images/mailigen_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mailigen.com',
     amount: 238,
@@ -1056,7 +1056,7 @@ export const systems = [
   },
   {
     name: 'Mailjet',
-    title: 'mailjet',
+    url: 'mailjet',
     image: 'assets/images/mailjet_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mailjet.com',
     amount: 217,
@@ -1065,7 +1065,7 @@ export const systems = [
   },
   {
     name: 'Mailo Post',
-    title: 'mailopost',
+    url: 'mailopost',
     image: 'assets/images/mailopost_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mailopost.ru',
     amount: 217,
@@ -1074,7 +1074,7 @@ export const systems = [
   },
   {
     name: 'MangoOffice',
-    title: 'mango-office',
+    url: 'mango-office',
     image: 'assets/images/mango-office_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mango-office.ru',
     amount: 238,
@@ -1083,7 +1083,7 @@ export const systems = [
   },
   {
     name: 'ManyChat',
-    title: 'manychat',
+    url: 'manychat',
     image: 'assets/images/manychat_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=manychat.com',
     amount: 284,
@@ -1092,7 +1092,7 @@ export const systems = [
   },
   {
     name: 'Marquiz',
-    title: '',
+    url: '',
     image: 'assets/images/marquiz_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=marquiz.ru',
     amount: 238,
@@ -1101,7 +1101,7 @@ export const systems = [
   },
   {
     name: 'MassDelivery',
-    title: 'massdelivery',
+    url: 'massdelivery',
     image: 'assets/images/massdelivery_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=massdelivery.ru',
     amount: 217,
@@ -1110,7 +1110,7 @@ export const systems = [
   },
   {
     name: 'Meistertask',
-    title: 'meistertask',
+    url: 'meistertask',
     image: 'assets/images/meistertask_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=meistertask.com',
     amount: 217,
@@ -1119,7 +1119,7 @@ export const systems = [
   },
   {
     name: 'MessageBird',
-    title: 'messagebird',
+    url: 'messagebird',
     image: 'assets/images/messagebird_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=messagebird.com',
     amount: 217,
@@ -1128,7 +1128,7 @@ export const systems = [
   },
   {
     name: 'Messaggio',
-    title: 'messaggio',
+    url: 'messaggio',
     image: 'assets/images/messaggio_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=messaggio.com',
     amount: 217,
@@ -1137,7 +1137,7 @@ export const systems = [
   },
   {
     name: 'Messedo',
-    title: '',
+    url: '',
     image: 'assets/images/messedo_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=messedo.com',
     amount: 217,
@@ -1146,7 +1146,7 @@ export const systems = [
   },
   {
     name: 'Messente',
-    title: 'messente',
+    url: 'messente',
     image: 'assets/images/messente_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=messente.com',
     amount: 217,
@@ -1155,7 +1155,7 @@ export const systems = [
   },
   {
     name: 'Microsoft Outlook',
-    title: 'outlook',
+    url: 'outlook',
     image: 'assets/images/outlook_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=outlook.live.com',
     amount: 217,
@@ -1164,7 +1164,7 @@ export const systems = [
   },
   {
     name: 'Mobile Text Alerts',
-    title: 'mobile-text-alerts',
+    url: 'mobile-text-alerts',
     image: 'assets/images/mobile-text-alerts_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mobile-text-alerts.com',
     amount: 217,
@@ -1173,7 +1173,7 @@ export const systems = [
   },
   {
     name: 'Mobiniti',
-    title: 'mobiniti',
+    url: 'mobiniti',
     image: 'assets/images/mobiniti_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mobiniti.com',
     amount: 217,
@@ -1182,7 +1182,7 @@ export const systems = [
   },
   {
     name: 'Mobizon',
-    title: 'mobizon',
+    url: 'mobizon',
     image: 'assets/images/mobizon_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mobizon.ua',
     amount: 217,
@@ -1191,7 +1191,7 @@ export const systems = [
   },
   {
     name: 'Mobizon',
-    title: 'mobizon',
+    url: 'mobizon',
     image: 'assets/images/mobizon_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mobizon.ua',
     amount: 217,
@@ -1200,7 +1200,7 @@ export const systems = [
   },
   {
     name: 'Moclients',
-    title: 'moclients',
+    url: 'moclients',
     image: 'assets/images/moclients_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=moclients.com',
     amount: 238,
@@ -1209,7 +1209,7 @@ export const systems = [
   },
   {
     name: 'Monday.com',
-    title: 'monday-com',
+    url: 'monday-com',
     image: 'assets/images/monday-com_ru.png',
     icon: 'assets/images/monday-com_ru_icon.png',
     amount: 217,
@@ -1218,7 +1218,7 @@ export const systems = [
   },
   {
     name: 'Monster Leads',
-    title: 'monsterleads',
+    url: 'monsterleads',
     image: 'assets/images/monster-leads_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=monsterleads.pro',
     amount: 238,
@@ -1227,7 +1227,7 @@ export const systems = [
   },
   {
     name: 'MoonMail',
-    title: 'moonmail',
+    url: 'moonmail',
     image: 'assets/images/moonmail_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=moonmail.io',
     amount: 217,
@@ -1236,7 +1236,7 @@ export const systems = [
   },
   {
     name: 'Moosend',
-    title: 'moosend',
+    url: 'moosend',
     image: 'assets/images/moosend_ru.png',
     icon: 'assets/images/moosend_ru_icon.png',
     amount: 217,
@@ -1245,7 +1245,7 @@ export const systems = [
   },
   {
     name: 'MySQL',
-    title: 'mysql',
+    url: 'mysql',
     image: 'assets/images/mysql_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=mysql.com',
     amount: 217,
@@ -1254,7 +1254,7 @@ export const systems = [
   },
   {
     name: 'Nadavi',
-    title: 'nadavi',
+    url: 'nadavi',
     image: 'assets/images/nadavi_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=nadavi.net',
     amount: 238,
@@ -1263,7 +1263,7 @@ export const systems = [
   },
   {
     name: 'Nethouse.События',
-    title: 'nethouse',
+    url: 'nethouse',
     image: 'assets/images/nethouse_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=nethouse.ua',
     amount: 238,
@@ -1272,7 +1272,7 @@ export const systems = [
   },
   {
     name: 'New-Tel',
-    title: 'new-tel',
+    url: 'new-tel',
     image: 'assets/images/newtel_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=new-tel.net',
     amount: 238,
@@ -1281,7 +1281,7 @@ export const systems = [
   },
   {
     name: 'Nextel',
-    title: 'nextel',
+    url: 'nextel',
     image: 'assets/images/nextel_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=nextel.com.ua',
     amount: 238,
@@ -1290,7 +1290,7 @@ export const systems = [
   },
   {
     name: 'NotiSend',
-    title: 'notisend',
+    url: 'notisend',
     image: 'assets/images/notisend_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=notisend.ru',
     amount: 217,
@@ -1299,7 +1299,7 @@ export const systems = [
   },
   {
     name: 'Notion',
-    title: 'notion',
+    url: 'notion',
     image: 'assets/images/notion_ru.png',
     icon: 'assets/images/notion_ru_icon.png',
     amount: 217,
@@ -1308,7 +1308,7 @@ export const systems = [
   },
   {
     name: 'OLX',
-    title: 'olx',
+    url: 'olx',
     image: 'assets/images/olx_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=www.olx.ua',
     amount: 217,
@@ -1317,7 +1317,7 @@ export const systems = [
   },
   {
     name: 'Omnicell',
-    title: 'omnicell',
+    url: 'omnicell',
     image: 'assets/images/omnicell_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=omnicell.com.ua',
     amount: 217,
@@ -1326,7 +1326,7 @@ export const systems = [
   },
   {
     name: 'OneBox',
-    title: 'crm-onebox',
+    url: 'crm-onebox',
     image: 'assets/images/crm-onebox_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=crm-onebox.com',
     amount: 217,
@@ -1335,7 +1335,7 @@ export const systems = [
   },
   {
     name: 'Online-sms.pro',
-    title: 'online-sms-pro',
+    url: 'online-sms-pro',
     image: 'assets/images/online-sms-pro_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=online-sms.pro',
     amount: 217,
@@ -1344,7 +1344,7 @@ export const systems = [
   },
   {
     name: 'OnlinePBX',
-    title: 'onlinepbx',
+    url: 'onlinepbx',
     image: 'assets/images/onlinepbx_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=www.onlinepbx.ru',
     amount: 238,
@@ -1353,7 +1353,7 @@ export const systems = [
   },
   {
     name: 'Ontraport',
-    title: 'ontraport',
+    url: 'ontraport',
     image: 'assets/images/ontraport_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=ontraport.com',
     amount: 217,
@@ -1362,7 +1362,7 @@ export const systems = [
   },
   {
     name: 'Opencart',
-    title: 'opencart',
+    url: 'opencart',
     image: 'assets/images/opencart_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=www.opencart.com',
     amount: 217,
@@ -1371,7 +1371,7 @@ export const systems = [
   },
   {
     name: 'P1SMS',
-    title: 'p1sms',
+    url: 'p1sms',
     image: 'assets/images/p1sms_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=p1sms.ru',
     amount: 217,
@@ -1380,7 +1380,7 @@ export const systems = [
   },
   {
     name: 'PDL-profit',
-    title: 'pdl-profit',
+    url: 'pdl-profit',
     image: 'assets/images/pdl-profit_ru.png',
     icon: 'assets/images/pdl-profit_ru_icon.png',
     amount: 217,
@@ -1389,7 +1389,7 @@ export const systems = [
   },
   {
     name: 'Pact',
-    title: 'pact',
+    url: 'pact',
     image: 'assets/images/pact_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=pact.im',
     amount: 238,
@@ -1398,7 +1398,7 @@ export const systems = [
   },
   {
     name: 'Perezvoni',
-    title: 'perezvoni',
+    url: 'perezvoni',
     image: 'assets/images/perezvoni_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=perezvoni.com',
     amount: 238,
@@ -1407,7 +1407,7 @@ export const systems = [
   },
   {
     name: 'Phonet',
-    title: 'phonet',
+    url: 'phonet',
     image: 'assets/images/phonet_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=phonet.com.ua',
     amount: 238,
@@ -1416,7 +1416,7 @@ export const systems = [
   },
   {
     name: 'Pipedrive',
-    title: 'pipedrive',
+    url: 'pipedrive',
     image: 'assets/images/pipedrive_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=pipedrive.com',
     amount: 217,
@@ -1425,7 +1425,7 @@ export const systems = [
   },
   {
     name: 'Planfix',
-    title: 'planfix',
+    url: 'planfix',
     image: 'assets/images/planfix_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=planfix.ru',
     amount: 217,
@@ -1434,7 +1434,7 @@ export const systems = [
   },
   {
     name: 'PlatformaLP',
-    title: 'platformalp',
+    url: 'platformalp',
     image: 'assets/images/platformalp_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=platformalp.ru',
     amount: 238,
@@ -1443,7 +1443,7 @@ export const systems = [
   },
   {
     name: 'Portmone',
-    title: 'portmone',
+    url: 'portmone',
     image: 'assets/images/portmone_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=portmone.com.ua',
     amount: 217,
@@ -1452,7 +1452,7 @@ export const systems = [
   },
   {
     name: 'PostgreSQL',
-    title: 'postgresql',
+    url: 'postgresql',
     image: 'assets/images/postgresql_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=postgresql.org',
     amount: 217,
@@ -1461,7 +1461,7 @@ export const systems = [
   },
   {
     name: 'PotokSMS',
-    title: 'potoksms',
+    url: 'potoksms',
     image: 'assets/images/potoksms_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=potoksms.ru',
     amount: 217,
@@ -1470,7 +1470,7 @@ export const systems = [
   },
   {
     name: 'PrestaShop',
-    title: 'prestashop',
+    url: 'prestashop',
     image: 'assets/images/prestashop_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=prestashop.com',
     amount: 217,
@@ -1479,7 +1479,7 @@ export const systems = [
   },
   {
     name: 'Prom',
-    title: 'prom',
+    url: 'prom',
     image: 'assets/images/prom_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=prom.ua',
     amount: 217,
@@ -1488,7 +1488,7 @@ export const systems = [
   },
   {
     name: 'ProstoSMS',
-    title: 'prostosms',
+    url: 'prostosms',
     image: 'assets/images/prostosms_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=sms-prosto.ru',
     amount: 217,
@@ -1497,7 +1497,7 @@ export const systems = [
   },
   {
     name: 'Prostor SMS',
-    title: 'prostor-sms',
+    url: 'prostor-sms',
     image: 'assets/images/prostor-sms_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=prostor-sms.ru',
     amount: 217,
@@ -1506,7 +1506,7 @@ export const systems = [
   },
   {
     name: 'ProveSource',
-    title: 'provesrc',
+    url: 'provesrc',
     image: 'assets/images/provesource_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=provesrc.com',
     amount: 217,
@@ -1515,7 +1515,7 @@ export const systems = [
   },
   {
     name: 'PushSMS',
-    title: 'pushsms',
+    url: 'pushsms',
     image: 'assets/images/pushsms_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=pushsms.ru',
     amount: 217,
@@ -1524,7 +1524,7 @@ export const systems = [
   },
   {
     name: 'Puzzlebot',
-    title: 'puzzlebot',
+    url: 'puzzlebot',
     image: 'assets/images/puzzlebot_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=puzzlebot.top',
     amount: 238,
@@ -1533,7 +1533,7 @@ export const systems = [
   },
   {
     name: 'Pyrus',
-    title: 'pyrus',
+    url: 'pyrus',
     image: 'assets/images/pyrus_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=pyrus.com',
     amount: 217,
@@ -1542,7 +1542,7 @@ export const systems = [
   },
   {
     name: 'QuizGO',
-    title: 'quizgo',
+    url: 'quizgo',
     image: 'assets/images/quizgo_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=quizgo.ru',
     amount: 238,
@@ -1552,7 +1552,7 @@ export const systems = [
   /*
   {
     name: '',
-    title: '',
+    url: '',
     image: 'assets/images/_ru.png',
     icon: '',
     amount: ,

@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class IntegrationService {
   items: any[] = []; // сюда будут добавляться системы, которые выбрали
+
   addToIntegrationList(system: any) {
     this.items.push(system);
   }
@@ -21,5 +22,7 @@ export class IntegrationService {
     this.items.pop();
     this.items.push(s);
   }
+
+
   constructor() { }
 }

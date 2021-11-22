@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { systems } from '../systems';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IntegrationService } from '../integration.service';
 import { Title, Meta } from '@angular/platform-browser';
 
@@ -13,15 +13,26 @@ export class SingleSystemComponent implements OnInit {
   title: any; // мета тег <title>
   systems = systems; // for routerLink in <li> of AgileComponent. It was originally
   system: any; // for parameters below. for TurboComponent
-  product: any; // for AgileComponent
-  idNumber: any;
+  product1: any; // for AgileComponent
+  numberId: any;
   constructor(private route: ActivatedRoute,
-              private integrationService: IntegrationService,
+              private router: Router,
+              public integrationService: IntegrationService,
               private titleService: Title,
-              private metaTagService: Meta) { }
+              private metaTagService: Meta,
+              ) {
+    this.route.paramMap.subscribe((params) => {
+      // this.product = params.get('id1');
+      this.numberId = systems.findIndex((el) => {
+        return el.url == params.get('id1');
+      });
+
+      this.product1 = this.systems[this.numberId];
+    });
+  }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
+    /* this.route.params.subscribe(params => {
       // в значение params записывается то, что мы писали в routerLink="/product/{{system.title}}" из main-page.component.html
       this.idNumber = systems.findIndex((el, val)=>{
         return el.title == params['id']; // по свойству title ищем индекс элемента
@@ -31,18 +42,19 @@ export class SingleSystemComponent implements OnInit {
       this.title = `${this.product.name} интеграция, Автоматизация за 5 минут`; // мета тег <title>
       // this.system = +params['id'];
       // this.product = systems[this.system];
-    })
+    }) */
 
 
     this.titleService.setTitle(this.title);
     this.metaTagService.updateTag(
-      { name: 'description', content: `Нужно объединить ${this.product.name} с другими системами? Наш сайт позволяет самостоятельно интегрировать и автоматизировать бизнес процессы` },
+      { name: 'description', content: `Нужно объединить ${this.product1.name} с другими системами? Наш сайт позволяет самостоятельно интегрировать и автоматизировать бизнес процессы` },
     );
     this.metaTagService.updateTag(
-      { name: 'keywords', content: `${this.product.name}, ${this.product.name} интеграция, ${this.product.name} автоматизация` }
+      { name: 'keywords', content: `${this.product1.name}, ${this.product1.name} интеграция, ${this.product1.name} автоматизация` }
     );
   }
-  addToEndList(i: any) {
+
+  /* addToEndList(i: any) {
     this.integrationService.addToIntegrationList(i);
-  }
+  }*/
 }
