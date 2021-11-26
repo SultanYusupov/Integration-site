@@ -68,22 +68,20 @@
     Создайте интеграцию {{system1.name}} и {{system2.name}} самостоятельно, без программистов
   </h1>
 </div>
-<div class="settings_container">
+<!--<div class="settings_container">
   <div class="data_source">
     <h2>Откуда</h2>
     <div class="control system">
       <select>
-        <option>-выберите систему-</option>
-        <option>Agile CRM</option>
-        <option>Битрикс24</option>
-        <option selected>Клиентикс</option>
+        <option *ngFor="let system of systems" [value]="system.name" [selected]="system1.name == system.name ? system1.name: ''">{{system.name}}</option>
       </select>
     </div>
     <div class="control action">
       <select>
+        <option selected>-</option>
         <option>Загрузить компании (новые)</option>
         <option>Загрузить контакты (новые)</option>
-        <option selected>Получить данные</option>
+        <option>Получить данные</option>
       </select>
     </div>
   </div>
@@ -92,35 +90,31 @@
     <h2>Куда</h2>
     <div class="control system">
       <select>
-        <option>-выберите систему-</option>
-        <option>Agile CRM</option>
-        <option>Битрикс24</option>
-        <option selected>TurboSMS</option>
+        <option *ngFor="let system of systems" [value]="system.name" [selected]="system2.name == system.name ? system2.name: ''">{{system.name}}</option>
       </select>
     </div>
     <div class="control action">
       <select>
+        <option selected>-</option>
         <option>Добавить примечание к сделке</option>
         <option>Редактировать сделку</option>
-        <option selected>Отправить SMS</option>
+        <option>Отправить SMS</option>
       </select>
     </div>
   </div>
-</div>
+</div>-->
 <div class="continue_settings">
-  <p class="info">14 дней бесплатно</p>
   <a href="#" class="button settings_btn">Продолжить настройки</a>
 </div>
 
 <!--Список систем для интеграции-->
-<h1 class="header">Другие готовые интеграции</h1>
+<h1 class="header">Другие возможные интеграции</h1>
 <div class="container" *ngIf="system1">
-  <!--wrapper was here-->
   <div class="source">
     <div class="systems_list">
       <!--Список 1-->
       <div class="integrations_title">
-        {{system1.name}} <span>(197 готовых коннекторов)</span>
+        {{system1.name}} <span>({{system1.amount}} готовых коннекторов)</span>
       </div>
       <ul class="lists" *ngIf="system2">
         <li class="system_item" *ngFor="let system of systems">
@@ -132,7 +126,7 @@
     <div class="systems_list">
       <!--Список 2-->
       <div class="integrations_title" *ngIf="system2">
-        {{system2.name}} <span>(181 готовый коннектор)</span>
+        {{system2.name}} <span>({{system2.amount}} готовый коннектор)</span>
       </div>
       <ul class="lists" *ngIf="system1">
         <li class="system_item" *ngFor="let system of systems">
@@ -215,7 +209,7 @@
   </div>
 
   <!--Блок со статьями-->
-  <h3 class="new_articles">Наши статьи в блоге</h3>
+  <!--<h3 class="new_articles">Наши статьи в блоге</h3>
   <div class="articles">
     <article class="article">
       <div class="article_img img1"></div>
@@ -273,7 +267,7 @@
         <a href="" class="link">Читать далее &rarr;</a>
       </div>
     </article>
-  </div>
+  </div>-->
 </div>
 <div class="request">
   <h1 class="header">

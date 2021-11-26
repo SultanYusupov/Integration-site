@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { systems } from '../systems';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms';
 
 @Component({
   selector: 'app-single-system',
@@ -26,6 +27,7 @@ export class SingleSystemComponent implements OnInit {
       });
 
       this.product1 = this.systems[this.numberId];
+
     });
   }
 
@@ -39,5 +41,4 @@ export class SingleSystemComponent implements OnInit {
       { name: 'keywords', content: `${this.product1.name}, ${this.product1.name} интеграция, ${this.product1.name} автоматизация` }
     );
   }
-
 }

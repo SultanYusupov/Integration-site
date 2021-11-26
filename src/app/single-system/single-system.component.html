@@ -23,7 +23,7 @@
     </p>
   </div>
   <p class="subtitle">
-    Свяжите {{ product1.name }} с одной из <b>216</b> готовых систем за 5 минут,
+    Свяжите {{ product1.name }} с одной из <b>{{ product1.amount }}</b> готовых систем за 5 минут,
     без программистов. Готовы начать прямо сейчас?
   </p>
   <a href="#" title="Начать сейчас" class="button start_now_btn"
@@ -67,20 +67,18 @@
     Создайте интеграцию с {{ product1.name }} самостоятельно, без программистов
   </h1>
 </div>
-<div class="settings_container">
+<!-- <div class="settings_container">
   <div class="data_source">
     <h2>Откуда</h2>
-    <div class="control system">
+    <div class="control system" >
       <select>
-        <option>-выберите систему-</option>
-        <option selected>Agile CRM</option>
-        <option>Битрикс24</option>
+        <option *ngFor="let system of systems" [value]="system.name" [selected]="product1.name == system.name ? product1.name: ''">{{system.name}}</option>
       </select>
     </div>
     <div class="control action">
       <select>
-        <option>-выберите действие-</option>
-        <option selected>Загрузить компании (новые)</option>
+        <option selected>-</option>
+        <option>Загрузить компании (новые)</option>
         <option>Загрузить контакты (новые)</option>
       </select>
     </div>
@@ -90,28 +88,25 @@
     <h2>Куда</h2>
     <div class="control system">
       <select>
-        <option>-выберите систему-</option>
-        <option selected>Agile CRM</option>
-        <option>Битрикс24</option>
+        <option *ngFor="let system of systems" [value]="system.name" [selected]="product1.name == system.name ? product1.name: ''">{{system.name}}</option>
       </select>
     </div>
     <div class="control action">
       <select>
-        <option>-выберите действие-</option>
-        <option selected>Добавить примечание к сделке</option>
+        <option selected>-</option>
+        <option>Добавить примечание к сделке</option>
         <option>Редактировать сделку</option>
       </select>
     </div>
   </div>
-</div>
+</div>-->
 <div class="continue_settings">
-  <p class="info">14 дней бесплатно</p>
   <a href="#" class="button settings_btn">Продолжить настройки</a>
 </div>
 
 <!--Список систем для интеграции-->
 <div class="container">
-  <h1 class="header">Готовые интеграции</h1>
+  <h1 class="header">Возможные интеграции</h1>
   <div class="integrations_title">
     {{ product1.name }} <span>({{ product1.amount }} готовых коннекторов)</span>
   </div>
@@ -201,7 +196,7 @@
   </div>
 
   <!--Блок со статьями-->
-  <h3 class="new_articles">Наши статьи в блоге</h3>
+ <!--<h3 class="new_articles">Наши статьи в блоге</h3>
   <div class="articles">
     <article class="article">
       <div class="article_img img1"></div>
@@ -260,7 +255,8 @@
         <a href="" class="link">Читать далее &rarr;</a>
       </div>
     </article>
-  </div>
+  </div>-->
+
   <div class="request">
     <h1 class="header">
       Вы собственник или разработчик сервиса<br />
