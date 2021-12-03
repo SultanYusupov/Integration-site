@@ -24,11 +24,11 @@
     <a  *ngIf="system2" href="#" [title]="system2.name + 'интеграция'">{{system2.name}}</a> за 5 минут.
     Без программистов. Готовы начать прямо сейчас?
   </p>
-  <a href="#" title="Начать сейчас" class="button start_now_btn"
+  <a title="Начать сейчас" class="button start_now_btn" (click)="integrationService.clickEvent()"
   >Начать сейчас</a
   >
 </div>
-
+<app-pop-up [class.show]="integrationService.status" class="shadow"></app-pop-up>
 <!--Блок с инструкцией как интегрировать системы-->
 <div class="howto container" *ngIf="system1">
   <h1 class="header" *ngIf="system2">

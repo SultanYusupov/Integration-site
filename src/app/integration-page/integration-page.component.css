@@ -409,3 +409,6 @@ details[open] {
     width: calc(100% / 2 - 10px);
   }
 }
+.show {
+  display: none;
+}
