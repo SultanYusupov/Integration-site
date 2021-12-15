@@ -11,6 +11,12 @@ import { IntegrationPageComponent } from './integration-page/integration-page.co
 import { IntegrationService } from "./integration.service";
 import { PopUpComponent } from './pop-up/pop-up.component';
 
+import {BackendService} from './services/backend.service';
+import {SettingsService} from "./services/settings.service";
+import {SzgmDataService} from "./services/szgm-data.service";
+import {ApplicationService} from "./services/application.service";
+import {KpGeneratorService} from "./services/kp-generator.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +36,7 @@ import { PopUpComponent } from './pop-up/pop-up.component';
       {path: 'products/:id1/:id2', component: IntegrationPageComponent},
     ]),
   ],
-  providers: [IntegrationService],
+  providers: [IntegrationService, BackendService, SettingsService, SzgmDataService, ApplicationService, KpGeneratorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

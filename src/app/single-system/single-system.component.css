@@ -61,9 +61,7 @@ a {
 }
 .icon {
   display: block;
-  /*width: 60px;*/
   height: 75px;
-  /*background: url(/../../../assets/howto_icons.png) 0 0 no-repeat;*/
   font-size: 36px;
   color: #60bbb5;
   font-weight: 700;
@@ -97,7 +95,7 @@ a {
   font-family: Roboto, sans-serif;
   font-weight: 100;
 }
-.settings_container {
+/*.settings_container {
   width: 80%;
   border-radius: 10px;
   background: #ffffff;
@@ -171,13 +169,10 @@ a {
   line-height: 30px;
   font-weight: 500;
   color: #464a55;
-}
+}*/
 .continue_settings {
   text-align: center;
-  margin-bottom: 80px;
-}
-.continue_settings .info {
-  padding: 0 0 30px 0;
+  margin: 40px 0 60px 0;
 }
 .settings_btn {
   display: inline-block;
@@ -302,7 +297,7 @@ details[open] {
 }
 
 /*-------articles. Блок со статьями----------*/
-.new_articles {
+/*.new_articles {
   font-weight: bold;
   font-size: 24px;
   line-height: 100%;
@@ -367,7 +362,7 @@ details[open] {
 }
 .link:hover {
   text-decoration: underline;
-}
+}*/
 
 /*------request-------*/
 .request {
@@ -391,4 +386,8 @@ details[open] {
   .article {
     width: calc(100% / 2 - 10px);
   }
+}
+
+.show {
+  display: none;
 }

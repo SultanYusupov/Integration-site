@@ -1,5 +1,4 @@
-header {
-  /*background-color: #33205e;*/
+/* header {
   background-color: white;
   position: absolute;
   width: 100%;
@@ -39,7 +38,6 @@ header {
 }
 .log_in {
   padding: 8px 20px;
-  /*border: 2px solid #ffe131;*/
   border: 2px solid #e55749;
   border-radius: 5px;
   font-size: 15px;
@@ -137,7 +135,7 @@ header {
     position: absolute;
     right: 60px;
   }
-}
+}*/
 
 footer {
   background-color: #62a4a0;
@@ -148,12 +146,14 @@ footer {
 .footer_container {
   display: flex;
   justify-content: space-between;
-  align-content: center;
-}
-.footer_column {
-  display: flex;
   align-items: center;
+  min-height: 86px;
+  flex-wrap: wrap;
 }
+/*.footer_column {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*}*/
 .social_link {
   display: inline-block;
   width: 30px;
@@ -176,13 +176,13 @@ footer {
   font-weight: 400;
 }
 .social_media {
-  margin: 10px 0 0 -4px;
+  /*margin: 10px 0 0 -4px;*/
 }
 .footer_block {
-  display: flex;
-  flex-direction: column;
-  margin: 8px 0 0 94px;
-  align-content: center;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  margin-top: 8px;
+  align-items: center;
 }
 .footer_block p {
   color: #464a55;
@@ -190,8 +190,7 @@ footer {
   margin-bottom: 10px;
 }
 .footer_menu {
-  column-count: 2;
-  -webkit-column-count: 2;
+  margin-top: -20px;
 }
 .footer_menu a {
   color: white;
@@ -201,20 +200,26 @@ footer {
   list-style-position: inside;
 }
 .footer_menu li:not(first-child) {
-  padding-top: 8px;
+  /*padding-top: 8px;*/
+  padding-top: 12px;
 }
-@media screen and (max-width: 924px) {
+@media screen and (max-width: 786px) {
   .footer_menu {
-    column-count: auto;
-    -webkit-column-count: auto;
+    margin-top: 0;
   }
   .footer_block {
-    margin-left: 64px;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 459px) {
+  .social_media {
+    margin: 0;
   }
 }
 @media screen and (max-width: 692px) {
-  .footer_block {
-    margin-left: 24px;
+  .footer_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -256,10 +261,6 @@ footer {
   .subtitle {
     max-width: 220px;
   }
-}
-
-a {
-  color: #60bbb5;
 }
 
 /*------howto. Блок с инструкцией как интегрировать системы-----------*/

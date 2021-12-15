@@ -21,8 +21,7 @@
   <h1 class="title" *ngIf="system2">{{ system1.name }} + {{ system2.name }}</h1>
   <p class="subtitle">
     Свяжите <a *ngIf="system1" href="#" [title]="system1.name + 'интеграция'">{{system1.name}}</a> и
-    <a  *ngIf="system2" href="#" [title]="system2.name + 'интеграция'">{{system2.name}}</a> за 5 минут.
-    Без программистов. Готовы начать прямо сейчас?
+    <a  *ngIf="system2" href="#" [title]="system2.name + 'интеграция'">{{system2.name}}</a>. Готовы начать прямо сейчас?
   </p>
   <a title="Начать сейчас" class="button start_now_btn" (click)="integrationService.clickEvent()"
   >Начать сейчас</a
@@ -38,7 +37,7 @@
   <p class="info" *ngIf="system2">
     Теперь Вам не нужно привлекать программистов или интеграторов для
     автоматизации {{system1.name}} и {{system2.name}}. С нашим сайтом вы свяжете и
-    автоматизируете работу этих систем за 5 минут, самостоятельно.
+    автоматизируете работу этих двух систем.
   </p>
   <div class="instruction">
     <div class="step">
@@ -68,7 +67,7 @@
     Создайте интеграцию {{system1.name}} и {{system2.name}} самостоятельно, без программистов
   </h1>
 </div>
-<div class="settings_container">
+<!-- <div class="settings_container">
   <div class="data_source">
     <h2>Откуда</h2>
     <div class="control system">
@@ -106,14 +105,13 @@
       </select>
     </div>
   </div>
-</div>
+</div> -->
 <div class="continue_settings">
-  <p class="info">14 дней бесплатно</p>
-  <a href="#" class="button settings_btn">Продолжить настройки</a>
+  <a class="button settings_btn" (click)="integrationService.clickEvent()">Продолжить настройки</a>
 </div>
 
 <!--Список систем для интеграции-->
-<h1 class="header">Другие готовые интеграции</h1>
+<h1 class="header">Другие возможные интеграции</h1>
 <div class="container" *ngIf="system1">
   <!--wrapper was here-->
   <div class="source">
@@ -210,12 +208,12 @@
       </p>
     </div>
     <div class="try_btn_container">
-      <a class="button try_button" title="Попробовать">Попробовать</a>
+      <a class="button try_button" title="Попробовать" (click)="integrationService.clickEvent()">Попробовать</a>
     </div>
   </div>
 
   <!--Блок со статьями-->
-  <h3 class="new_articles">Наши статьи в блоге</h3>
+  <!-- <h3 class="new_articles">Наши статьи в блоге</h3>
   <div class="articles">
     <article class="article">
       <div class="article_img img1"></div>
@@ -273,7 +271,7 @@
         <a href="" class="link">Читать далее &rarr;</a>
       </div>
     </article>
-  </div>
+  </div>-->
 </div>
 <div class="request">
   <h1 class="header">

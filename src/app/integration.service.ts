@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import {HttpClient} from "@angular/common/http";
+import {map} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -23,18 +24,19 @@ export class IntegrationService {
     this.items.push(s);
   } */
 
+
   public status: boolean = true;
   public clickEvent() {
     this.status = !this.status;
   }
 
-  postData(user: any) {
-    const body = { name: user.name, age: user.age }
-    return this.http.post(
-      'http://localhost:60820/api/values',
-      body
-    )
-  }
+  // postData(user: any) {
+  //   const body = { name: user.name, age: user.age }
+  //   return this.http.post(
+  //     'http://localhost:60820/api/values',
+  //     body
+  //   )
+  // }
   constructor(private formBuilder: FormBuilder,
               private http: HttpClient) {
 
