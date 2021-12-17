@@ -40,9 +40,7 @@ export class SettingsService {
   placementOn(inputValue: any) {
     return this.bs.post<{
       result: boolean
-    }>(this.moduleId, 'placement.on', {
-      code: inputValue
-    })
+    }>(this.moduleId, 'placement.on', inputValue)
       .pipe(map(response => {
         return response
       }))

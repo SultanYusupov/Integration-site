@@ -17,21 +17,22 @@ import {KpGeneratorService} from "../services/kp-generator.service";
   styleUrls: ['./pop-up.component.css']
 })
 export class PopUpComponent implements OnInit {
-  private url = 'http://localhost/index.php';
-  // private token: string;
   private obj = '{"name" : "name"}';
   private code: any;
   private moduleId = "szgm";
   reactiveForm: any;
+  public msg: string = '';
+  public hidefrm:boolean = false;
+  public hideMsg:boolean = true;
+  public alertSuccess:boolean = false;
+  public alertFail:boolean = false;
+  public disabled: boolean = false;
 
   constructor(public integrationService: IntegrationService,
               private formBuilder: FormBuilder,
               private http: HttpClient,
               private bs: BackendService,
-              private settings: SettingsService,
-              private sds: SzgmDataService,
-              private as: ApplicationService,
-              private kp: KpGeneratorService) {
+              private settings: SettingsService) {
 
   }
 
@@ -58,6 +59,7 @@ export class PopUpComponent implements OnInit {
   }
 
   onSubmit(customerData: any) {
+    // обработка данных формы
     const controls = this.reactiveForm.controls;
 
     if (this.reactiveForm.invalid) {
@@ -65,8 +67,7 @@ export class PopUpComponent implements OnInit {
         .forEach(controlName => controls[controlName].markAsTouched());
       return;
     }
-    // обработка данных формы
-    // console.warn('Your order has been submitted', customerData);
+    // очищает input при отправке
     this.reactiveForm.reset();
   }
 
@@ -77,14 +78,31 @@ export class PopUpComponent implements OnInit {
     return result;
   }
 
-
     sendData() {
+    // кнопка "Отправить" становится не активной
+    this.disabled = !this.disabled;
+
     let inputValue = this.reactiveForm.value;
 
     let jsonStr = JSON.stringify(inputValue);
     console.log(jsonStr);
 
-      return this.settings.placementOn(jsonStr);
+      return this.settings.placementOn(jsonStr).subscribe(data => {
+        // при нажатии "Отправить", форма исчезает и появляется сообщение об отправлении
+        this.hidefrm = !this.hidefrm;
+          this.hideMsg = !this.hideMsg;
+          this.alertSuccess = !this.alertSuccess;
+        this.msg = 'Ваша заявка отправлена';
+        this.disabled = !this.disabled;
+      },
+        err => {
+          // при нажатии "Отправить", форма исчезает и появляется сообщение об отправлении
+        this.hidefrm = !this.hidefrm;
+          this.hideMsg = !this.hideMsg;
+          this.alertFail = !this.alertFail;
+        this.msg = 'Ошибка. Не удалось отправить заявку';
+          this.disabled = !this.disabled;
+        });
 
    /*
     //   this.settings.placementOff(this.reactiveForm.value);
