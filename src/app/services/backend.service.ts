@@ -7,7 +7,7 @@ import {map} from "rxjs/operators";
 })
 export class BackendService {
 
-  private backendUrl = 'http://localhost/index.php';
+  private backendUrl = 'https://generator.solo-it.ru/backend/api/v1';
   private obj = '{"name" : "name"}';
 
   constructor(

@@ -1,6 +1,13 @@
 <div class="shadow"></div>
-  <div class="popup-window">
-    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit(reactiveForm.value)">
+  <div class="popup-window" [style.max-height]="hidefrm ? '105px': '378px' ">
+    <div class="cl-btn-2" title="Закрыть" (click)="integrationService.clickEvent()">
+      <div>
+        <div class="leftright"></div>
+        <div class="rightleft"></div>
+      </div>
+    </div>
+
+    <form [formGroup]="reactiveForm" [ngClass]="{hideForm:hidefrm}" (ngSubmit)="onSubmit(reactiveForm.value)">
       <h3>Оставьте заявку</h3>
       <div class="field">
         <label for="name">Имя</label>
@@ -26,14 +33,14 @@
         </div>
       </div>
 
-      <button class="button" type="submit" (click)="sendData()">Отправить</button>
+      <button class="button" type="submit" (click)="sendData()" [disabled]="disabled">Отправить</button>
     </form>
 
-    <div class="cl-btn-2" title="Закрыть" (click)="integrationService.clickEvent()">
-      <div>
-        <div class="leftright"></div>
-        <div class="rightleft"></div>
-      </div>
-    </div>
+
+    <p [ngClass]="{'hideMessage': hideMsg, 'alert-success': alertSuccess, 'alert-fail': alertFail}">
+      {{msg}}
+    </p>
   </div>
+
+
 

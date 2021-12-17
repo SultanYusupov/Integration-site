@@ -23,11 +23,14 @@ export class IntegrationService {
     this.items.pop();
     this.items.push(s);
   } */
-
-
+  public hidefrm:boolean = false;
   public status: boolean = true;
-  public clickEvent() {
+  public alertFail:boolean = false;
+
+  clickEvent() {
     this.status = !this.status;
+    this.alertFail = !this.alertFail;
+    this.hidefrm = !this.hidefrm;
   }
 
   // postData(user: any) {
@@ -39,7 +42,6 @@ export class IntegrationService {
   // }
   constructor(private formBuilder: FormBuilder,
               private http: HttpClient) {
-
   }
 
 }
