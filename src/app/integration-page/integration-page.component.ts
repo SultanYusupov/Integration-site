@@ -12,19 +12,25 @@ import { Title, Meta } from '@angular/platform-browser';
 export class IntegrationPageComponent implements OnInit {
   metaTitle: any; // для мета тегов <title>
   system: any;
+  commonArray: any; // общий массив, в котором хранятся первая и вторя системы
+  // number: any;
   systems = systems; // массив объектов из systems.ts
-  system1: any; // первая система
-  system2: any; // вторая система
-  product1: any; // первая система в url адресе
-  product2: any; // вторая система в url адресе
+  system1: any; // для первой системы
+  system2: any; // для второй системы
+  product1: any;
+  product2: any;
   numberId1: any;
   numberId2: any;
 
   constructor(private route: ActivatedRoute,
-              private integrationService: IntegrationService,
+              public integrationService: IntegrationService,
               private titleService: Title,
               private metaTagService: Meta,
-              private router: Router) {
+              private router: Router,) {
+    // при роутинге из компонента single-page
+    /* this.commonArray = integrationService.getItems();
+    this.system1 = this.commonArray[0];
+    this.system2 = this.commonArray[1]; */
 
     this.route.paramMap.subscribe((params) => {
       this.product1 = params.get('id1');
@@ -51,18 +57,16 @@ export class IntegrationPageComponent implements OnInit {
     });
   }
 
-  // функция, которая срабатывает при роутинге из компонента SinglePage в IntegrationPage
   onSectionClick(product1: any, product2: any) {
     this.router.navigate(['/path/', product1, product2], {
       relativeTo: this.route,
     });
   }
-  // функция, которая срабатывает при роутинге внутри компонента IntegrationPage
   changeSystem() {
     this.router.navigateByUrl(this.system.url);
   }
-
-  ngOnInit(): void {
-  }
-
+  // clickEvent() {
+  //   this.integrationService.clickEvent();
+  // }
+  ngOnInit(): void {}
 }

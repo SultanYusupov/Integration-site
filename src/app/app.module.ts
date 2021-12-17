@@ -1,31 +1,42 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from "@angular/common/http";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { SingleSystemComponent } from './single-system/single-system.component';
 import { IntegrationPageComponent } from './integration-page/integration-page.component';
 import { IntegrationService } from "./integration.service";
-import {FormsModule} from "@angular/forms";
+import { PopUpComponent } from './pop-up/pop-up.component';
+
+import {BackendService} from './services/backend.service';
+import {SettingsService} from "./services/settings.service";
+import {SzgmDataService} from "./services/szgm-data.service";
+import {ApplicationService} from "./services/application.service";
+import {KpGeneratorService} from "./services/kp-generator.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     SingleSystemComponent,
-    IntegrationPageComponent
+    IntegrationPageComponent,
+    PopUpComponent,
   ],
-    imports: [
-        BrowserModule,
-        RouterModule.forRoot([
-            {path: '', component: MainPageComponent},
-            {path: 'products/:id1', component: SingleSystemComponent},
-            {path: 'products/:id1/:id2', component: IntegrationPageComponent},
-        ]),
-        FormsModule,
-    ],
-  providers: [IntegrationService],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot([
+      {path: '', component: MainPageComponent},
+      {path: 'products/:id1', component: SingleSystemComponent},
+      {path: 'products/:id1/:id2', component: IntegrationPageComponent},
+    ]),
+  ],
+  providers: [IntegrationService, BackendService, SettingsService, SzgmDataService, ApplicationService, KpGeneratorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

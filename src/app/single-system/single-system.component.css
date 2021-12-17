@@ -61,9 +61,7 @@ a {
 }
 .icon {
   display: block;
-  /*width: 60px;*/
   height: 75px;
-  /*background: url(/../../../assets/howto_icons.png) 0 0 no-repeat;*/
   font-size: 36px;
   color: #60bbb5;
   font-weight: 700;
@@ -85,6 +83,7 @@ a {
   }
 }
 
+/*-------settings. Блок с настройками связки-------------*/
 .settings_header {
   padding-top: 70px;
   width: 80%;
@@ -96,11 +95,84 @@ a {
   font-family: Roboto, sans-serif;
   font-weight: 100;
 }
-
+/*.settings_container {
+  width: 80%;
+  border-radius: 10px;
+  background: #ffffff;
+  filter: drop-shadow(0px 0px 20px rgba(90,90,170,.2));
+  margin: 50px auto 60px auto;
+}
+.data_source, .data_receiver {
+  display: flex;
+  align-items: center;
+}
+.data_source h2 {
+  margin-right: 50px;
+}
+.data_receiver h2 {
+  margin-right: 78px;
+}
+.system {
+  width: 33%;
+  margin-right: 30px;
+}
+.action {
+  width: 55%;
+}
+.data_source {
+  padding: 40px 40px 10px 40px;
+}
+.data_receiver {
+  padding: 10px 40px 40px 40px;
+}
+@media screen and (max-width: 911px) {
+  .data_source {
+    padding: 30px 20px 10px 20px;
+  }
+  .data_receiver {
+    padding: 10px 20px 30px 20px;
+  }
+}
+@media screen and (max-width: 803px) {
+  .data_source, .data_receiver {
+    flex-direction: column;
+  }
+  .data_source h2, .data_receiver h2 {
+    margin-right: 0;
+  }
+  .system, .action {
+    width: 100%;
+  }
+  .system {
+    margin-right: 0;
+  }
+}
+.settings_container h2 {
+  text-transform: uppercase;
+  color: #60bbb5;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.control .title {
+  font-size: 14px;
+}
+.settings_container .control select {
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  margin-top: 5px;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #464a55;
+}*/
 .continue_settings {
   text-align: center;
-  /*margin-bottom: 80px;*/
-  margin-top: 40px;
+  margin: 40px 0 60px 0;
 }
 .settings_btn {
   display: inline-block;
@@ -224,109 +296,8 @@ details[open] {
   font-weight: bold;
 }
 
-/*------request-------*/
-.request {
-  margin-top: 80px;
-  line-height: 40px;
-}
-.request p {
-  padding: 10px 0 0 0;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 400;
-  text-align: center;
-  color: #464a55;
-}
-.request a {
-  font-weight: bold;
-  color: #60bbb5;
-  text-decoration: underline;
-}
-@media screen and (max-width: 800px) {
-  .article {
-    width: calc(100% / 2 - 10px);
-  }
-}
-
-/*-------settings. Блок с настройками связки-------------*/
-/* .settings_container {
-  width: 80%;
-  border-radius: 10px;
-  background: #ffffff;
-  filter: drop-shadow(0px 0px 20px rgba(90,90,170,.2));
-  margin: 50px auto 60px auto;
-}
-.data_source, .data_receiver {
-  display: flex;
-  align-items: center;
-}
-.data_source h2 {
-  margin-right: 50px;
-}
-.data_receiver h2 {
-  margin-right: 78px;
-}
-.system {
-  width: 33%;
-  margin-right: 30px;
-}
-.action {
-  width: 55%;
-}
-.data_source {
-  padding: 40px 40px 10px 40px;
-}
-.data_receiver {
-  padding: 10px 40px 40px 40px;
-}
-@media screen and (max-width: 911px) {
-  .data_source {
-    padding: 30px 20px 10px 20px;
-  }
-  .data_receiver {
-    padding: 10px 20px 30px 20px;
-  }
-}
-@media screen and (max-width: 803px) {
-  .data_source, .data_receiver {
-    flex-direction: column;
-  }
-  .data_source h2, .data_receiver h2 {
-    margin-right: 0;
-  }
-  .system, .action {
-    width: 100%;
-  }
-  .system {
-    margin-right: 0;
-  }
-}
-.settings_container h2 {
-  text-transform: uppercase;
-  color: #60bbb5;
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: bold;
-}
-.control .title {
-  font-size: 14px;
-}
-.settings_container .control select {
-  cursor: pointer;
-  width: 100%;
-  height: 50px;
-  padding-left: 10px;
-  margin-top: 5px;
-  border: 1px solid #d7d7d7;
-  border-radius: 4px;
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 500;
-  color: #464a55;
-} */
-
 /*-------articles. Блок со статьями----------*/
-/* .new_articles {
+/*.new_articles {
   font-weight: bold;
   font-size: 24px;
   line-height: 100%;
@@ -392,3 +363,31 @@ details[open] {
 .link:hover {
   text-decoration: underline;
 }*/
+
+/*------request-------*/
+.request {
+  margin-top: 80px;
+  line-height: 40px;
+}
+.request p {
+  padding: 10px 0 0 0;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+  color: #464a55;
+}
+.request a {
+  font-weight: bold;
+  color: #60bbb5;
+  text-decoration: underline;
+}
+@media screen and (max-width: 800px) {
+  .article {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+.show {
+  display: none;
+}

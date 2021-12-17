@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "first_system": "Flexbe",
+      "second_system": "Enquiz",
+      "id": 1
+    },
+    {
+      "first_system": "Mailganer",
+      "second_system": "Feedgee",
+      "id": 2
+    },
+    {
+      "first_system": "Carrot quest",
+      "second_system": "Mailjet",
+      "id": 3
+    }
+  ]
+}

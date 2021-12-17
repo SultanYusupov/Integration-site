@@ -23,21 +23,18 @@
     </p>
   </div>
   <p class="subtitle">
-    Свяжите {{ product1.name }} с одной из <b>{{ product1.amount }}</b> готовых систем за 5 минут,
-    без программистов. Готовы начать прямо сейчас?
+    Свяжите {{ product1.name }} с одной из <b>216</b> готовых систем. Готовы начать прямо сейчас?
   </p>
-  <a href="#" title="Начать сейчас" class="button start_now_btn"
-  >Начать сейчас</a
-  >
+  <a title="Начать сейчас" class="button start_now_btn" (click)="integrationService.clickEvent()"
+  >Начать сейчас</a>
 </div>
-
+<app-pop-up [class.show]="integrationService.status"></app-pop-up>
 <!--Блок с инструкцией как интегрировать системы-->
 <div class="howto container">
   <h1 class="header">Как интегрировать {{ product1.name }} и другие системы</h1>
   <p class="info">
     Теперь Вам не нужно привлекать программистов или интеграторов для
-    автоматизации {{ product1.name }} и другие системы. С нашим сайтом вы свяжете
-    и автоматизируете работу этих систем за 5 минут, самостоятельно.
+    автоматизации {{ product1.name }} и другие системы.
   </p>
   <div class="instruction">
     <div class="step">
@@ -64,21 +61,23 @@
 <!--Блок с настройками связки-->
 <div class="container">
   <h1 class="settings_header">
-    Создайте интеграцию с {{ product1.name }} самостоятельно, без программистов
+    Создайте интеграцию с {{ product1.name }} самостоятельно
   </h1>
 </div>
-<!-- <div class="settings_container">
+<!--<div class="settings_container">
   <div class="data_source">
     <h2>Откуда</h2>
-    <div class="control system" >
+    <div class="control system">
       <select>
-        <option *ngFor="let system of systems" [value]="system.name" [selected]="product1.name == system.name ? product1.name: ''">{{system.name}}</option>
+        <option>-выберите систему-</option>
+        <option selected>Agile CRM</option>
+        <option>Битрикс24</option>
       </select>
     </div>
     <div class="control action">
       <select>
-        <option selected>-</option>
-        <option>Загрузить компании (новые)</option>
+        <option>-выберите действие-</option>
+        <option selected>Загрузить компании (новые)</option>
         <option>Загрузить контакты (новые)</option>
       </select>
     </div>
@@ -88,20 +87,22 @@
     <h2>Куда</h2>
     <div class="control system">
       <select>
-        <option *ngFor="let system of systems" [value]="system.name" [selected]="product1.name == system.name ? product1.name: ''">{{system.name}}</option>
+        <option>-выберите систему-</option>
+        <option selected>Agile CRM</option>
+        <option>Битрикс24</option>
       </select>
     </div>
     <div class="control action">
       <select>
-        <option selected>-</option>
-        <option>Добавить примечание к сделке</option>
+        <option>-выберите действие-</option>
+        <option selected>Добавить примечание к сделке</option>
         <option>Редактировать сделку</option>
       </select>
     </div>
   </div>
 </div>-->
 <div class="continue_settings">
-  <a href="#" class="button settings_btn">Продолжить настройки</a>
+  <a class="button settings_btn" (click)="integrationService.clickEvent()">Продолжить настройки</a>
 </div>
 
 <!--Список систем для интеграции-->
@@ -191,12 +192,12 @@
       </p>
     </div>
     <div class="try_btn_container">
-      <a class="button try_button" title="Попробовать">Попробовать</a>
+      <a class="button try_button" title="Попробовать" (click)="integrationService.clickEvent()">Попробовать</a>
     </div>
   </div>
 
   <!--Блок со статьями-->
- <!--<h3 class="new_articles">Наши статьи в блоге</h3>
+  <!-- <h3 class="new_articles">Наши статьи в блоге</h3>
   <div class="articles">
     <article class="article">
       <div class="article_img img1"></div>

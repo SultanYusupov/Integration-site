@@ -1,11 +1,10 @@
-header {
-  /*background-color: #33205e;*/
+/* header {
   background-color: white;
   position: absolute;
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 50;
+  z-index: 10;
 }
 .site_content_holder {
   display: flex;
@@ -39,7 +38,6 @@ header {
 }
 .log_in {
   padding: 8px 20px;
-  /*border: 2px solid #ffe131;*/
   border: 2px solid #e55749;
   border-radius: 5px;
   font-size: 15px;
@@ -72,7 +70,6 @@ header {
     width: 26px;
     height: 26px;
     cursor: pointer;
-    /*z-index: 51;*/
   }
   .menu-btn > span,
   .menu-btn > span::before,
@@ -81,7 +78,7 @@ header {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #e55749;
+    background-color: #ffe131;
     transition-duration: 0.25s;
   }
   .menu-btn > span::before {
@@ -101,9 +98,9 @@ header {
     height: auto;
     margin: 80px 0 0 0;
     list-style: none;
-    /*background-color: #ffe131;*/
-    /*border-radius: 5px 0 0 5px;*/
-    /*box-shadow: 1px 0 6px rgba(0, 0, 0, 0.2);*/
+    background-color: #ffe131;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 1px 0 6px rgba(0, 0, 0, 0.2);
     transition-duration: 0.25s;
     visibility: hidden;
   }
@@ -138,7 +135,7 @@ header {
     position: absolute;
     right: 60px;
   }
-}
+}*/
 
 footer {
   background-color: #62a4a0;
@@ -219,11 +216,11 @@ footer {
     margin: 0;
   }
 }
-  @media screen and (max-width: 692px) {
-    .footer_container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
+@media screen and (max-width: 692px) {
+  .footer_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /*====================== middle styles =========================*/
@@ -265,10 +262,6 @@ footer {
     max-width: 220px;
   }
 }
-
-/* a {
-  color: #60bbb5;
-} */
 
 /*------howto. Блок с инструкцией как интегрировать системы-----------*/
 .howto {
@@ -543,7 +536,7 @@ details[open] {
 }
 
 /*-------articles. Блок со статьями----------*/
-/*.new_articles {
+.new_articles {
   font-weight: bold;
   font-size: 24px;
   line-height: 100%;
@@ -608,7 +601,7 @@ details[open] {
 }
 .link:hover {
   text-decoration: underline;
-}*/
+}
 
 /*------request-------*/
 .request {
@@ -628,8 +621,8 @@ details[open] {
   color: #60bbb5;
   text-decoration: underline;
 }
-/*@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .article {
     width: calc(100% / 2 - 10px);
   }
-}*/
+}

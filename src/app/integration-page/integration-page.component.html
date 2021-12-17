@@ -21,14 +21,13 @@
   <h1 class="title" *ngIf="system2">{{ system1.name }} + {{ system2.name }}</h1>
   <p class="subtitle">
     Свяжите <a *ngIf="system1" href="#" [title]="system1.name + 'интеграция'">{{system1.name}}</a> и
-    <a  *ngIf="system2" href="#" [title]="system2.name + 'интеграция'">{{system2.name}}</a> за 5 минут.
-    Без программистов. Готовы начать прямо сейчас?
+    <a  *ngIf="system2" href="#" [title]="system2.name + 'интеграция'">{{system2.name}}</a>. Готовы начать прямо сейчас?
   </p>
-  <a href="#" title="Начать сейчас" class="button start_now_btn"
+  <a title="Начать сейчас" class="button start_now_btn" (click)="integrationService.clickEvent()"
   >Начать сейчас</a
   >
 </div>
-
+<app-pop-up [class.show]="integrationService.status" class="shadow"></app-pop-up>
 <!--Блок с инструкцией как интегрировать системы-->
 <div class="howto container" *ngIf="system1">
   <h1 class="header" *ngIf="system2">
@@ -38,7 +37,7 @@
   <p class="info" *ngIf="system2">
     Теперь Вам не нужно привлекать программистов или интеграторов для
     автоматизации {{system1.name}} и {{system2.name}}. С нашим сайтом вы свяжете и
-    автоматизируете работу этих систем за 5 минут, самостоятельно.
+    автоматизируете работу этих двух систем.
   </p>
   <div class="instruction">
     <div class="step">
@@ -68,20 +67,22 @@
     Создайте интеграцию {{system1.name}} и {{system2.name}} самостоятельно, без программистов
   </h1>
 </div>
-<!--<div class="settings_container">
+<!-- <div class="settings_container">
   <div class="data_source">
     <h2>Откуда</h2>
     <div class="control system">
       <select>
-        <option *ngFor="let system of systems" [value]="system.name" [selected]="system1.name == system.name ? system1.name: ''">{{system.name}}</option>
+        <option>-выберите систему-</option>
+        <option>Agile CRM</option>
+        <option>Битрикс24</option>
+        <option selected>Клиентикс</option>
       </select>
     </div>
     <div class="control action">
       <select>
-        <option selected>-</option>
         <option>Загрузить компании (новые)</option>
         <option>Загрузить контакты (новые)</option>
-        <option>Получить данные</option>
+        <option selected>Получить данные</option>
       </select>
     </div>
   </div>
@@ -90,31 +91,34 @@
     <h2>Куда</h2>
     <div class="control system">
       <select>
-        <option *ngFor="let system of systems" [value]="system.name" [selected]="system2.name == system.name ? system2.name: ''">{{system.name}}</option>
+        <option>-выберите систему-</option>
+        <option>Agile CRM</option>
+        <option>Битрикс24</option>
+        <option selected>TurboSMS</option>
       </select>
     </div>
     <div class="control action">
       <select>
-        <option selected>-</option>
         <option>Добавить примечание к сделке</option>
         <option>Редактировать сделку</option>
-        <option>Отправить SMS</option>
+        <option selected>Отправить SMS</option>
       </select>
     </div>
   </div>
-</div>-->
+</div> -->
 <div class="continue_settings">
-  <a href="#" class="button settings_btn">Продолжить настройки</a>
+  <a class="button settings_btn" (click)="integrationService.clickEvent()">Продолжить настройки</a>
 </div>
 
 <!--Список систем для интеграции-->
 <h1 class="header">Другие возможные интеграции</h1>
 <div class="container" *ngIf="system1">
+  <!--wrapper was here-->
   <div class="source">
     <div class="systems_list">
       <!--Список 1-->
       <div class="integrations_title">
-        {{system1.name}} <span>({{system1.amount}} готовых коннекторов)</span>
+        {{system1.name}} <span>(197 готовых коннекторов)</span>
       </div>
       <ul class="lists" *ngIf="system2">
         <li class="system_item" *ngFor="let system of systems">
@@ -126,7 +130,7 @@
     <div class="systems_list">
       <!--Список 2-->
       <div class="integrations_title" *ngIf="system2">
-        {{system2.name}} <span>({{system2.amount}} готовый коннектор)</span>
+        {{system2.name}} <span>(181 готовый коннектор)</span>
       </div>
       <ul class="lists" *ngIf="system1">
         <li class="system_item" *ngFor="let system of systems">
@@ -204,12 +208,12 @@
       </p>
     </div>
     <div class="try_btn_container">
-      <a class="button try_button" title="Попробовать">Попробовать</a>
+      <a class="button try_button" title="Попробовать" (click)="integrationService.clickEvent()">Попробовать</a>
     </div>
   </div>
 
   <!--Блок со статьями-->
-  <!--<h3 class="new_articles">Наши статьи в блоге</h3>
+  <!-- <h3 class="new_articles">Наши статьи в блоге</h3>
   <div class="articles">
     <article class="article">
       <div class="article_img img1"></div>
