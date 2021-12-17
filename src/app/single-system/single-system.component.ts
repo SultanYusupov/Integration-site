@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { systems } from '../systems';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
+import { IntegrationService } from '../integration.service';
 
 @Component({
   selector: 'app-single-system',
@@ -11,14 +11,14 @@ import { FormsModule }   from '@angular/forms';
 })
 export class SingleSystemComponent implements OnInit {
   title: any; // мета тег <title>
-  systems = systems; // for routerLink in <li> of AgileComponent. It was originally
-  // system: any; // for parameters below. for TurboComponent
+  systems = systems; // для routerLink in <li>
   product1: any; // объект из массива systems.ts. система, которую мы выбрали
   numberId: any;
   constructor(private route: ActivatedRoute,
               private router: Router,
               private titleService: Title,
               private metaTagService: Meta,
+              public integrationService: IntegrationService
               ) {
     this.route.paramMap.subscribe((params) => {
       // в params находится имя системы, взятое из url-адреса, и с помощью метода findIndex находим id объекта (из systems.ts)
