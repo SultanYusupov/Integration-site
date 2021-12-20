@@ -14,12 +14,12 @@ export class SingleSystemComponent implements OnInit {
   systems = systems; // для routerLink in <li>
   product1: any; // объект из массива systems.ts. система, которую мы выбрали
   numberId: any;
+
   constructor(private route: ActivatedRoute,
               private router: Router,
               private titleService: Title,
               private metaTagService: Meta,
-              public integrationService: IntegrationService
-              ) {
+              public integrationService: IntegrationService) {
     this.route.paramMap.subscribe((params) => {
       // в params находится имя системы, взятое из url-адреса, и с помощью метода findIndex находим id объекта (из systems.ts)
       this.numberId = systems.findIndex((el) => {
@@ -35,10 +35,16 @@ export class SingleSystemComponent implements OnInit {
     this.titleService.setTitle(this.title); // устанавливаем meta тег <title>
     // прочие мета теги
     this.metaTagService.updateTag(
-      { name: 'description', content: `Нужно объединить ${this.product1.name} с другими системами? Наш сайт позволяет самостоятельно интегрировать и автоматизировать бизнес процессы` },
+      {
+        name: 'description',
+        content: `Нужно объединить ${this.product1.name} с другими системами? Наш сайт позволяет самостоятельно интегрировать и автоматизировать бизнес процессы`
+      },
     );
     this.metaTagService.updateTag(
-      { name: 'keywords', content: `${this.product1.name}, ${this.product1.name} интеграция, ${this.product1.name} автоматизация` }
+      {
+        name: 'keywords',
+        content: `${this.product1.name}, ${this.product1.name} интеграция, ${this.product1.name} автоматизация`
+      }
     );
   }
 }

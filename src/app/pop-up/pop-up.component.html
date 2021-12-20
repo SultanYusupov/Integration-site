@@ -1,13 +1,13 @@
 <div class="shadow"></div>
-  <div class="popup-window" [style.max-height]="hidefrm ? '105px': '378px' ">
-    <div class="cl-btn-2" title="Закрыть" (click)="integrationService.clickEvent()">
+  <div class="popup-window" [style.max-height]="hideForm ? '105px': '378px' ">
+    <div class="cl-btn-2" title="Закрыть" (click)="integrationService.clickEvent(); rollback()">
       <div>
         <div class="leftright"></div>
         <div class="rightleft"></div>
       </div>
     </div>
 
-    <form [formGroup]="reactiveForm" [ngClass]="{hideForm:hidefrm}" (ngSubmit)="onSubmit(reactiveForm.value)">
+    <form [formGroup]="reactiveForm" [ngClass]="{'hide-form': hideForm}" (ngSubmit)="onSubmit(reactiveForm.value)">
       <h3>Оставьте заявку</h3>
       <div class="field">
         <label for="name">Имя</label>

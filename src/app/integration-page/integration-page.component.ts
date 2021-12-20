@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { systems } from '../systems';
 import { IntegrationService } from '../integration.service';
 import { Title, Meta } from '@angular/platform-browser';
@@ -12,8 +12,6 @@ import { Title, Meta } from '@angular/platform-browser';
 export class IntegrationPageComponent implements OnInit {
   metaTitle: any; // для мета тегов <title>
   system: any;
-  commonArray: any; // общий массив, в котором хранятся первая и вторя системы
-  // number: any;
   systems = systems; // массив объектов из systems.ts
   system1: any; // для первой системы
   system2: any; // для второй системы
@@ -27,10 +25,6 @@ export class IntegrationPageComponent implements OnInit {
               private titleService: Title,
               private metaTagService: Meta,
               private router: Router,) {
-    // при роутинге из компонента single-page
-    /* this.commonArray = integrationService.getItems();
-    this.system1 = this.commonArray[0];
-    this.system2 = this.commonArray[1]; */
 
     this.route.paramMap.subscribe((params) => {
       this.product1 = params.get('id1');
@@ -65,8 +59,6 @@ export class IntegrationPageComponent implements OnInit {
   changeSystem() {
     this.router.navigateByUrl(this.system.url);
   }
-  // clickEvent() {
-  //   this.integrationService.clickEvent();
-  // }
+
   ngOnInit(): void {}
 }

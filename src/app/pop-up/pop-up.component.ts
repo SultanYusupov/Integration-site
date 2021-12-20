@@ -1,15 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { IntegrationService } from '../integration.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-// import {resolve} from "@angular/compiler-cli/src/ngtsc/file_system";
-import {map} from "rxjs/operators";
+import { FormBuilder, Validators } from '@angular/forms';
+import { HttpClient } from "@angular/common/http";
 
-import {BackendService} from "../services/backend.service";
-import {iSettings, SettingsService} from "../services/settings.service";
-import {SzgmDataService} from "../services/szgm-data.service";
-import {ApplicationService} from "../services/application.service";
-import {KpGeneratorService} from "../services/kp-generator.service";
+import { BackendService } from "../services/backend.service";
+import { SettingsService } from "../services/settings.service";
 
 @Component({
   selector: 'app-pop-up',
@@ -17,12 +12,9 @@ import {KpGeneratorService} from "../services/kp-generator.service";
   styleUrls: ['./pop-up.component.css']
 })
 export class PopUpComponent implements OnInit {
-  private obj = '{"name" : "name"}';
-  private code: any;
-  private moduleId = "szgm";
   reactiveForm: any;
   public msg: string = '';
-  public hidefrm:boolean = false;
+  public hideForm:boolean = false;
   public hideMsg:boolean = true;
   public alertSuccess:boolean = false;
   public alertFail:boolean = false;
@@ -33,7 +25,6 @@ export class PopUpComponent implements OnInit {
               private http: HttpClient,
               private bs: BackendService,
               private settings: SettingsService) {
-
   }
 
   ngOnInit(): void {
@@ -41,6 +32,7 @@ export class PopUpComponent implements OnInit {
   }
 
   initForm() {
+    // здесь получаем объект в котором данные формы
     return this.reactiveForm = this.formBuilder.group({
       name: ['', [
         Validators.required,
@@ -89,33 +81,27 @@ export class PopUpComponent implements OnInit {
 
       return this.settings.placementOn(jsonStr).subscribe(data => {
         // при нажатии "Отправить", форма исчезает и появляется сообщение об отправлении
-        this.hidefrm = !this.hidefrm;
+        this.hideForm = !this.hideForm;
           this.hideMsg = !this.hideMsg;
           this.alertSuccess = !this.alertSuccess;
         this.msg = 'Ваша заявка отправлена';
-        this.disabled = !this.disabled;
       },
         err => {
           // при нажатии "Отправить", форма исчезает и появляется сообщение об отправлении
-        this.hidefrm = !this.hidefrm;
+        this.hideForm = !this.hideForm;
           this.hideMsg = !this.hideMsg;
           this.alertFail = !this.alertFail;
         this.msg = 'Ошибка. Не удалось отправить заявку';
-          this.disabled = !this.disabled;
         });
 
-   /*
-    //   this.settings.placementOff(this.reactiveForm.value);
-      // this.settings.robotOff(this.obj);
-      // this.settings.robotOn(this.obj);
-      // this.settings.activityOff(this.obj);
-      // this.settings.activityOn(this.obj);
-
-      // this.sds.saveAdministrative('szgm', 'administrative.save', 'dealDateCreate');
-      // // this.sds.loadDealStages();
-      // this.sds.saveProductionFields('szgm', 'administrative.save', this.obj);
-      // this.sds.loadProjectByFilter('szgm', 'get.excel.data', 'message');
-     */
     }
+    // при нажатии "Закрыть" окно формы возвращается в первоначальное состояние
+  rollback() {
+    this.disabled = false;
+    this.alertSuccess = false;
+    this.alertFail = false;
+    this.hideForm = false;
+    this.hideMsg = true;
+  }
 }
 
