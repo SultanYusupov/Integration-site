@@ -24,7 +24,6 @@
   -webkit-transition: max-height 1s;
 }
 h3 {
-  /*margin: 0 0 30px 37%;*/
   color: #60bbb5;
   position: relative;
   left: 37%;
@@ -71,23 +70,6 @@ button {
 button:active {
   cursor: wait;
 }
-/*.close {
-  position: absolute;
-  left: 500px;
-  bottom: 373px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #e55749;
-  cursor: pointer;
-}*/
-
-/*.cl-btn-2 {*/
-/*  margin: 20px;*/
-/*  display: flex;*/
-/*  justify-content: center;*/
-/*}*/
 .cl-btn-2 div {
   cursor: pointer;
   position: relative;
@@ -130,12 +112,9 @@ button:active {
   opacity: 0;
 }
 .alert-success, .alert-fail {
-  /*text-align: center;*/
   font-size: 20px;
   font-family: Roboto, sans-serif;
   font-weight: 100;
-  /*line-height: 20px;*/
-  /*margin-bottom: 30px;*/
   position: absolute;
   bottom: 48px;
   left: 19%;

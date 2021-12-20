@@ -25,7 +25,7 @@ export class SingleSystemComponent implements OnInit {
       this.numberId = systems.findIndex((el) => {
         return el.url == params.get('id1');
       });
-
+      // по номеру id находим сам объект. эта переменная будет использоваться в html-коде
       this.product1 = this.systems[this.numberId];
 
     });

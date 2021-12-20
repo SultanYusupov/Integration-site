@@ -150,10 +150,6 @@ footer {
   min-height: 86px;
   flex-wrap: wrap;
 }
-/*.footer_column {*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*}*/
 .social_link {
   display: inline-block;
   width: 30px;
@@ -176,11 +172,8 @@ footer {
   font-weight: 400;
 }
 .social_media {
-  /*margin: 10px 0 0 -4px;*/
 }
 .footer_block {
-  /*display: flex;*/
-  /*flex-direction: column;*/
   margin-top: 8px;
   align-items: center;
 }
@@ -200,7 +193,6 @@ footer {
   list-style-position: inside;
 }
 .footer_menu li:not(first-child) {
-  /*padding-top: 8px;*/
   padding-top: 12px;
 }
 @media screen and (max-width: 786px) {
@@ -222,7 +214,6 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 }
-
 /*====================== middle styles =========================*/
 /*------ systems. Блок с логотипами систем интеграций----------*/
 .systems svg {
@@ -283,7 +274,6 @@ footer {
 }
 .icon {
   display: block;
-  /*width: 60px;*/
   height: 75px;
   /*background: url(/../../../assets/howto_icons.png) 0 0 no-repeat;*/
   font-size: 36px;
@@ -536,7 +526,7 @@ details[open] {
 }
 
 /*-------articles. Блок со статьями----------*/
-.new_articles {
+/* .new_articles {
   font-weight: bold;
   font-size: 24px;
   line-height: 100%;
@@ -601,7 +591,7 @@ details[open] {
 }
 .link:hover {
   text-decoration: underline;
-}
+}*/
 
 /*------request-------*/
 .request {

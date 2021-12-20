@@ -27,16 +27,22 @@ export class IntegrationPageComponent implements OnInit {
               private router: Router,) {
 
     this.route.paramMap.subscribe((params) => {
+      // имя первой системы из url
       this.product1 = params.get('id1');
+      // находим номер id объекта (из systems.ts)
       this.numberId1 = systems.findIndex((el) => {
         return el.url == params.get('id1');
       });
+      // по номеру id находим первый объект. эта переменная будет использоваться в html-коде
       this.system1 = systems[this.numberId1];
 
+      // имя второй системы из url
       this.product2 = params.get('id2');
+      // находим номер id объекта (из systems.ts)
       this.numberId2 = systems.findIndex((el) => {
         return el.url == params.get('id2');
       });
+      // по номеру id находим второй объект. эта переменная будет использоваться в html-коде
       this.system2 = systems[this.numberId2];
 
       // динамические мета теги

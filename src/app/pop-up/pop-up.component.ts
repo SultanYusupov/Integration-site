@@ -32,7 +32,7 @@ export class PopUpComponent implements OnInit {
   }
 
   initForm() {
-    // здесь получаем объект в котором данные формы
+    // получаем данные формы
     return this.reactiveForm = this.formBuilder.group({
       name: ['', [
         Validators.required,
@@ -71,23 +71,23 @@ export class PopUpComponent implements OnInit {
   }
 
     sendData() {
-    // кнопка "Отправить" становится не активной
+    // кнопка "Отправить" становится неактивной
     this.disabled = !this.disabled;
 
     let inputValue = this.reactiveForm.value;
-
+    // преобразовываем обект с данными формы в json-строку
     let jsonStr = JSON.stringify(inputValue);
     console.log(jsonStr);
 
       return this.settings.placementOn(jsonStr).subscribe(data => {
-        // при нажатии "Отправить", форма исчезает и появляется сообщение об отправлении
+        // при нажатии "Отправить", форма исчезает и появляется сообщение об успешном отправлении
         this.hideForm = !this.hideForm;
           this.hideMsg = !this.hideMsg;
           this.alertSuccess = !this.alertSuccess;
         this.msg = 'Ваша заявка отправлена';
       },
         err => {
-          // при нажатии "Отправить", форма исчезает и появляется сообщение об отправлении
+          // при нажатии "Отправить", форма исчезает и появляется сообщение о неудачном отправлении
         this.hideForm = !this.hideForm;
           this.hideMsg = !this.hideMsg;
           this.alertFail = !this.alertFail;

@@ -314,74 +314,6 @@ details[open] {
   cursor: pointer;
 }
 
-/*-------articles. Блок со статьями----------*/
-/* .new_articles {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 100%;
-  color: #222222;
-  padding-top: 70px;
-}
-.articles {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
-}
-.article {
-  width: calc(100% / 3 - 20px);
-  min-height: 284px;
-  margin-top: 20px;
-}
-.article_img {
-  height: 165px;
-  border-radius: 5px;
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
-}
-.img1 {
-  background-image: url(/../../assets/images/books_for_entrepreneurs.png);
-}
-.img2 {
-  background-image: url(/../../assets/images/all_about_bitrix.png);
-}
-.img3 {
-  background-image: url(/../../assets/images/instagram_article.png);
-}
-.img4 {
-  background-image: url(/../../assets/images/telegram_article.png);
-}
-.img5 {
-  background-image: url(/../../assets/images/freelancer_article.png);
-}
-.img6 {
-  background-image: url(/../../assets/images/save_my_leads.png);
-}
-.link_container {
-  padding: 15px;
-  border-radius: 0 0 8px 8px;
-  background: #ffffff;
-}
-.article_header {
-  display: block;
-  height: 61px;
-  overflow: hidden;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 110%;
-  color: #464a55;
-}
-.link {
-  float: left;
-  padding-top: 10px;
-  font-size: 15px;
-  font-weight: bold;
-  color: #e55749;
-}
-.link:hover {
-  text-decoration: underline;
-} */
-
 /*------request-------*/
 .request {
   margin-top: 80px;
@@ -407,6 +339,7 @@ details[open] {
   }
 }
 
+/*pop-up component*/
 .show {
   display: none;
 }
