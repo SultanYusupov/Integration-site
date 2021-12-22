@@ -21,7 +21,7 @@
   <h1 class="title" *ngIf="system2">{{ system1.name }} + {{ system2.name }}</h1>
   <p class="subtitle">
     Свяжите <a *ngIf="system1" href="#" [title]="system1.name + 'интеграция'">{{system1.name}}</a> и
-    <a  *ngIf="system2" href="#" [title]="system2.name + 'интеграция'">{{system2.name}}</a>. Готовы начать прямо сейчас?
+    <a  *ngIf="system2" href="#" [title]="system2.name + 'интеграция'">{{system2.name}}</a>. Начните прямо сейчас!
   </p>
   <a title="Начать сейчас" class="button start_now_btn" (click)="integrationService.clickEvent()"
   >Начать сейчас</a
@@ -35,9 +35,7 @@
     c помощью нашего сайта
   </h1>
   <p class="info" *ngIf="system2">
-    Теперь Вам не нужно привлекать программистов или интеграторов для
-    автоматизации {{system1.name}} и {{system2.name}}. С нашим сайтом вы свяжете и
-    автоматизируете работу этих двух систем.
+    Отправьте заявку и мы интегрируем {{system1.name}} с {{system2.name}}.
   </p>
   <div class="instruction">
     <div class="step">
@@ -46,17 +44,17 @@
     </div>
     <div class="step">
       <span class="icon">Шаг 2</span>
-      Укажите какие действия будут происходить между системами
+      Заполните заявку
     </div>
     <div class="step">
       <span class="icon">Шаг 3</span>
-      Включите автообновление
+      Укажите какие действия будут происходить между системами
     </div>
     <div class="step">
       <span class="icon">
         <object data="assets/images/checked.svg"></object>
       </span>
-      Вся настройка займет не более 5-ти минут
+      Ожидайте нашего звонка
     </div>
   </div>
 </div>
@@ -64,7 +62,7 @@
 <!--Блок с настройками связки-->
 <div class="container" *ngIf="system1">
   <h1 class="settings_header" *ngIf="system2">
-    Создайте интеграцию {{system1.name}} и {{system2.name}} самостоятельно, без программистов
+    Создайте интеграцию {{system1.name}} и {{system2.name}} с нашим сервисом
   </h1>
 </div>
 <!-- <div class="settings_container">
@@ -107,7 +105,7 @@
   </div>
 </div> -->
 <div class="continue_settings">
-  <a class="button settings_btn" (click)="integrationService.clickEvent()">Продолжить настройки</a>
+  <a class="button settings_btn" (click)="integrationService.clickEvent()">Создать интеграцию</a>
 </div>
 
 <!--Список систем для интеграции-->
@@ -151,13 +149,10 @@
         <p>Как происходит интеграция {{system1.name}} и {{system2.name}}?</p>
       </summary>
       <ul class="answer">
-        <li>Для начала нужно зарегистрироваться на нашем сайте</li>
+        <li>Оставьте заявку на нашем сайте</li>
         <li>Выбираете какие данные передавать из {{system1.name}} в {{system2.name}}</li>
         <li>Выбираете какие данные из одной системы передавать в другую</li>
-        <li>Включаете автообновление</li>
-        <li>
-          Теперь данные будут автоматически передаваться из {{system1.name}} в {{system2.name}}
-        </li>
+        <li>Ожидайте нашего звонка</li>
       </ul>
     </details>
     <details>
@@ -180,18 +175,16 @@
         За саму интеграцию ничего платить не нужно и на всех тарифах доступен
         полностью весь функционал. Вы оплачиваете только количество данных,
         которые по факту передаются из одной вашей системы в другую через наш
-        сервис. Если у вас количество данных в месяц небольшое, можете смело
-        пользоваться бесплатным тарифом или перейти на платный, при
-        необходимости. Подробнее о <a href="#">тарифах</a>.
+        сервис.
       </p>
     </details>
     <details *ngIf="system2">
       <summary>
         <span></span>
-        <p>Сколько готовых интеграций доступно на нашем сайте?</p>
+        <p>Сколько доступно интеграций доступно на нашем сайте?</p>
       </summary>
       <p class="answer">
-        На данный момент у нас готово 298+ интеграций помимо {{system1.name}} и
+        На данный момент у нас доступно {{systems.length}} интеграций помимо {{system1.name}} и
         {{system2.name}}
       </p>
     </details>
