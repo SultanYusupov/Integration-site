@@ -45,7 +45,8 @@ export class PopUpComponent implements OnInit {
       telephone: ['', [
         Validators.required, Validators.pattern('^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$')
       ]
-      ]
+      ],
+      comment: ['']
     });
   }
 
@@ -70,15 +71,14 @@ export class PopUpComponent implements OnInit {
   }
 
     sendData() {
-    // кнопка "Отправить" становится неактивной
-    // this.disabled = !this.disabled;
-
+    // значения из инпута в виде объекта
     let inputValue = this.reactiveForm.value;
     // преобразовываем обект с данными формы в json-строку
     let jsonStr = JSON.stringify(inputValue);
     console.log(jsonStr);
 
-      return this.settings.placementOn(jsonStr).subscribe(data => {
+    // метод post находится в backend.service
+    return this.settings.placementOn(jsonStr).subscribe(data => {
         // при нажатии "Отправить", форма исчезает и появляется сообщение об успешном отправлении
         this.hideForm = !this.hideForm;
           this.hideMsg = !this.hideMsg;

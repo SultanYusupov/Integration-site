@@ -307,7 +307,7 @@ export const systems = [
   {
     name: 'CallTrackingRU',
     url: 'calltracking',
-    image: 'assets/images/calltraking-ru_ru.png',
+    image: 'assets/images/calltracking-ru_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=calltracking.ru',
     amount: 238,
     description: 'Сервис коллтрекинга CallTrackingRU предлагает маркетинговый инструмент отслеживания входящих звонков, который поможет проанализировать, какой из рекламных каналов привлекает большее количество откликов от заинтересованных клиентов. Анализ источников трафика происходит благодаря технологии подмены номера. Также CallTrackingRU предоставляет свои клиентам дополнительные возможность настройки телефонии в широких пределах.'

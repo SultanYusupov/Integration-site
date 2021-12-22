@@ -43,7 +43,7 @@ export class BackendService {
    */
 
   post<T>(module: any, method: any, params: any){
-    //console.log(`${this.backendUrl}/${module}/${method}`)
+    // в params передается json-строка из формы
     return this.http.post<any>(this.backendUrl, params, {withCredentials: true})
       .pipe(map((response: {
         code: any,
