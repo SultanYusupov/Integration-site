@@ -18,7 +18,7 @@ export class PopUpComponent implements OnInit {
   public hideMsg:boolean = true;
   public alertSuccess:boolean = false;
   public alertFail:boolean = false;
-  public disabled: boolean = false;
+  // public disabled: boolean = false;
 
   constructor(public integrationService: IntegrationService,
               private formBuilder: FormBuilder,
@@ -35,16 +35,15 @@ export class PopUpComponent implements OnInit {
     // получаем данные формы
     return this.reactiveForm = this.formBuilder.group({
       name: ['', [
-        Validators.required,
         Validators.pattern(/[А-я]/)
       ]
       ],
       email: ['', [
-        Validators.required, Validators.email
+        Validators.email
       ]
       ],
       telephone: ['', [
-        Validators.pattern('^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$')
+        Validators.required, Validators.pattern('^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$')
       ]
       ]
     });
@@ -72,7 +71,7 @@ export class PopUpComponent implements OnInit {
 
     sendData() {
     // кнопка "Отправить" становится неактивной
-    this.disabled = !this.disabled;
+    // this.disabled = !this.disabled;
 
     let inputValue = this.reactiveForm.value;
     // преобразовываем обект с данными формы в json-строку
@@ -97,7 +96,7 @@ export class PopUpComponent implements OnInit {
     }
     // при нажатии "Закрыть" окно формы возвращается в первоначальное состояние
   rollback() {
-    this.disabled = false;
+    // this.disabled = false;
     this.alertSuccess = false;
     this.alertFail = false;
     this.hideForm = false;

@@ -7,8 +7,7 @@ import {map} from "rxjs/operators";
 })
 export class BackendService {
 
-  private backendUrl = 'http://localhost/index.php';
-  private obj = '{"name" : "name"}';
+  private backendUrl = '/dist/integration-site/forms/';
 
   constructor(
     private http: HttpClient,
@@ -45,9 +44,7 @@ export class BackendService {
 
   post<T>(module: any, method: any, params: any){
     //console.log(`${this.backendUrl}/${module}/${method}`)
-    return this.http.post<any>(this.backendUrl, Object.assign({
-      token: 'token'
-    }, params), {withCredentials: true})
+    return this.http.post<any>(this.backendUrl, params, {withCredentials: true})
       .pipe(map((response: {
         code: any,
         data: any

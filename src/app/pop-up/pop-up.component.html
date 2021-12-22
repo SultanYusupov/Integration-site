@@ -1,5 +1,5 @@
 <div class="shadow"></div>
-  <div class="popup-window" [style.max-height]="hideForm ? '105px': '378px' ">
+  <div class="popup-window" [style.height]="hideForm ? '105px': 'auto' ">
     <div class="cl-btn-2" title="Закрыть" (click)="integrationService.clickEvent(); rollback()">
       <div>
         <div class="leftright"></div>
@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <button class="button" type="submit" (click)="sendData()" [disabled]="disabled">Отправить</button>
+      <button class="button" type="submit" (click)="sendData()" [disabled]="this.reactiveForm.invalid">Отправить</button>
     </form>
 
 
