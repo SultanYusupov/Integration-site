@@ -35,7 +35,7 @@
     c помощью нашего сайта
   </h1>
   <p class="info" *ngIf="system2">
-    Отправьте заявку и мы интегрируем {{system1.name}} с {{system2.name}}.
+    Оставьте нам заявку и мы интегрируем {{system1.name}} с {{system2.name}}.
   </p>
   <div class="instruction">
     <div class="step">
@@ -161,9 +161,7 @@
         <p>Сколько времени нужно на интеграцию?</p>
       </summary>
       <p class="answer">
-        В зависимости от системы, с которой вы будете делать интеграцию, время
-        настройки может отличаться и составлять от 5-ти до 30-минут. В среднем
-        настройка занимает 10-15 минут.
+        В зависимости от системы, с которой вы хотите сделать интеграцию.
       </p>
     </details>
     <details *ngIf="system2">
@@ -201,7 +199,7 @@
       </p>
     </div>
     <div class="try_btn_container">
-      <a class="button try_button" title="Попробовать" (click)="integrationService.clickEvent()">Попробовать</a>
+      <a class="button try_button" title="Попробовать" (click)="integrationService.clickEvent()">Оставить заявку</a>
     </div>
   </div>
 

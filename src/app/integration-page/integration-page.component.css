@@ -11,6 +11,7 @@
   line-height: 40px;
   color: white;
   padding: 20px 0;
+  text-align: center;
 }
 .systems svg {
   width: 48px;
@@ -27,58 +28,14 @@
   margin-bottom: 20px;
 }
 @media screen and (max-width: 973px) {
-  .systems {
-    display: none;
-  }
   .subtitle {
     font-size: 17px;
-    text-align: left;
     max-width: 420px;
     margin-top: 0;
   }
   .container_for_content {
-    align-items: flex-start;
     padding: 100px 0 20px 20px;
   }
-}
-@media screen and (max-width: 689px) {
-  .subtitle {
-    max-width: 220px;
-  }
-}
-
-/*------howto. Блок с инструкцией как интегрировать системы-----------*/
-.howto {
-  margin-top: 70px;
-  font-weight: 400;
-}
-.instruction {
-  margin-top: 35px;
-  display: flex;
-  padding: 60px 0;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.step {
-  padding: 0 30px 0 30px;
-  width: 25%;
-  font-size: 15px;
-  line-height: 20px;
-  color: #464a55;
-}
-@media screen and (max-width: 749px) {
-  .step {
-    width: 50%;
-    padding: 10px 30px 10px 30px;
-  }
-}
-.icon {
-  display: block;
-  height: 75px;
-  font-size: 36px;
-  color: #60bbb5;
-  font-weight: 700;
-  line-height: 75px;
 }
 
 /*-------settings. Блок с настройками связки-------------*/

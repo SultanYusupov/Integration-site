@@ -2,7 +2,7 @@ export const systems = [
   {
     name: 'AgileCRM',
     url: 'agilecrm',
-    image: 'https://apix-drive.com/ru/img/agilecrm_ru.png',
+    image: 'assets/images/agilecrm_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=agilecrm.com',
     amount: 216,
     description: 'Платформа Agile CRM предоставляет широкий спектр инструментов для автоматизации продаж, ' +
@@ -15,7 +15,7 @@ export const systems = [
   {
     name: 'Клиентикс',
     url: 'klientiks',
-    image: 'https://apix-drive.com/img/klientiks_ru.png',
+    image: 'assets/images/klientiks_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=klientiks.ru',
     amount: 238,
     description: 'Сервис “Клиентикс” представляет собой облачную CRM-систему. Она будет\n' +
@@ -31,7 +31,7 @@ export const systems = [
   {
     name: 'TurboSMS',
     url: 'turbosms',
-    image: 'https://apix-drive.com/img/turbosms_ru.png',
+    image: 'assets/images/turbosms_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=turbosms.ua',
     amount: 217,
     description: 'TurboSMS представляет собой сервис отправки SMS-сообщений. С ростом\n' +

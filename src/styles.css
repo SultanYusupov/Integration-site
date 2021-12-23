@@ -23,19 +23,17 @@ body {
 .container_for_content {
   padding-top: 120px;
   width: 100%;
-  /*background-color: #33205e;*/
   background-color: #62a4a0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 36.25rem;
+  /*min-width: 36.25rem;*/
 }
 
 /*Заголовки h1*/
 .header {
   font-size: 36px;
   line-height: 40px;
-  /*font-weight: bold;*/
   font-family: Roboto, sans-serif;
   font-weight: 100;
   text-align: center;
@@ -83,6 +81,18 @@ a {
   min-width: 512px;
   justify-content: space-between;
 }
+@media screen and (max-width: 530px) {
+  .systems {
+    flex-direction: column;
+  }
+  .systems img {
+    margin-bottom: 20px;
+  }
+  .systems svg {
+    transform: rotate(90deg);
+    margin-bottom: 20px;
+  }
+}
 .systems img {
   border-radius: 10px;
 }
@@ -95,6 +105,44 @@ a {
   font-size: 18px;
   line-height: 30px;
   text-align: center;
+}
+
+/*------howto. Блок с инструкцией как интегрировать системы-----------*/
+.howto {
+  margin-top: 70px;
+  font-weight: 400;
+}
+.instruction {
+  margin-top: 35px;
+  display: flex;
+  padding: 60px 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.step {
+  padding: 0 30px 0 30px;
+  width: 25%;
+  font-size: 15px;
+  line-height: 20px;
+  color: #464a55;
+}
+.step:last-child {
+  width: 20%;
+}
+@media screen and (max-width: 749px) {
+  .step, .step:last-child {
+    width: 50%;
+    padding: 10px 30px 10px 30px;
+  }
+}
+.icon {
+  display: block;
+  height: 75px;
+  font-size: 36px;
+  color: #60bbb5;
+  font-weight: 700;
+  line-height: 75px;
 }
 /*==============================================*/
 
