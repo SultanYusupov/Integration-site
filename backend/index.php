@@ -29,22 +29,10 @@ $arResult = array(
 echo json_encode($arResult);*/
 $received = file_get_contents('php://input');
 
-
-
 // $array = json_decode($received, true);
 $save = file_put_contents($_SERVER["DOCUMENT_ROOT"]. "/doc.log", $received, FILE_APPEND);
-if ($save === false) {
-  echo 'Ошибка, не удалось записать информацию в файл';
-}
+
 $message = file_get_contents($_SERVER["DOCUMENT_ROOT"]. "/doc.log", true);
 
-/*$arr = array(
-  'name' => $array['name'],
-  'email' => $array['email'],
-  'telephone' => $array['telephone']
-);*/
-
-//echo $message; // string, но преобразовать в массив или объект не получается
-
+echo $message;
 ?>
-<pre><?var_dump($_POST);?></pre>

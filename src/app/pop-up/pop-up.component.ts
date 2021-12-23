@@ -5,11 +5,23 @@ import { HttpClient } from "@angular/common/http";
 
 import { BackendService } from "../services/backend.service";
 import { SettingsService } from "../services/settings.service";
+import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-pop-up',
   templateUrl: './pop-up.component.html',
-  styleUrls: ['./pop-up.component.css']
+  styleUrls: ['./pop-up.component.css'],
+  animations: [
+    trigger('sizeOfForm', [
+      state('big', style({
+        minHeight: '510px'
+      })),
+      state('small', style({
+        height: '105px'
+      })),
+      transition('big => small', animate('1s 0.2s linear'))
+    ])
+  ]
 })
 export class PopUpComponent implements OnInit {
   reactiveForm: any;
@@ -18,6 +30,7 @@ export class PopUpComponent implements OnInit {
   public hideMsg:boolean = true;
   public alertSuccess:boolean = false;
   public alertFail:boolean = false;
+  size: string = 'big'; // это для popup-window, анимация будет происходить не в css, а в angular
   // public disabled: boolean = false;
 
   constructor(public integrationService: IntegrationService,
@@ -81,6 +94,7 @@ export class PopUpComponent implements OnInit {
     return this.settings.placementOn(jsonStr).subscribe(data => {
         // при нажатии "Отправить", форма исчезает и появляется сообщение об успешном отправлении
         this.hideForm = !this.hideForm;
+        this.size = 'small';
           this.hideMsg = !this.hideMsg;
           this.alertSuccess = !this.alertSuccess;
         this.msg = 'Ваша заявка отправлена';
@@ -88,6 +102,7 @@ export class PopUpComponent implements OnInit {
         err => {
           // при нажатии "Отправить", форма исчезает и появляется сообщение о неудачном отправлении
         this.hideForm = !this.hideForm;
+          this.size = 'small';
           this.hideMsg = !this.hideMsg;
           this.alertFail = !this.alertFail;
         this.msg = 'Ошибка. Не удалось отправить заявку';
@@ -97,6 +112,7 @@ export class PopUpComponent implements OnInit {
     // при нажатии "Закрыть" окно формы возвращается в первоначальное состояние
   rollback() {
     // this.disabled = false;
+    this.size = 'big';
     this.alertSuccess = false;
     this.alertFail = false;
     this.hideForm = false;

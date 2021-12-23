@@ -16,6 +16,7 @@ import {SettingsService} from "./services/settings.service";
 import {SzgmDataService} from "./services/szgm-data.service";
 import {ApplicationService} from "./services/application.service";
 import {KpGeneratorService} from "./services/kp-generator.service";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {KpGeneratorService} from "./services/kp-generator.service";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,

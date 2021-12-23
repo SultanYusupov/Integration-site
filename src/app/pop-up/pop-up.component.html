@@ -1,5 +1,5 @@
 <div class="shadow"></div>
-  <div class="popup-window" [style.height]="hideForm ? '105px': 'auto' ">
+  <div class="popup-window" [@sizeOfForm]="size">
     <div class="cl-btn-2" title="Закрыть" (click)="integrationService.clickEvent(); rollback()">
       <div>
         <div class="leftright"></div>
