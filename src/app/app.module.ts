@@ -17,6 +17,9 @@ import {SzgmDataService} from "./services/szgm-data.service";
 import {ApplicationService} from "./services/application.service";
 import {KpGeneratorService} from "./services/kp-generator.service";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {installStep} from "./model/install-step";
+import { RequestService } from "./services/request.service";
+import {ApplicationStorageService} from "./services/application-storage.service";
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
       {path: 'products/:id1/:id2', component: IntegrationPageComponent},
     ]),
   ],
-  providers: [IntegrationService, BackendService, SettingsService, SzgmDataService, ApplicationService, KpGeneratorService],
+  providers: [IntegrationService, BackendService, SettingsService, SzgmDataService,
+    ApplicationService, KpGeneratorService, RequestService, ApplicationStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

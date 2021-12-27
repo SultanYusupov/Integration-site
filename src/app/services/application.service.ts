@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {BackendService} from "./backend.service";
+import {RequestService} from "./request.service";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class ApplicationService {
   allowUsers: any = [];
 
   constructor(
-    private bs: BackendService
+    private bs: RequestService
   ) {
     this.settings = (<any>window).application;
   }
@@ -24,9 +24,10 @@ export class ApplicationService {
     return this.settings.profile.ADMIN
   }
 
-  do(){
+  // я закомментировал
+  /*do(){
      return this.bs.get('serve', 'do.test')
-  }
+  }*/
 
   havePermission(perm: S_Permission){
     console.log(this.settings.permissions)
