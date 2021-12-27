@@ -156,13 +156,13 @@ footer {
   height: 30px;
 }
 .social_link:first-child {
-  background: url('/../assets/images/icon-facebook.png');
+  background: url('../assets/images/icon-facebook.png');
 }
 .social_link:nth-child(2) {
-  background: url('/../assets/images/icon-telegram.png');
+  background: url('../assets/images/icon-telegram.png');
 }
 .social_link:last-child {
-  background: url('/../assets/images/icon-vk.png');
+  background: url('../assets/images/icon-vk.png');
 }
 .email,
 .telephone,

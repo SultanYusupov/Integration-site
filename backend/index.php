@@ -28,13 +28,16 @@ $arResult = array(
 
 echo json_encode($arResult);*/
 $received = file_get_contents('php://input');
+if (!empty($_POST)) {
+  echo "Произошла ошибка";
+}
 
  $array = json_decode($received, true);
 $save = file_put_contents($_SERVER["DOCUMENT_ROOT"]. "/doc.log", $received, FILE_APPEND);
 
 $message = file_get_contents($_SERVER["DOCUMENT_ROOT"]. "/doc.log", true);
 
-//echo $message;
+echo $message;
 
 /*------Отправляем данные в Битрикс--------------*/
 // формируем URL, на который будем отправлять запрос в битрикс24
