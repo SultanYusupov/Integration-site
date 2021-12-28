@@ -28,20 +28,20 @@ $arResult = array(
 
 echo json_encode($arResult);*/
 $received = file_get_contents('php://input');
-if (!empty($_POST)) {
-  echo "Произошла ошибка";
-}
 
  $array = json_decode($received, true);
 $save = file_put_contents($_SERVER["DOCUMENT_ROOT"]. "/doc.log", $received, FILE_APPEND);
 
 $message = file_get_contents($_SERVER["DOCUMENT_ROOT"]. "/doc.log", true);
-
-echo $message;
+$arResult = array(
+  'data' => $array
+);
+echo json_encode($arResult);
+// echo $message;
 
 /*------Отправляем данные в Битрикс--------------*/
 // формируем URL, на который будем отправлять запрос в битрикс24
-$queryURL = "https://b24-24zdb7.bitrix24.ru/rest/1/9uveg12vvakig3t0/crm.lead.add.json";
+/*$queryURL = "https://b24-24zdb7.bitrix24.ru/rest/1/9uveg12vvakig3t0/crm.lead.add.json";
 
 //собираем данные из формы
 $sName = htmlspecialchars($array['name']);
@@ -77,5 +77,5 @@ $result = json_decode($result,1);
 if(array_key_exists('error', $result))
 {
   die("Ошибка при сохранении лида: ".$result['error_description']);
-}
+}*/
 ?>
