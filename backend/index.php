@@ -30,14 +30,39 @@ echo json_encode($arResult);*/
 $received = file_get_contents('php://input');
 
  $array = json_decode($received, true);
-$save = file_put_contents($_SERVER["DOCUMENT_ROOT"]. "/doc.log", $received, FILE_APPEND);
 
-$message = file_get_contents($_SERVER["DOCUMENT_ROOT"]. "/doc.log", true);
+$code = 0;
+$error = '';
+
+if (!preg_match('/((8|\+7)-?)?\(?\d{3,5}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}((-?\d{1})?-?\d{1})?/', $array['telephone'])) {
+  $error = 'Не указан номер телефона';
+}
+
+sleep(5);
+
 $arResult = array(
-  'data' => $array
+  //'data' => $array['telephone'],
+  'data' => array(
+    'next' => 2,
+    'name' => $array['name'],
+    'telephone' => $array['telephone']
+  ),
+  'code' => !$error ? 1 : 0,
+  'message' => !$error ? 'Мы скоро с вами свяжемся' : $error,
 );
+
+
+$forLog = array(
+  'date' => date('Y-m-d H:i:s'),
+  'data1' => $array,
+  'data_input' => $received,
+);
+
+$forLog = print_r($forLog, true);
+
+$save = file_put_contents($_SERVER["DOCUMENT_ROOT"]. "/backend/log.txt", $forLog, FILE_APPEND);
+// $message = file_get_contents($_SERVER["DOCUMENT_ROOT"]. "/backend/log.txt", true);
 echo json_encode($arResult);
-// echo $message;
 
 /*------Отправляем данные в Битрикс--------------*/
 // формируем URL, на который будем отправлять запрос в битрикс24

@@ -13,7 +13,7 @@ export class RequestService {
   constructor(
     private http: HttpClient
   ) {
-    this.backendUrl = './forms/index.php'
+    this.backendUrl = './backend/index.php'
     console.log(this.backendUrl)
   }
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpResponse} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpResponse} from "@angular/common/http";
 import {map} from "rxjs/operators";
 
 @Injectable({
@@ -7,7 +7,7 @@ import {map} from "rxjs/operators";
 })
 export class BackendService {
 
-  private backendUrl = '/dist/integration-site/forms/';
+  private backendUrl = './backend/index.php';
 
   constructor(
     private http: HttpClient,

@@ -28,6 +28,7 @@ import {installStep} from "../model/install-step";
 })
 export class PopUpComponent implements OnInit {
   title = 'Наименование приложения';
+
   state = {
     install: false
   };
@@ -43,6 +44,7 @@ export class PopUpComponent implements OnInit {
 
   anketa: any;
 
+  public errorInputMsg: string = 'Введите номер телефона'
   reactiveForm: any;
   public msg: string = '';
   public hideForm:boolean = false;
@@ -78,7 +80,7 @@ export class PopUpComponent implements OnInit {
       ]
       ],
       telephone: ['', [
-        Validators.required, Validators.pattern('^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$')
+        Validators.required, Validators.pattern('/((8|\\+7)-?)?\\(?\\d{3,5}\\)?-?\\d{1}-?\\d{1}-?\\d{1}-?\\d{1}-?\\d{1}((-?\\d{1})?-?\\d{1})?/')
       ]
       ],
       comment: ['']
@@ -110,7 +112,6 @@ export class PopUpComponent implements OnInit {
     let inputValue = this.reactiveForm.value;
     // преобразовываем обект с данными формы в json-строку
     let jsonStr = JSON.stringify(inputValue);
-    console.log(jsonStr);
 
     // метод post находится в backend.service
     return this.settings.placementOn(jsonStr).subscribe(data => {
@@ -182,15 +183,34 @@ export class PopUpComponent implements OnInit {
         prevStepData = {};
       }
       let requestParams = Object.assign({}, prevStepData, {
+        name: inputValue.name,
+        email: inputValue.email,
         telephone: inputValue.telephone,
-        name: inputValue.name
+        comment: inputValue.comment
       });
       // console.log('sent request', requestParams);
       this.bs.request('app.install2', requestParams)
         .subscribe(response => {
-           console.log(response);
-           console.log('Success!');
-          let next = response.data.next;
+           console.log(response.data);
+           console.log('Response success!');
+           // let message = response.message;
+            let code = response.code;
+            if(code == 0){
+              /*this.hideForm = !this.hideForm;
+              this.size = 'small';
+              this.hideMsg = !this.hideMsg;
+              this.alertFail = !this.alertFail;
+              this.msg = 'Ошибка. Не удалось отправить заявку';*/
+              this.errorInputMsg = 'Введите валидный номер телефона';
+            }
+            else {
+              this.hideForm = !this.hideForm;
+              this.size = 'small';
+              this.hideMsg = !this.hideMsg;
+              this.alertSuccess = !this.alertSuccess;
+              this.msg = 'Ваша заявка отправлена';
+            }
+          /*let next = response.data.next;
           if (response.data.result){
             if (response.data.result.message){
               step.resultMessage = response.data.result.message;
@@ -211,11 +231,16 @@ export class PopUpComponent implements OnInit {
               this.installFinish();
             }
             this.state.install = false;
-          }
+          }*/
         },
         error=> {
           console.log(error);
           console.log('Fail');
+          this.hideForm = !this.hideForm;
+          this.size = 'small';
+          this.hideMsg = !this.hideMsg;
+          this.alertFail = !this.alertFail;
+          this.msg = 'Ошибка. Не удалось отправить заявку';
         }
         )
     } else {
