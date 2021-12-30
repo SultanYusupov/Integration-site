@@ -17,6 +17,7 @@ export class ApplicationStorageService {
   constructor() {
     this.soloapp = (<any>window).soloapp;
     console.log(this.soloapp);
+    console.log('this is application-storage')
   }
 
   get token(){

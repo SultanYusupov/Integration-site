@@ -10,6 +10,7 @@ import {RequestService} from "../services/request.service";
 import {ApplicationStorageService} from "../services/application-storage.service";
 import {installStep} from "../model/install-step";
 
+
 @Component({
   selector: 'app-pop-up',
   templateUrl: './pop-up.component.html',
@@ -40,11 +41,11 @@ export class PopUpComponent implements OnInit {
       show: false
     },
   ];
-  installErrorMsg: string = '';
+  installErrorMsg: string = 'Введите номер телефона';
 
   anketa: any;
 
-  public errorInputMsg: string = 'Введите номер телефона'
+
   reactiveForm: any;
   public msg: string = '';
   public hideForm:boolean = false;
@@ -53,6 +54,7 @@ export class PopUpComponent implements OnInit {
   public alertFail:boolean = false;
   size: string = 'big'; // это для popup-window, анимация будет происходить не в css, а в angular
   // public disabled: boolean = false;
+  public wrongNumber:boolean = false;
 
   constructor(public integrationService: IntegrationService,
               private formBuilder: FormBuilder,
@@ -80,7 +82,7 @@ export class PopUpComponent implements OnInit {
       ]
       ],
       telephone: ['', [
-        Validators.required, Validators.pattern('/((8|\\+7)-?)?\\(?\\d{3,5}\\)?-?\\d{1}-?\\d{1}-?\\d{1}-?\\d{1}-?\\d{1}((-?\\d{1})?-?\\d{1})?/')
+        Validators.required, Validators.pattern('^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{10}$')
       ]
       ],
       comment: ['']
@@ -116,6 +118,7 @@ export class PopUpComponent implements OnInit {
     // метод post находится в backend.service
     return this.settings.placementOn(jsonStr).subscribe(data => {
         // при нажатии "Отправить", форма исчезает и появляется сообщение об успешном отправлении
+        console.log(data);
         this.hideForm = !this.hideForm;
         this.size = 'small';
           this.hideMsg = !this.hideMsg;
@@ -171,6 +174,7 @@ export class PopUpComponent implements OnInit {
     this.installStep(0, {
       anketa: this.anketa
     })
+    console.log('Кнопка работает');
   }
   installStep(stepNo: number, prevStepData?:any){
     // console.log(`start step ${stepNo}`, prevStepData);
@@ -188,20 +192,16 @@ export class PopUpComponent implements OnInit {
         telephone: inputValue.telephone,
         comment: inputValue.comment
       });
-      // console.log('sent request', requestParams);
-      this.bs.request('app.install2', requestParams)
+       console.log(requestParams);
+      this.bs.request('method', requestParams)
         .subscribe(response => {
            console.log(response.data);
            console.log('Response success!');
            // let message = response.message;
             let code = response.code;
             if(code == 0){
-              /*this.hideForm = !this.hideForm;
-              this.size = 'small';
-              this.hideMsg = !this.hideMsg;
-              this.alertFail = !this.alertFail;
-              this.msg = 'Ошибка. Не удалось отправить заявку';*/
-              this.errorInputMsg = 'Введите валидный номер телефона';
+              this.wrongNumber = true;
+              this.installErrorMsg = 'Введите корректный номер';
             }
             else {
               this.hideForm = !this.hideForm;
@@ -210,28 +210,28 @@ export class PopUpComponent implements OnInit {
               this.alertSuccess = !this.alertSuccess;
               this.msg = 'Ваша заявка отправлена';
             }
-          /*let next = response.data.next;
-          if (response.data.result){
-            if (response.data.result.message){
-              step.resultMessage = response.data.result.message;
-            }
-            if (response.data.result.data){
-              step.resultData = response.data.result.data;
-            }
-          }
-          step.status = true;
-          if (next){
-            this.installStep(next, Object.assign({}, prevStepData, step.resultData));
-          } else {
-            // console.log('install finish');
-
-            if (response.data.error){
-              this.installErrorMsg = response.data.error;
-            } else {
-              this.installFinish();
-            }
-            this.state.install = false;
-          }*/
+          // let next = response.data.next;
+          // if (response.data.result){
+          //   if (response.data.result.message){
+          //     step.resultMessage = response.data.result.message;
+          //   }
+          //   if (response.data.result.data){
+          //     step.resultData = response.data.result.data;
+          //   }
+          // }
+          // step.status = true;
+          // if (next){
+          //   this.installStep(next, Object.assign({}, prevStepData, step.resultData));
+          // } else {
+          //   // console.log('install finish');
+          //
+          //   if (response.data.error){
+          //     this.installErrorMsg = response.data.error;
+          //   } else {
+          //     this.installFinish();
+          //   }
+          //   this.state.install = false;
+          // }
         },
         error=> {
           console.log(error);

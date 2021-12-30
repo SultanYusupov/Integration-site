@@ -30,9 +30,10 @@ h3 {
   margin: 0 auto 16px auto;
   padding: 0.25rem;
 }
-.required-field::after {
-  content: "*";
+label[for=telephone] span {
   color: red;
+  font-size: 10px;
+  margin-left: 4px;
 }
 label {
   display: flex;
@@ -69,6 +70,7 @@ button {
   margin-left: 40%;
   margin-top: 16px;
 }
+
 button:active {
   cursor: wait;
 }

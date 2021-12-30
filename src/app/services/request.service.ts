@@ -13,8 +13,9 @@ export class RequestService {
   constructor(
     private http: HttpClient
   ) {
-    this.backendUrl = './backend/index.php'
-    console.log(this.backendUrl)
+    this.backendUrl = 'http://stazhirovka-2021-0611.solo-it.ru/backend/index.php';
+    console.log(this.backendUrl);
+    console.log('request есть');
   }
 
   request(method: any, params?: any): Observable<BackendResponse>{

@@ -40,23 +40,23 @@ if (!preg_match('/((8|\+7)-?)?\(?\d{3,5}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}((
 
 sleep(5);
 
-$arResult = array(
+$arResult = [
   //'data' => $array['telephone'],
-  'data' => array(
+  'data' => [
     'next' => 2,
     'name' => $array['name'],
     'telephone' => $array['telephone']
-  ),
+  ],
   'code' => !$error ? 1 : 0,
   'message' => !$error ? 'Мы скоро с вами свяжемся' : $error,
-);
+];
 
 
-$forLog = array(
+$forLog = [
   'date' => date('Y-m-d H:i:s'),
   'data1' => $array,
   'data_input' => $received,
-);
+];
 
 $forLog = print_r($forLog, true);
 

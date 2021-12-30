@@ -26,10 +26,10 @@
       </div>
 
       <div class="field">
-        <label class="required-field" for="telephone">Телефон</label>
-        <input type="text" id="telephone" placeholder="Введите свой номер телефона" formControlName="telephone">
-        <div class="error" *ngIf="isControlInvalid('telephone')">
-          {{errorInputMsg}}
+        <label for="telephone">Телефон<span *ngIf="isControlInvalid('telephone')">*</span></label>
+        <input type="text" id="telephone" placeholder="Введите свой номер телефона" formControlName="telephone" required="required">
+        <div class="error" *ngIf="isControlInvalid('telephone') || wrongNumber">
+          {{installErrorMsg}}
         </div>
       </div>
 
