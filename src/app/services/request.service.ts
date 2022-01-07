@@ -15,19 +15,16 @@ export class RequestService {
   ) {
     this.backendUrl = 'http://stazhirovka-2021-0611.solo-it.ru/backend/index.php';
     console.log(this.backendUrl);
-    console.log('request есть');
   }
 
-  request(method: any, params?: any): Observable<BackendResponse>{
+  request(params?: any): Observable<BackendResponse>{
     if (params){
-      return this.http.post(this.getUrl(method), params, {withCredentials: true})
+      return this.http.post(this.backendUrl, params, {withCredentials: true})
         .pipe(map(response => response as BackendResponse));
     } else {
-      return this.http.get(this.getUrl(method), {withCredentials: true})
+      return this.http.get(this.backendUrl, {withCredentials: true})
         .pipe(map(response => response as BackendResponse));
     }
   }
-  private getUrl(method:any){
-    return this.backendUrl;
-  }
+
 }

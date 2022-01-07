@@ -34,9 +34,8 @@
       </div>
 
       <textarea type="text" placeholder="Напишите какую интеграцию вы бы хотели сделать" formControlName="comment"></textarea>
-      <button class="button" type="submit" (click)="start()" [disabled]="this.reactiveForm.invalid">Отправить</button>
+      <button class="button" [class.btn-load]="loading" type="submit" (click)="start()" [disabled]="this.reactiveForm.invalid">{{buttonText}}</button>
     </form>
-
 
     <p [ngClass]="{'hideMessage': hideMsg, 'alert-success': alertSuccess, 'alert-fail': alertFail}">
       {{msg}}

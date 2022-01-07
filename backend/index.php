@@ -27,6 +27,12 @@ $arResult = array(
 );
 
 echo json_encode($arResult);*/
+
+/*if( ! ini_get('date.timezone') )
+{
+    date_default_timezone_set('GMT');
+}*/
+
 $received = file_get_contents('php://input');
 
  $array = json_decode($received, true);

@@ -1,5 +1,6 @@
 export interface BackendResponse {
   code: number;
   data?: any;
-  msg?: string;
+  // msg?: string;
+  message?: string;
 }

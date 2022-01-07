@@ -64,16 +64,30 @@ input.ng-touched.ng-invalid{
 }
 
 button {
-  padding: 2px 8px;
   font-weight: bold;
   color: white;
   margin-left: 40%;
   margin-top: 16px;
+  border: none;
+  width: 120px;
+  height: 35px;
+}
+.btn-load {
+  background-image: repeating-linear-gradient(47deg, #e55749, #e55749 20%, #D32F2F 20%, #D32F2F 40%,
+  #e55749 40%);
+  animation: progress-bar-stripes 0.8s linear infinite 0s;
+  animation-fill-mode: backwards;
+  -webkit-animation-fill-mode: backwards;
+}
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 120px;
+  }
 }
 
-button:active {
-  cursor: wait;
-}
 .cl-btn-2 div {
   cursor: pointer;
   position: relative;

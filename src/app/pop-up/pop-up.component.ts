@@ -5,6 +5,7 @@ import { HttpClient } from "@angular/common/http";
 import { BackendService } from "../services/backend.service";
 import { SettingsService } from "../services/settings.service";
 import {animate, state, style, transition, trigger} from "@angular/animations";
+import { HttpEvent, HttpEventType } from '@angular/common/http';
 
 import {RequestService} from "../services/request.service";
 import {ApplicationStorageService} from "../services/application-storage.service";
@@ -29,7 +30,7 @@ import {installStep} from "../model/install-step";
 })
 export class PopUpComponent implements OnInit {
   title = 'Наименование приложения';
-
+  progress:number = 0;
   state = {
     install: false
   };
@@ -45,7 +46,6 @@ export class PopUpComponent implements OnInit {
 
   anketa: any;
 
-
   reactiveForm: any;
   public msg: string = '';
   public hideForm:boolean = false;
@@ -55,6 +55,8 @@ export class PopUpComponent implements OnInit {
   size: string = 'big'; // это для popup-window, анимация будет происходить не в css, а в angular
   // public disabled: boolean = false;
   public wrongNumber:boolean = false;
+  buttonText:string = 'Отправить';
+  loading:boolean = false;
 
   constructor(public integrationService: IntegrationService,
               private formBuilder: FormBuilder,
@@ -92,7 +94,6 @@ export class PopUpComponent implements OnInit {
   onSubmit(customerData: any) {
     // обработка данных формы
     const controls = this.reactiveForm.controls;
-
     if (this.reactiveForm.invalid) {
       Object.keys(controls)
         .forEach(controlName => controls[controlName].markAsTouched());
@@ -138,6 +139,8 @@ export class PopUpComponent implements OnInit {
     // при нажатии "Закрыть" окно формы возвращается в первоначальное состояние
   rollback() {
     // this.disabled = false;
+    this.buttonText = 'Отправить';
+    this.loading = false;
     this.size = 'big';
     this.alertSuccess = false;
     this.alertFail = false;
@@ -171,13 +174,18 @@ export class PopUpComponent implements OnInit {
 
   }
   start(){
-    this.installStep(0, {
-      anketa: this.anketa
-    })
-    console.log('Кнопка работает');
+    if (!this.reactiveForm.value.telephone) {
+      this.installErrorMsg = 'Номер телефона обязателен';
+    }
+    else {
+      this.installStep(0, {
+        anketa: this.anketa
+      })
+      this.loading = !this.loading;
+    }
   }
   installStep(stepNo: number, prevStepData?:any){
-    // console.log(`start step ${stepNo}`, prevStepData);
+    this.buttonText = 'Отправка..';
     let inputValue = this.reactiveForm.value;
     let step = this.stages[stepNo];
     if (step){
@@ -193,17 +201,18 @@ export class PopUpComponent implements OnInit {
         comment: inputValue.comment
       });
        console.log(requestParams);
-      this.bs.request('method', requestParams)
-        .subscribe(response => {
+      this.bs.request(requestParams)
+        .subscribe((response) => {
            console.log(response.data);
-           console.log('Response success!');
-           // let message = response.message;
+            let message = response.message;
             let code = response.code;
             if(code == 0){
               this.wrongNumber = true;
+              console.log('message is: '+ message);
               this.installErrorMsg = 'Введите корректный номер';
             }
             else {
+              console.log('message is: '+ message);
               this.hideForm = !this.hideForm;
               this.size = 'small';
               this.hideMsg = !this.hideMsg;
