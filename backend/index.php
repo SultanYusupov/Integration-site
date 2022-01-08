@@ -33,43 +33,53 @@ echo json_encode($arResult);*/
     date_default_timezone_set('GMT');
 }*/
 
-$received = file_get_contents('php://input');
+// функция удаляет все ненужные символы (также защищает от эксплойта)
+function test_input($dat)
+{
+  $dat = trim($dat);
+  $dat = stripslashes($dat);
+  $dat = htmlspecialchars($dat);
+  return $dat;
+}
 
+$received = file_get_contents('php://input');
  $array = json_decode($received, true);
 
 $code = 0;
 $error = '';
 
 if (!preg_match('/((8|\+7)-?)?\(?\d{3,5}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}((-?\d{1})?-?\d{1})?/', $array['telephone'])) {
-  $error = 'Не указан номер телефона';
+  $error = 'Неверно указан номер телефона';
 }
 
-sleep(5);
+  sleep(5);
 
-$arResult = [
-  //'data' => $array['telephone'],
-  'data' => [
-    'next' => 2,
-    'name' => $array['name'],
-    'telephone' => $array['telephone']
-  ],
-  'code' => !$error ? 1 : 0,
-  'message' => !$error ? 'Мы скоро с вами свяжемся' : $error,
-];
+  $arResult = [
+    //'data' => $array['telephone'],
+    'data' => [
+      'next' => 2,
+      'name' => test_input($array['name']),
+      'email' => test_input($array['email']),
+      'telephone' => test_input($array['telephone']),
+      'comment' => test_input($array['comment'])
+    ],
+    'code' => !$error ? 1 : 0,
+//  'message' => !$error ? 'Мы скоро с вами свяжемся' : $error,
+    'message' => $error ? $error : 'Ваша заявка отправлена'
+  ];
 
 
-$forLog = [
-  'date' => date('Y-m-d H:i:s'),
-  'data1' => $array,
-  'data_input' => $received,
-];
+  $forLog = [
+    'date' => date('Y-m-d H:i:s'),
+    'data1' => $array,
+    'data_input' => $received,
+  ];
 
-$forLog = print_r($forLog, true);
+  $forLog = print_r($forLog, true);
 
-$save = file_put_contents($_SERVER["DOCUMENT_ROOT"]. "/backend/log.txt", $forLog, FILE_APPEND);
+  $save = file_put_contents($_SERVER["DOCUMENT_ROOT"] . "/backend/log.txt", $forLog, FILE_APPEND);
 // $message = file_get_contents($_SERVER["DOCUMENT_ROOT"]. "/backend/log.txt", true);
-echo json_encode($arResult);
-
+  echo json_encode($arResult);
 /*------Отправляем данные в Битрикс--------------*/
 // формируем URL, на который будем отправлять запрос в битрикс24
 /*$queryURL = "https://b24-24zdb7.bitrix24.ru/rest/1/9uveg12vvakig3t0/crm.lead.add.json";

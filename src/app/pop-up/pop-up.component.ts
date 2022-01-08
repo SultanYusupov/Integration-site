@@ -42,7 +42,7 @@ export class PopUpComponent implements OnInit {
       show: false
     },
   ];
-  installErrorMsg: string = 'Введите номер телефона';
+  installErrorMsg: any = 'Введите номер телефона';
 
   anketa: any;
 
@@ -146,6 +146,7 @@ export class PopUpComponent implements OnInit {
     this.alertFail = false;
     this.hideForm = false;
     this.hideMsg = true;
+    this.wrongNumber = false;
   }
 
   install(){
@@ -175,9 +176,10 @@ export class PopUpComponent implements OnInit {
   }
   start(){
     if (!this.reactiveForm.value.telephone) {
-      this.installErrorMsg = 'Номер телефона обязателен';
+      this.installErrorMsg = 'Номер телефона должен быть обязателен';
     }
     else {
+      this.wrongNumber = false;
       this.installStep(0, {
         anketa: this.anketa
       })
@@ -207,9 +209,11 @@ export class PopUpComponent implements OnInit {
             let message = response.message;
             let code = response.code;
             if(code == 0){
+              this.loading = !this.loading;
+              this.buttonText = 'Отправить';
               this.wrongNumber = true;
               console.log('message is: '+ message);
-              this.installErrorMsg = 'Введите корректный номер';
+              this.installErrorMsg = message;
             }
             else {
               console.log('message is: '+ message);
@@ -256,7 +260,7 @@ export class PopUpComponent implements OnInit {
       // console.log('install finish');
     }
   }
-  installFinish(){
+  /*installFinish(){
     let cmd = 'setInstallFinish:'
       + ':' + this.uniqid()
       + (!!this.as.APP_SID ? (':' + this.as.APP_SID) : '');
@@ -273,12 +277,10 @@ export class PopUpComponent implements OnInit {
       s += charsList[Math.round(Math.random()*(charsList.length-1))];
     return s;
   }
-
   next() {
     this.installFinish();
     this.state.install = false;
-
-  }
+  }*/
 
 }
 
