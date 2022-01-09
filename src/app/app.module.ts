@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { PathLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
@@ -20,6 +21,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {installStep} from "./model/install-step";
 import { RequestService } from "./services/request.service";
 import {ApplicationStorageService} from "./services/application-storage.service";
+
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import {ApplicationStorageService} from "./services/application-storage.service"
     ]),
   ],
   providers: [IntegrationService, BackendService, SettingsService, SzgmDataService,
-    ApplicationService, KpGeneratorService, RequestService, ApplicationStorageService],
+    ApplicationService, KpGeneratorService, RequestService, ApplicationStorageService,
+    {provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

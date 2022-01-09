@@ -84,7 +84,7 @@ export class PopUpComponent implements OnInit {
       ]
       ],
       telephone: ['', [
-        Validators.required, Validators.pattern('^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{10}$')
+        Validators.required, Validators.pattern('^(\\+7|8)([0-9]{10})')
       ]
       ],
       comment: ['']
@@ -177,6 +177,9 @@ export class PopUpComponent implements OnInit {
   start(){
     if (!this.reactiveForm.value.telephone) {
       this.installErrorMsg = 'Номер телефона должен быть обязателен';
+    }
+    else if (this.reactiveForm.value.telephone.invalid) {
+      this.installErrorMsg = 'Введите правильный номер телефона';
     }
     else {
       this.wrongNumber = false;

@@ -34,8 +34,7 @@ echo json_encode($arResult);*/
 }*/
 
 // функция удаляет все ненужные символы (также защищает от эксплойта)
-function test_input($dat)
-{
+function test_input($dat) {
   $dat = trim($dat);
   $dat = stripslashes($dat);
   $dat = htmlspecialchars($dat);
@@ -43,15 +42,20 @@ function test_input($dat)
 }
 
 $received = file_get_contents('php://input');
- $array = json_decode($received, true);
-
 $code = 0;
 $error = '';
 
-if (!preg_match('/((8|\+7)-?)?\(?\d{3,5}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}((-?\d{1})?-?\d{1})?/', $array['telephone'])) {
+if (empty($received)) {
+  $error = 'Ошибка. Получены пустые данные';
+}
+ $array = json_decode($received, true);
+
+if (preg_match('/^(\+7|8)([0-9]{10})/', $array['telephone'])) {
+  $code = 1;
+}
+else {
   $error = 'Неверно указан номер телефона';
 }
-
   sleep(5);
 
   $arResult = [
@@ -63,9 +67,8 @@ if (!preg_match('/((8|\+7)-?)?\(?\d{3,5}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}((
       'telephone' => test_input($array['telephone']),
       'comment' => test_input($array['comment'])
     ],
-    'code' => !$error ? 1 : 0,
-//  'message' => !$error ? 'Мы скоро с вами свяжемся' : $error,
-    'message' => $error ? $error : 'Ваша заявка отправлена'
+    'code' => $code,
+    'message' => $code ? 'Ваша заявка отправлена' : $error,
   ];
 
 
@@ -73,6 +76,7 @@ if (!preg_match('/((8|\+7)-?)?\(?\d{3,5}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}((
     'date' => date('Y-m-d H:i:s'),
     'data1' => $array,
     'data_input' => $received,
+    'result_code' => $code
   ];
 
   $forLog = print_r($forLog, true);
