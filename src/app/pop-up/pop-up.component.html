@@ -13,7 +13,7 @@
         <label for="name">Имя</label>
         <input type="text" id="name" placeholder="Введите свое имя" formControlName="name" name="name" max="12">
         <div class="error" *ngIf="isControlInvalid('name')">
-          Имя должно состоять только из русских букв
+          Имя должно состоять только из кириллицы
         </div>
       </div>
 
@@ -21,7 +21,7 @@
         <label for="email">E-mail</label>
         <input type="email" id="email" placeholder="Введите адрес электронной почты" formControlName="email" name="email">
         <div class="error" *ngIf="isControlInvalid('email')">
-          Введите валидный адрес почты
+          Введите правильный адрес почты
         </div>
       </div>
 
@@ -34,7 +34,7 @@
       </div>
 
       <textarea type="text" placeholder="Напишите какую интеграцию вы бы хотели сделать" formControlName="comment"></textarea>
-      <button class="button" [class.btn-load]="loading" type="submit" (click)="start()">{{buttonText}}</button>
+      <button class="button" [class.btn-load]="loading" type="submit" (click)="start()" [disabled]="this.reactiveForm.invalid">{{buttonText}}</button>
     </form>
 
     <p [ngClass]="{'hideMessage': hideMsg, 'alert-success': alertSuccess, 'alert-fail': alertFail}">

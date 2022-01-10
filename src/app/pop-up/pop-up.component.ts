@@ -84,7 +84,7 @@ export class PopUpComponent implements OnInit {
       ]
       ],
       telephone: ['', [
-        Validators.required, Validators.pattern('^(\\+7|8)([0-9]{10})')
+        Validators.required, Validators.pattern('^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$')
       ]
       ],
       comment: ['']
@@ -99,8 +99,6 @@ export class PopUpComponent implements OnInit {
         .forEach(controlName => controls[controlName].markAsTouched());
       return;
     }
-    // очищает input при отправке
-    this.reactiveForm.reset();
   }
 
   isControlInvalid(controlName: string): boolean {
@@ -147,6 +145,8 @@ export class PopUpComponent implements OnInit {
     this.hideForm = false;
     this.hideMsg = true;
     this.wrongNumber = false;
+    // очищает input при отправке
+    this.reactiveForm.reset();
   }
 
   install(){
