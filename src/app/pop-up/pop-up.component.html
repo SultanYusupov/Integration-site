@@ -11,9 +11,9 @@
       <h3>Оставьте заявку</h3>
       <div class="field">
         <label for="name">Имя</label>
-        <input type="text" id="name" placeholder="Введите свое имя" formControlName="name" name="name" max="12">
+        <input type="text" id="name" placeholder="Введите свое имя" formControlName="name" name="name">
         <div class="error" *ngIf="isControlInvalid('name')">
-          Имя должно состоять только из кириллицы
+          Имя должно состоять только из букв кириллицы
         </div>
       </div>
 

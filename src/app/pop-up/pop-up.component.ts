@@ -5,7 +5,6 @@ import { HttpClient } from "@angular/common/http";
 import { BackendService } from "../services/backend.service";
 import { SettingsService } from "../services/settings.service";
 import {animate, state, style, transition, trigger} from "@angular/animations";
-import { HttpEvent, HttpEventType } from '@angular/common/http';
 
 import {RequestService} from "../services/request.service";
 import {ApplicationStorageService} from "../services/application-storage.service";
@@ -76,7 +75,7 @@ export class PopUpComponent implements OnInit {
     // получаем данные формы
     return this.reactiveForm = this.formBuilder.group({
       name: ['', [
-        Validators.pattern(/[А-я]/)
+        Validators.pattern(/[А-я]/), Validators.maxLength(12)
       ]
       ],
       email: ['', [
@@ -87,7 +86,7 @@ export class PopUpComponent implements OnInit {
         Validators.required, Validators.pattern('^(8|\\+7)[\\- ]?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$')
       ]
       ],
-      comment: ['']
+      comment: ['', [Validators.maxLength(80)]]
     });
   }
 
@@ -108,32 +107,6 @@ export class PopUpComponent implements OnInit {
     return result;
   }
 
-    /*sendData() {
-    // значения из инпута в виде объекта
-    let inputValue = this.reactiveForm.value;
-    // преобразовываем обект с данными формы в json-строку
-    let jsonStr = JSON.stringify(inputValue);
-
-    // метод post находится в backend.service
-    return this.settings.placementOn(jsonStr).subscribe(data => {
-        // при нажатии "Отправить", форма исчезает и появляется сообщение об успешном отправлении
-        console.log(data);
-        this.hideForm = !this.hideForm;
-        this.size = 'small';
-          this.hideMsg = !this.hideMsg;
-          this.alertSuccess = !this.alertSuccess;
-        this.msg = 'Ваша заявка отправлена';
-      },
-        err => {
-          // при нажатии "Отправить", форма исчезает и появляется сообщение о неудачном отправлении
-        this.hideForm = !this.hideForm;
-          this.size = 'small';
-          this.hideMsg = !this.hideMsg;
-          this.alertFail = !this.alertFail;
-        this.msg = 'Ошибка. Не удалось отправить заявку';
-        });
-
-    }*/
     // при нажатии "Закрыть" окно формы возвращается в первоначальное состояние
   rollback() {
     this.disabled = false;
@@ -181,9 +154,6 @@ export class PopUpComponent implements OnInit {
       this.installErrorMsg = 'Номер телефона должен быть обязателен';
       this.disabled = false;
     }
-    // else if (this.reactiveForm.value.telephone.invalid) {
-    //   this.installErrorMsg = 'Введите правильный номер телефона';
-    // }
     const controls = this.reactiveForm.controls;
     if (this.reactiveForm.invalid) {
       Object.keys(controls)
@@ -205,7 +175,6 @@ export class PopUpComponent implements OnInit {
     let step = this.stages[stepNo];
     if (step){
       step.show = true;
-      // console.log('step', step);
       if (!prevStepData){
         prevStepData = {};
       }
@@ -237,28 +206,6 @@ export class PopUpComponent implements OnInit {
               this.alertSuccess = !this.alertSuccess;
               this.msg = 'Ваша заявка отправлена';
             }
-          // let next = response.data.next;
-          // if (response.data.result){
-          //   if (response.data.result.message){
-          //     step.resultMessage = response.data.result.message;
-          //   }
-          //   if (response.data.result.data){
-          //     step.resultData = response.data.result.data;
-          //   }
-          // }
-          // step.status = true;
-          // if (next){
-          //   this.installStep(next, Object.assign({}, prevStepData, step.resultData));
-          // } else {
-          //   // console.log('install finish');
-          //
-          //   if (response.data.error){
-          //     this.installErrorMsg = response.data.error;
-          //   } else {
-          //     this.installFinish();
-          //   }
-          //   this.state.install = false;
-          // }
         },
         error=> {
           console.log(error);
@@ -274,27 +221,6 @@ export class PopUpComponent implements OnInit {
       // console.log('install finish');
     }
   }
-  /*installFinish(){
-    let cmd = 'setInstallFinish:'
-      + ':' + this.uniqid()
-      + (!!this.as.APP_SID ? (':' + this.as.APP_SID) : '');
-    // console.log(cmd);
-    // console.log('http'+(this.as.PROTOCOL?'s':'')+'://' + this.as.DOMAIN);
-    setTimeout(() => {
-      parent.postMessage(cmd, 'http'+(this.as.PROTOCOL?'s':'')+'://' + this.as.DOMAIN);
-    }, 2000);
-  }
-  uniqid() {
-    let s = '';
-    let charsList = '0123456789abcdefghijklmnopqrstuvwxyz';
-    for (let i = 0; i <32; i++)
-      s += charsList[Math.round(Math.random()*(charsList.length-1))];
-    return s;
-  }
-  next() {
-    this.installFinish();
-    this.state.install = false;
-  }*/
 
 }
 
