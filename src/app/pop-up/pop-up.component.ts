@@ -53,7 +53,7 @@ export class PopUpComponent implements OnInit {
   public alertSuccess:boolean = false;
   public alertFail:boolean = false;
   size: string = 'big'; // это для popup-window, анимация будет происходить не в css, а в angular
-  // public disabled: boolean = false;
+  public disabled: boolean = false;
   public wrongNumber:boolean = false;
   buttonText:string = 'Отправить';
   loading:boolean = false;
@@ -84,14 +84,14 @@ export class PopUpComponent implements OnInit {
       ]
       ],
       telephone: ['', [
-        Validators.required, Validators.pattern('^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$')
+        Validators.required, Validators.pattern('^(8|\\+7)[\\- ]?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$')
       ]
       ],
       comment: ['']
     });
   }
 
-  onSubmit(customerData: any) {
+  onSubmit() {
     // обработка данных формы
     const controls = this.reactiveForm.controls;
     if (this.reactiveForm.invalid) {
@@ -136,7 +136,7 @@ export class PopUpComponent implements OnInit {
     }*/
     // при нажатии "Закрыть" окно формы возвращается в первоначальное состояние
   rollback() {
-    // this.disabled = false;
+    this.disabled = false;
     this.buttonText = 'Отправить';
     this.loading = false;
     this.size = 'big';
@@ -175,11 +175,21 @@ export class PopUpComponent implements OnInit {
 
   }
   start(){
+    this.disabled = true;
     if (!this.reactiveForm.value.telephone) {
+      this.onSubmit();
       this.installErrorMsg = 'Номер телефона должен быть обязателен';
+      this.disabled = false;
     }
-    else if (this.reactiveForm.value.telephone.invalid) {
-      this.installErrorMsg = 'Введите правильный номер телефона';
+    // else if (this.reactiveForm.value.telephone.invalid) {
+    //   this.installErrorMsg = 'Введите правильный номер телефона';
+    // }
+    const controls = this.reactiveForm.controls;
+    if (this.reactiveForm.invalid) {
+      Object.keys(controls)
+        .forEach(controlName => controls[controlName].markAsTouched());
+      this.disabled = false;
+      return;
     }
     else {
       this.wrongNumber = false;
@@ -217,6 +227,7 @@ export class PopUpComponent implements OnInit {
               this.wrongNumber = true;
               console.log('message is: '+ message);
               this.installErrorMsg = message;
+              this.disabled = false;
             }
             else {
               console.log('message is: '+ message);

@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    <form [formGroup]="reactiveForm" [ngClass]="{'hide-form': hideForm}" (ngSubmit)="onSubmit(reactiveForm.value)">
+    <form [formGroup]="reactiveForm" [ngClass]="{'hide-form': hideForm}" (ngSubmit)="onSubmit()">
       <h3>Оставьте заявку</h3>
       <div class="field">
         <label for="name">Имя</label>
@@ -34,7 +34,7 @@
       </div>
 
       <textarea type="text" placeholder="Напишите какую интеграцию вы бы хотели сделать" formControlName="comment"></textarea>
-      <button class="button" [class.btn-load]="loading" type="submit" (click)="start()" [disabled]="this.reactiveForm.invalid">{{buttonText}}</button>
+      <button class="button" [class.btn-load]="loading" type="submit" (click)="start()" [disabled]="disabled">{{buttonText}}</button>
     </form>
 
     <p [ngClass]="{'hideMessage': hideMsg, 'alert-success': alertSuccess, 'alert-fail': alertFail}">

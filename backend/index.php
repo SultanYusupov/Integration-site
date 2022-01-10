@@ -50,7 +50,7 @@ if (empty($received)) {
 }
  $array = json_decode($received, true);
 
-if (preg_match('/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/', $array['telephone'])) {
+if (preg_match('/^(8|\+7)[\- ]?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/', $array['telephone'])) {
   $code = 1;
 }
 else {
