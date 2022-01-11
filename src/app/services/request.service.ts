@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {BackendResponse} from '../model/backend-response';
 import {map} from 'rxjs/operators';
+import { environment } from "../../environments/environment.prod";
 
 @Injectable({
   providedIn: 'root'
