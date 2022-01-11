@@ -1,6 +1,8 @@
 # IntegrationSite
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
+Сайт, где можно связать сервисы друг с другом. Сначала выбираете нужный сервис в списке, затем с какой системой вы хотите его связать. После этого заполняете заявку (достаточно номера телефона), можете указать какие данные требуется передавать между сервисами. Заявка отправляется в лид Битрикс24.
+
+Этот проект был создан с помощью [Angular CLI](https://github.com/angular/angular-cli) версии 12.2.3.
 
 ## Development server
 

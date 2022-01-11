@@ -53,17 +53,23 @@ $queryURL = "https://b24-sy2iop.bitrix24.ru/rest/1/6sx4gmjg6vh3vqj9/crm.lead.add
 //собираем данные из формы
 $sName = htmlspecialchars($array['name']);
 $sPhone = htmlspecialchars($array["telephone"]);
-$sEmail = htmlspecialchars($array["email"]);
-$sComment = test_input($array['comment']);
+$arEmail = Array(
+  "n0" => Array(
+    "VALUE" => str_replace(" ","",$array["email"]),
+    "VALUE_TYPE" => "WORK",
+  ),
+);
+$sComments = strip_tags($array['comment']);
 $arPhone = (!empty($sPhone)) ? array(array('VALUE' => $sPhone, 'VALUE_TYPE' => 'MOBILE')) : array();
 
 // формируем параметры для создания лида
 $queryData = http_build_query(array(
   "fields" => array(
+    "TITLE" => 'Интеграция систем',
     "NAME" => $sName,	// имя
-    "EMAIL" => $sEmail,	// фамилия
+    "EMAIL" => $arEmail,	// почта
     "PHONE" => $arPhone, // телефон
-    "COMMENT" => $sComment, // дополнительное сообщение
+    "COMMENTS" => $sComments, // дополнительное сообщение
   ),
   'params' => array("REGISTER_SONET_EVENT" => "Y")	// Y = произвести регистрацию события добавления лида в живой ленте. Дополнительно будет отправлено уведомление ответственному за лид.
 ));

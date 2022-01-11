@@ -75,9 +75,19 @@ button {
 .btn-load {
   background-image: repeating-linear-gradient(47deg, #e55749, #e55749 20%, #D32F2F 20%, #D32F2F 40%,
   #e55749 40%);
+  background-image: -moz-repeating-linear-gradient(47deg, #e55749, #e55749 20%, #D32F2F 20%, #D32F2F 40%,
+  #e55749 40%);
+  background-image: -ms-repeating-linear-gradient(47deg, #e55749, #e55749 20%, #D32F2F 20%, #D32F2F 40%,
+  #e55749 40%);
+  background-image: -webkit-repeating-linear-gradient(47deg, #e55749, #e55749 20%, #D32F2F 20%, #D32F2F 40%,
+  #e55749 40%);
+  background-image: -o-repeating-linear-gradient(47deg, #e55749, #e55749 20%, #D32F2F 20%, #D32F2F 40%,
+  #e55749 40%);
   animation: progress-bar-stripes 0.8s linear infinite 0s;
   animation-fill-mode: backwards;
   -webkit-animation-fill-mode: backwards;
+  -moz-animation-fill-mode: backwards;
+  -o-animation-fill-mode: backwards;
 }
 @keyframes progress-bar-stripes {
   from {

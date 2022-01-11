@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <textarea type="text" placeholder="Напишите какую интеграцию вы бы хотели сделать" formControlName="comment"></textarea>
+      <textarea type="text" placeholder="Напишите какую интеграцию вы бы хотели сделать" formControlName="comment" maxlength="60"></textarea>
       <button class="button" [class.btn-load]="loading" type="submit" (click)="start()" [disabled]="disabled">{{buttonText}}</button>
     </form>
 
