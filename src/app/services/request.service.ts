@@ -14,7 +14,8 @@ export class RequestService {
   constructor(
     private http: HttpClient
   ) {
-    this.backendUrl = 'http://stazhirovka-2021-0611.solo-it.ru/backend/index.php';
+    // this.backendUrl = 'http://stazhirovka-2021-0611.solo-it.ru/backend/index.php';
+    this.backendUrl = environment.urlForLead;
     console.log(this.backendUrl);
   }
 

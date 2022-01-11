@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { IntegrationService } from '../integration.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from "@angular/common/http";
-import { BackendService } from "../services/backend.service";
-import { SettingsService } from "../services/settings.service";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 
 import {RequestService} from "../services/request.service";
@@ -30,9 +28,6 @@ import {installStep} from "../model/install-step";
 export class PopUpComponent implements OnInit {
   title = 'Наименование приложения';
   progress:number = 0;
-  state = {
-    install: false
-  };
   stages:Array<installStep> = [
     {
       name: "Поиск клиента",
@@ -42,8 +37,6 @@ export class PopUpComponent implements OnInit {
     },
   ];
   installErrorMsg: any = 'Введите номер телефона';
-
-  anketa: any;
 
   reactiveForm: any;
   public msg: string = '';
@@ -61,27 +54,22 @@ export class PopUpComponent implements OnInit {
               private formBuilder: FormBuilder,
               private http: HttpClient,
               private bs: RequestService,
-              private as: ApplicationStorageService,
-              private settings: SettingsService) {
+              private as: ApplicationStorageService) {
   }
 
   ngOnInit(): void {
     this.initForm();
     this.title = this.as.appName;
-    this.install();
   }
 
+// получаем данные формы
   initForm() {
-    // получаем данные формы
     return this.reactiveForm = this.formBuilder.group({
       name: ['', [
-        Validators.pattern(/[А-я]/), Validators.maxLength(12)
+        Validators.pattern(/[А-я]|[A-z]/)
       ]
       ],
-      email: ['', [
-        Validators.email
-      ]
-      ],
+      email: [''],
       telephone: ['', [
         Validators.required, Validators.pattern('^(8|\\+7)[\\- ]?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$')
       ]
@@ -122,31 +110,31 @@ export class PopUpComponent implements OnInit {
     this.reactiveForm.reset();
   }
 
-  install(){
-    // let anketa = this.dialog.open(AnketaComponent, {
-    //   minWidth: 500,
-    //   data: {
-    //     title: this.title,
-    //     licenceLink: this.as.licenceLink
-    //   },
-    //   disableClose: true
-    // });
-    // anketa.afterClosed().subscribe((response:{
-    //   phone: string,
-    //   tarif: any,
-    //   activeTo: Date,
-    //   licence: boolean
-    // }) => {
-    //   if (response.activeTo){
-    //     response['offset'] = response.activeTo.getTimezoneOffset();
-    //     response['activeToTs'] = response.activeTo.getTime()/1000
-    //   }
-    //   this.state.install = true;
-    //   this.anketa = response;
-    // })
+  /*install(){
+    let anketa = this.dialog.open(AnketaComponent, {
+      minWidth: 500,
+      data: {
+        title: this.title,
+        licenceLink: this.as.licenceLink
+      },
+      disableClose: true
+    });
+    anketa.afterClosed().subscribe((response:{
+      phone: string,
+      tarif: any,
+      activeTo: Date,
+      licence: boolean
+    }) => {
+      if (response.activeTo){
+        response['offset'] = response.activeTo.getTimezoneOffset();
+        response['activeToTs'] = response.activeTo.getTime()/1000
+      }
+      this.state.install = true;
+      this.anketa = response;
+    })
     // this.start();//Закомментировать кнопочку
+  }*/
 
-  }
   start(){
     this.disabled = true;
     if (!this.reactiveForm.value.telephone) {
@@ -163,22 +151,17 @@ export class PopUpComponent implements OnInit {
     }
     else {
       this.wrongNumber = false;
-      this.installStep(0, {
-        anketa: this.anketa
-      })
+      // this.installStep(0, {
+      //   anketa: this.anketa
+      // })
+      this.installStep();
       this.loading = !this.loading;
     }
   }
-  installStep(stepNo: number, prevStepData?:any){
+  installStep(){
     this.buttonText = 'Отправка..';
     let inputValue = this.reactiveForm.value;
-    let step = this.stages[stepNo];
-    if (step){
-      step.show = true;
-      if (!prevStepData){
-        prevStepData = {};
-      }
-      let requestParams = Object.assign({}, prevStepData, {
+      let requestParams = Object.assign({}, {
         name: inputValue.name,
         email: inputValue.email,
         telephone: inputValue.telephone,
@@ -217,9 +200,6 @@ export class PopUpComponent implements OnInit {
           this.msg = 'Ошибка. Не удалось отправить заявку';
         }
         )
-    } else {
-      // console.log('install finish');
-    }
   }
 
 }
