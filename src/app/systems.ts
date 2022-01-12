@@ -1083,7 +1083,7 @@ export const systems = [
   },
   {
     name: 'Marquiz',
-    url: '',
+    url: 'marquiz',
     image: 'assets/images/marquiz_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=marquiz.ru',
     amount: 238,
@@ -1128,7 +1128,7 @@ export const systems = [
   },
   {
     name: 'Messedo',
-    url: '',
+    url: 'messedo',
     image: 'assets/images/messedo_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=messedo.com',
     amount: 217,
