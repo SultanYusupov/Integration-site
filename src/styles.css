@@ -21,13 +21,18 @@ body {
   box-sizing: content-box;
 }
 .container_for_content {
-  padding-top: 120px;
+  /*padding-top: 40px;*/
   width: 100%;
   background-color: #62a4a0;
   display: flex;
   flex-direction: column;
   align-items: center;
   /*min-width: 36.25rem;*/
+}
+@media screen and (max-width: 529px) {
+  .container_for_content {
+    padding: 0 0 20px 20px;
+  }
 }
 
 /*Заголовки h1*/
@@ -67,12 +72,16 @@ a {
 /*Основной логотип сайта*/
 .logo {
   display: inline-block;
-  width: 130px;
-  color: #e55749;
-  font-size: 24px;
-  letter-spacing: 2px;
-  font-weight: 700;
-  background: url("/assets/images/solo-it_logo.png");
+  /*width: 130px;*/
+  /*color: #e55749;*/
+  /*font-size: 24px;*/
+  /*letter-spacing: 2px;*/
+  /*font-weight: 700;*/
+
+}
+.logo img {
+  width: 110px;
+
 }
 
 /*Логотипы систем интеграции*/

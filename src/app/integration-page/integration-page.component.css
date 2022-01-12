@@ -33,9 +33,6 @@
     max-width: 420px;
     margin-top: 0;
   }
-  .container_for_content {
-    padding: 100px 0 20px 20px;
-  }
 }
 
 /*-------settings. Блок с настройками связки-------------*/
@@ -211,10 +208,9 @@ summary::-moz-list-bullet{list-style-type:none;}
 summary::marker{display:none;}
 summary {
   display:flex;
-  padding: 20px 40px 20px 20px;
+  padding: 20px 40px 20px 30px;
   font-weight: 600;
   cursor: pointer;
-  padding-left: 30px;
 }
 summary span {
   background: url("/../../assets/images/expand.png") no-repeat;

@@ -1550,9 +1550,9 @@ export const systems = [
     description: '«Битрикс24» — это облачный сервис, предназначенный для управления бизнесом, разработанный российской компанией «1С-Битрикс». Включает в себя набор из основных инструментов для автоматизации бизнес-процессов. Есть возможность общения между сотрудниками, контроль дедлайнов, обмен файлами, возможность составления подробных отчётов и многое другое. Несомненное достоинство сервиса — его удобство и простота.'
   },
   {
-    name: '1С-Битрикс: Управление сайтом',
+    name: '1С-Битрикс',
     url: '1c-bitrix',
-    image: 'assets/images/1C-Bitrix_ru.png',
+    image: 'assets/images/1C-Bitrix-Logo.png',
     icon: 'assets/images/1c_bitrix_logo.png',
     amount: 220,
     connectors: 183,
@@ -1561,7 +1561,7 @@ export const systems = [
   {
     name: 'Контур Эльба',
     url: 'kontur-elba',
-    image: 'assets/images/kontur-elba_ru.png.png',
+    image: 'assets/images/kontur-elba_ru.png',
     icon: 'assets/images/kontur-elba_icon.png',
     amount: 220,
     connectors: 183,
