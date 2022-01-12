@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { PathLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
@@ -16,6 +17,11 @@ import {SettingsService} from "./services/settings.service";
 import {SzgmDataService} from "./services/szgm-data.service";
 import {ApplicationService} from "./services/application.service";
 import {KpGeneratorService} from "./services/kp-generator.service";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {installStep} from "./model/install-step";
+import { RequestService } from "./services/request.service";
+import {ApplicationStorageService} from "./services/application-storage.service";
+
 
 @NgModule({
   declarations: [
@@ -27,6 +33,7 @@ import {KpGeneratorService} from "./services/kp-generator.service";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
@@ -36,7 +43,9 @@ import {KpGeneratorService} from "./services/kp-generator.service";
       {path: 'products/:id1/:id2', component: IntegrationPageComponent},
     ]),
   ],
-  providers: [IntegrationService, BackendService, SettingsService, SzgmDataService, ApplicationService, KpGeneratorService],
+  providers: [IntegrationService, BackendService, SettingsService, SzgmDataService,
+    ApplicationService, KpGeneratorService, RequestService, ApplicationStorageService,
+    {provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

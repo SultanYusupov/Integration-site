@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpResponse} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpResponse} from "@angular/common/http";
 import {map} from "rxjs/operators";
 
 @Injectable({
@@ -7,9 +7,8 @@ import {map} from "rxjs/operators";
 })
 export class BackendService {
 
-  private backendUrl = 'https://generator.solo-it.ru/backend/api/v1';
-  private obj = '{"name" : "name"}';
-
+  // private backendUrl = './forms/index.php';
+  private backendUrl = './backend/index.php';
   constructor(
     private http: HttpClient,
     // private token: string
@@ -44,10 +43,8 @@ export class BackendService {
    */
 
   post<T>(module: any, method: any, params: any){
-    //console.log(`${this.backendUrl}/${module}/${method}`)
-    return this.http.post<any>(this.backendUrl, Object.assign({
-      token: 'token'
-    }, params), {withCredentials: true})
+    // в params передается json-строка из формы
+    return this.http.post<any>(this.backendUrl, params, {withCredentials: true})
       .pipe(map((response: {
         code: any,
         data: any

@@ -17,23 +17,9 @@
   color: #ffffff;
 }
 @media screen and (max-width: 973px) {
-  .systems {
-    display: none;
-  }
   .subtitle {
     font-size: 17px;
-    text-align: left;
     max-width: 420px;
-    margin-top: 0;
-  }
-  .container_for_content {
-    align-items: flex-start;
-    padding: 100px 0 20px 20px;
-  }
-}
-@media screen and (max-width: 689px) {
-  .subtitle {
-    max-width: 220px;
   }
 }
 
@@ -41,32 +27,6 @@ a {
   color: #60bbb5;
 }
 
-/*------howto. Блок с инструкцией как интегрировать системы-----------*/
-.howto {
-  margin-top: 70px;
-  font-weight: 400;
-}
-.instruction {
-  margin-top: 35px;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 60px 0;
-}
-.step {
-  padding: 0 30px 0 30px;
-  width: 25%;
-  font-size: 15px;
-  line-height: 20px;
-  color: #464a55;
-}
-.icon {
-  display: block;
-  height: 75px;
-  font-size: 36px;
-  color: #60bbb5;
-  font-weight: 700;
-  line-height: 75px;
-}
 .try_btn_container {
   margin-top: 40px;
   text-align: center;
@@ -75,12 +35,6 @@ a {
   padding: 15px 65px 15px 65px;
   color: #ffffff;
   cursor: pointer;
-}
-@media screen and (max-width: 749px) {
-  .step {
-    width: 50%;
-    padding: 10px 30px 10px 30px;
-  }
 }
 
 /*-------settings. Блок с настройками связки-------------*/
@@ -296,74 +250,6 @@ details[open] {
   font-weight: bold;
 }
 
-/*-------articles. Блок со статьями----------*/
-/*.new_articles {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 100%;
-  color: #222222;
-  padding-top: 70px;
-}
-.articles {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
-}
-.article {
-  cursor: pointer;
-  width: calc(100% / 3 - 20px);
-  min-height: 284px;
-  margin-top: 20px;
-}
-.article_img {
-  height: 165px;
-  border-radius: 5px;
-  background-position: center;
-  background-size: cover;
-}
-.img1 {
-  background-image: url(/../../assets/images/1c860e638e3dd4654eaa90a3399a7013.png);
-}
-.img2 {
-  background-image: url(/../../assets/images/5b334296382fcb9e86683078a774de1a.png);
-}
-.img3 {
-  background-image: url(/../../assets/images/cba110c2d52c3029c8844431690b9c32.png);
-}
-.img4 {
-  background-image: url(/../../assets/images/e3ac0d78c9a0b9b1aa265f2a6d63b80b.png);
-}
-.img5 {
-  background-image: url(/../../assets/images/73cab19a42031a94dbdafde71164a070.png);
-}
-.img6 {
-  background-image: url(/../../assets/images/fa14bd8af027c1df78b3abd1f112553d.png);
-}
-.link_container {
-  padding: 15px;
-  border-radius: 0 0 8px 8px;
-  background: #ffffff;
-}
-.article_header {
-  display: block;
-  height: 61px;
-  overflow: hidden;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 110%;
-  color: #464a55;
-}
-.link {
-  float: left;
-  padding-top: 10px;
-  font-size: 15px;
-  font-weight: bold;
-  color: #e55749;
-}
-.link:hover {
-  text-decoration: underline;
-}*/
-
 /*------request-------*/
 .request {
   margin-top: 80px;
@@ -388,6 +274,7 @@ details[open] {
   }
 }
 
+/*pop-up component*/
 .show {
   display: none;
 }

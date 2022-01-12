@@ -11,6 +11,7 @@
   line-height: 40px;
   color: white;
   padding: 20px 0;
+  text-align: center;
 }
 .systems svg {
   width: 48px;
@@ -27,58 +28,11 @@
   margin-bottom: 20px;
 }
 @media screen and (max-width: 973px) {
-  .systems {
-    display: none;
-  }
   .subtitle {
     font-size: 17px;
-    text-align: left;
     max-width: 420px;
     margin-top: 0;
   }
-  .container_for_content {
-    align-items: flex-start;
-    padding: 100px 0 20px 20px;
-  }
-}
-@media screen and (max-width: 689px) {
-  .subtitle {
-    max-width: 220px;
-  }
-}
-
-/*------howto. Блок с инструкцией как интегрировать системы-----------*/
-.howto {
-  margin-top: 70px;
-  font-weight: 400;
-}
-.instruction {
-  margin-top: 35px;
-  display: flex;
-  padding: 60px 0;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.step {
-  padding: 0 30px 0 30px;
-  width: 25%;
-  font-size: 15px;
-  line-height: 20px;
-  color: #464a55;
-}
-@media screen and (max-width: 749px) {
-  .step {
-    width: 50%;
-    padding: 10px 30px 10px 30px;
-  }
-}
-.icon {
-  display: block;
-  height: 75px;
-  font-size: 36px;
-  color: #60bbb5;
-  font-weight: 700;
-  line-height: 75px;
 }
 
 /*-------settings. Блок с настройками связки-------------*/
@@ -254,10 +208,9 @@ summary::-moz-list-bullet{list-style-type:none;}
 summary::marker{display:none;}
 summary {
   display:flex;
-  padding: 20px 40px 20px 20px;
+  padding: 20px 40px 20px 30px;
   font-weight: 600;
   cursor: pointer;
-  padding-left: 30px;
 }
 summary span {
   background: url("/../../assets/images/expand.png") no-repeat;
@@ -314,74 +267,6 @@ details[open] {
   cursor: pointer;
 }
 
-/*-------articles. Блок со статьями----------*/
-/* .new_articles {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 100%;
-  color: #222222;
-  padding-top: 70px;
-}
-.articles {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
-}
-.article {
-  width: calc(100% / 3 - 20px);
-  min-height: 284px;
-  margin-top: 20px;
-}
-.article_img {
-  height: 165px;
-  border-radius: 5px;
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
-}
-.img1 {
-  background-image: url(/../../assets/images/books_for_entrepreneurs.png);
-}
-.img2 {
-  background-image: url(/../../assets/images/all_about_bitrix.png);
-}
-.img3 {
-  background-image: url(/../../assets/images/instagram_article.png);
-}
-.img4 {
-  background-image: url(/../../assets/images/telegram_article.png);
-}
-.img5 {
-  background-image: url(/../../assets/images/freelancer_article.png);
-}
-.img6 {
-  background-image: url(/../../assets/images/save_my_leads.png);
-}
-.link_container {
-  padding: 15px;
-  border-radius: 0 0 8px 8px;
-  background: #ffffff;
-}
-.article_header {
-  display: block;
-  height: 61px;
-  overflow: hidden;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 110%;
-  color: #464a55;
-}
-.link {
-  float: left;
-  padding-top: 10px;
-  font-size: 15px;
-  font-weight: bold;
-  color: #e55749;
-}
-.link:hover {
-  text-decoration: underline;
-} */
-
 /*------request-------*/
 .request {
   margin-top: 80px;
@@ -407,6 +292,7 @@ details[open] {
   }
 }
 
+/*pop-up component*/
 .show {
   display: none;
 }
