@@ -867,7 +867,7 @@ export const systems = [
   },
   {
     name: 'LP-CRM',
-    url: 'lp-crm_',
+    url: 'lp-crm',
     image: 'assets/images/lp-crm_ru.png',
     icon: 'assets/images/lp-crm_ru_icon.png',
     amount: 217,
