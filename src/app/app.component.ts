@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
+import {NgxMetrikaService} from "@kolkov/ngx-metrika";
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,14 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'integration-site';
+  title = 'Интеграции Solo-it';
   constructor(
-    private metaTagService: Meta
-  ) { }
+    private metaTagService: Meta,
+    private ym: NgxMetrikaService
+  ) {
+    this.ym.hit.emit();
+    this.ym.reachGoal.next({target: 'TARGET_NAME'});
+  }
 
   ngOnInit() {
     this.metaTagService.addTags([

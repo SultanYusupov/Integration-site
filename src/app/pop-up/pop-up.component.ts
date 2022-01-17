@@ -7,6 +7,7 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
 import {RequestService} from "../services/request.service";
 import {ApplicationStorageService} from "../services/application-storage.service";
 import {installStep} from "../model/install-step";
+import {NgxMetrikaService} from "@kolkov/ngx-metrika";
 
 
 @Component({
@@ -54,7 +55,8 @@ export class PopUpComponent implements OnInit {
               private formBuilder: FormBuilder,
               private http: HttpClient,
               private bs: RequestService,
-              private as: ApplicationStorageService) {
+              private as: ApplicationStorageService,
+              private ym: NgxMetrikaService) {
   }
 
   ngOnInit(): void {
@@ -157,6 +159,7 @@ export class PopUpComponent implements OnInit {
       this.installStep();
       this.loading = !this.loading;
     }
+    this.ym.reachGoal.next({target: 'FORM_SUBMISSION'});
   }
   installStep(){
     this.buttonText = 'Отправка..';
@@ -188,6 +191,7 @@ export class PopUpComponent implements OnInit {
               this.hideMsg = !this.hideMsg;
               this.alertSuccess = !this.alertSuccess;
               this.msg = 'Ваша заявка отправлена';
+              this.ym.reachGoal.next({target: 'FORM_SENT'});
             }
         },
         error=> {

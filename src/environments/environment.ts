@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlForLead: '/backend/index.php'
+  urlForLead: '/backend/index.php',
 };
 
 /*

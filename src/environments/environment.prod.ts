@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  urlForLead: 'stazhirovka-2021-0611.solo-it.ru/backend/index.php'
+  urlForLead: '/backend/index.php',
+  yaCounterId: 87142671
 };

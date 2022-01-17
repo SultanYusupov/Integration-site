@@ -27,11 +27,11 @@ export class SingleSystemComponent implements OnInit {
       });
       // по номеру id находим сам объект. эта переменная будет использоваться в html-коде
       this.product1 = this.systems[this.numberId];
-
     });
   }
 
   ngOnInit(): void {
+    this.title = `${this.product1.name} интеграция`;
     this.titleService.setTitle(this.title); // устанавливаем meta тег <title>
     // прочие мета теги
     this.metaTagService.updateTag(

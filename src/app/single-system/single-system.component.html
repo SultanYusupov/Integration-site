@@ -1,7 +1,7 @@
 <!--Блок с логотипами систем интеграций-->
 <div class="container_for_content" *ngIf="product1">
   <div class="systems">
-    <img *ngIf="product1" src="{{product1.image}}" alt="{{product1.name}}" title="{{product1.name}} интеграция" />
+    <img *ngIf="product1" src="{{product1.image}}" alt="{{product1.name}}" title="{{product1.name}} интеграция"/>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
@@ -116,7 +116,7 @@
         <span
           [style]="' background: url('+ system.icon +') 0 0 no-repeat;' "
         ></span
-        ><a [routerLink]="[system.url]" title="system.title">{{system.name}}</a>
+        ><a [routerLink]="[system.url]" [title]="system.name">{{system.name}}</a>
       </li>
       <!--Маршрутизация в компонент integration-page-->
     </ul>
@@ -180,7 +180,7 @@
       </p>
     </div>
     <div class="try_btn_container">
-      <a class="button try_button" title="Попробовать" (click)="integrationService.clickEvent()">Оставить заявку</a>
+      <a class="button try_button" title="Попробовать" ymGoal trackOn="click" (click)="integrationService.clickEvent()">Оставить заявку</a>
     </div>
   </div>
 

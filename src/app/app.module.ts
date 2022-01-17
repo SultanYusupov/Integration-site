@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { PathLocationStrategy, LocationStrategy } from '@angular/common';
+import { NgxMetrikaModule } from '@kolkov/ngx-metrika';
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
@@ -21,6 +22,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {installStep} from "./model/install-step";
 import { RequestService } from "./services/request.service";
 import {ApplicationStorageService} from "./services/application-storage.service";
+import {environment} from "../environments/environment.prod";
+import {defer} from "rxjs";
 
 
 @NgModule({
@@ -42,6 +45,13 @@ import {ApplicationStorageService} from "./services/application-storage.service"
       {path: 'products/:id1', component: SingleSystemComponent},
       {path: 'products/:id1/:id2', component: IntegrationPageComponent},
     ]),
+    NgxMetrikaModule.forRoot({
+      id: environment.yaCounterId,
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+    })
   ],
   providers: [IntegrationService, BackendService, SettingsService, SzgmDataService,
     ApplicationService, KpGeneratorService, RequestService, ApplicationStorageService,

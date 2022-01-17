@@ -1,10 +1,9 @@
 <div>
   <ul class="list" *ngFor="let system of systems">
     <li class="system_item">
-      <span></span><a
+      <span [style]="'background: url('+ system.icon +') 0 0 no-repeat;'"></span><a
       routerLink="/products/{{system.url}}"
-      [title]="system.name + ' интеграция'"
-    >{{ system.name }}</a>
+      [title]="system.name + ' интеграция'">{{ system.name }}</a>
     </li>
   </ul>
 </div>
