@@ -11,12 +11,12 @@ $received = file_get_contents('php://input');
 $code = 0;
 $error = '';
 
-if (empty($received)) {
-  $error = 'Ошибка. Получены пустые данные';
-}
+//if (empty($received)) {
+//  $error = 'Ошибка. Получены пустые данные';
+//}
  $array = json_decode($received, true);
 
-if (preg_match('/^(8|\+7)[\- ]?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/', $array['telephone'])) {
+if (str_replace($array['telephone'])) {
   $code = 1;
 }
 else {

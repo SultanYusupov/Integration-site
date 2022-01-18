@@ -73,7 +73,8 @@ export class PopUpComponent implements OnInit {
       ],
       email: [''],
       telephone: ['', [
-        Validators.required, Validators.pattern('^(8|\\+7)[\\- ]?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$')
+        Validators.required,
+        // Validators.pattern('^(8|\+7)[\- ]?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$')
       ]
       ],
       comment: ['', [Validators.maxLength(80)]]
