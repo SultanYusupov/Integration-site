@@ -46,10 +46,10 @@ export class PopUpComponent implements OnInit {
   public alertSuccess:boolean = false;
   public alertFail:boolean = false;
   size: string = 'big'; // это для popup-window, анимация будет происходить не в css, а в angular
-  public disabled: boolean = false;
+  public disabled: boolean = true;
   public wrongNumber:boolean = false;
   buttonText:string = 'Отправить';
-  loading:boolean = false;
+  loading:boolean = false; // анимация загрузки
 
   constructor(public integrationService: IntegrationService,
               private formBuilder: FormBuilder,
@@ -139,7 +139,7 @@ export class PopUpComponent implements OnInit {
 
 
   start(){
-    this.disabled = true;
+    // this.disabled = true;
     const controls = this.reactiveForm.controls;
     if (!this.reactiveForm.value.telephone) {
       this.onSubmit();
@@ -150,7 +150,7 @@ export class PopUpComponent implements OnInit {
       Object.keys(controls)
         .forEach(controlName => controls[controlName].markAsTouched());
       this.installErrorMsg = 'Введите правильный номер телефона';
-      this.disabled = false;
+      // this.disabled = false;
       return;
     }
     else {
@@ -194,7 +194,6 @@ export class PopUpComponent implements OnInit {
               this.hideMsg = !this.hideMsg;
               this.alertSuccess = !this.alertSuccess;
               this.msg = 'Ваша заявка отправлена';
-              // this.ym.reachGoal.next({target: 'FORM_SENT'});
             }
         },
         error=> {

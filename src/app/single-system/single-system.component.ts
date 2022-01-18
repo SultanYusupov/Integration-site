@@ -33,7 +33,7 @@ export class SingleSystemComponent implements OnInit {
 
     //this.ym.hit.emit({url: `/products/${this.product1}`, hitOptions: options});
     this.ym.hit.emit({url: `/products/${this.product1}`, hitOptions: {
-        title: 'Переход на другую страницу',
+        title: `${this.product1}`,
         referer: 'http://stazhirovka-2021-0611.solo-it.ru'
     }});
   }

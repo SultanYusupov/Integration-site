@@ -1,4 +1,4 @@
-<div class="shadow"></div>
+<div class="shadow" (click)="integrationService.clickEvent(); rollback()"></div>
   <div class="popup-window" [@sizeOfForm]="size">
     <div class="cl-btn-2" title="Закрыть" (click)="integrationService.clickEvent(); rollback()">
       <div>
@@ -20,7 +20,7 @@
       </div>
 
       <div class="field">
-        <label for="telephone">Телефон<span *ngIf="isControlInvalid('telephone')">*</span></label>
+        <label for="telephone">Телефон<span>*</span></label>
         <input type="text" id="telephone" placeholder="Введите свой номер телефона" formControlName="telephone" required="required">
         <div class="error" *ngIf="isControlInvalid('telephone') || wrongNumber">
           {{installErrorMsg}}
@@ -28,7 +28,7 @@
       </div>
 
       <textarea type="text" placeholder="Напишите какую интеграцию вы бы хотели сделать" formControlName="comment" maxlength="60"></textarea>
-      <button class="button" [class.btn-load]="loading" type="submit" (click)="start()" [disabled]="disabled">{{buttonText}}</button>
+      <button class="button" [class.btn-load]="loading" type="submit" (click)="start()" [disabled]="reactiveForm.invalid">{{buttonText}}</button>
     </form>
 
     <p [ngClass]="{'hideMessage': hideMsg, 'alert-success': alertSuccess, 'alert-fail': alertFail}">
