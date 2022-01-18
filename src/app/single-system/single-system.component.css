@@ -12,7 +12,7 @@
   line-height: 20px;
 }
 .start_now_btn  {
-  padding: 10px 55px;
+  padding: 10px 45px;
   margin: 40px 0 20px 0;
   color: #ffffff;
 }
@@ -32,7 +32,7 @@ a {
   text-align: center;
 }
 .try_button {
-  padding: 15px 65px 15px 65px;
+  padding: 15px 45px;
   color: #ffffff;
   cursor: pointer;
 }
@@ -130,7 +130,7 @@ a {
 }
 .settings_btn {
   display: inline-block;
-  padding: 15px 65px 15px 65px;
+  padding: 15px 40px;
   color: #ffffff;
 }
 
@@ -202,10 +202,9 @@ summary::-moz-list-bullet{list-style-type:none;}
 summary::marker{display:none;}
 summary {
   display:flex;
-  padding: 20px 40px 20px 20px;
+  padding: 20px 40px 20px 30px;
   font-weight: 600;
   cursor: pointer;
-  padding-left: 30px;
 }
 summary span {
   background: url("/../../assets/images/expand.png") no-repeat;

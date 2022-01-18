@@ -10,7 +10,7 @@ export class IntegrationService {
   clickEvent() {
     // по клику появляется окно формы
     this.status = !this.status;
-    this.ym.reachGoal.next({target: 'FORM_OPENING'});
+    // this.ym.reachGoal.next({target: 'FORM_OPENING'});
   }
   constructor(
     private ym: NgxMetrikaService

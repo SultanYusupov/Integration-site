@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { systems } from '../systems';
 import { IntegrationService } from '../integration.service';
 import { Title, Meta } from '@angular/platform-browser';
+import {NgxMetrikaService} from "@kolkov/ngx-metrika";
 
 @Component({
   selector: 'app-integration-page',
@@ -24,7 +25,8 @@ export class IntegrationPageComponent implements OnInit {
               public integrationService: IntegrationService,
               private titleService: Title,
               private metaTagService: Meta,
-              private router: Router,) {
+              private router: Router,
+              private ym: NgxMetrikaService) {
 
     this.route.paramMap.subscribe((params) => {
       // имя первой системы из url
@@ -55,6 +57,8 @@ export class IntegrationPageComponent implements OnInit {
         { name: 'keywords', content: `${this.system1.name} ${this.system2.name}, ${this.system1.name} ${this.system2.name} интеграция, ${this.system1.name} ${this.system2.name} автоматизация` }
       );
     });
+
+    this.ym.hit.emit();
   }
 
   onSectionClick(product1: any, product2: any) {

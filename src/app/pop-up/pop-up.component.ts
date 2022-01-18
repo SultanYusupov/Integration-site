@@ -7,7 +7,7 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
 import {RequestService} from "../services/request.service";
 import {ApplicationStorageService} from "../services/application-storage.service";
 import {installStep} from "../model/install-step";
-import {NgxMetrikaService} from "@kolkov/ngx-metrika";
+import {CommonOptions, NgxMetrikaService} from "@kolkov/ngx-metrika";
 
 
 @Component({
@@ -29,14 +29,14 @@ import {NgxMetrikaService} from "@kolkov/ngx-metrika";
 export class PopUpComponent implements OnInit {
   title = 'Наименование приложения';
   progress:number = 0;
-  stages:Array<installStep> = [
+  /*stages:Array<installStep> = [
     {
       name: "Поиск клиента",
       code: "client",
       status: false,
       show: false
     },
-  ];
+  ];*/
   installErrorMsg: any = 'Введите номер телефона';
 
   reactiveForm: any;
@@ -86,6 +86,7 @@ export class PopUpComponent implements OnInit {
     if (this.reactiveForm.invalid) {
       Object.keys(controls)
         .forEach(controlName => controls[controlName].markAsTouched());
+      this.installErrorMsg = 'Введите правильный номер телефона';
       return;
     }
   }
@@ -108,8 +109,7 @@ export class PopUpComponent implements OnInit {
     this.hideForm = false;
     this.hideMsg = true;
     this.wrongNumber = false;
-    // очищает input при отправке
-    this.reactiveForm.reset();
+    this.reactiveForm.reset(); // очищает input при отправке
   }
 
   /*install(){
@@ -137,22 +137,25 @@ export class PopUpComponent implements OnInit {
     // this.start();//Закомментировать кнопочку
   }*/
 
+
   start(){
     this.disabled = true;
+    const controls = this.reactiveForm.controls;
     if (!this.reactiveForm.value.telephone) {
       this.onSubmit();
       this.installErrorMsg = 'Номер телефона должен быть обязателен';
       this.disabled = false;
     }
-    const controls = this.reactiveForm.controls;
-    if (this.reactiveForm.invalid) {
+    else if (this.reactiveForm.invalid) {
       Object.keys(controls)
         .forEach(controlName => controls[controlName].markAsTouched());
+      this.installErrorMsg = 'Введите правильный номер телефона';
       this.disabled = false;
       return;
     }
     else {
       this.wrongNumber = false;
+      this.installErrorMsg = '';
       // this.installStep(0, {
       //   anketa: this.anketa
       // })
@@ -191,7 +194,7 @@ export class PopUpComponent implements OnInit {
               this.hideMsg = !this.hideMsg;
               this.alertSuccess = !this.alertSuccess;
               this.msg = 'Ваша заявка отправлена';
-              this.ym.reachGoal.next({target: 'FORM_SENT'});
+              // this.ym.reachGoal.next({target: 'FORM_SENT'});
             }
         },
         error=> {
