@@ -51,7 +51,7 @@ export class IntegrationPageComponent implements OnInit {
       this.metaTitle = `${this.system1.name} + ${this.system2.name} интеграция`;
       this.titleService.setTitle(this.metaTitle);
       this.metaTagService.updateTag(
-        { name: 'description', content: `Нужно объединить ${this.system1.name} и ${this.system2.name}? Наш сайт позволяет самостоятельно интегрировать и автоматизировать работу систем.` },
+        { name: 'description', content: `Нужно объединить ${this.system1.name} и ${this.system2.name}? Мы поможем вам интегрировать и автоматизировать бизнес процессы.` },
       );
       this.metaTagService.updateTag(
         { name: 'keywords', content: `${this.system1.name} ${this.system2.name}, ${this.system1.name} ${this.system2.name} интеграция, ${this.system1.name} ${this.system2.name} автоматизация` }

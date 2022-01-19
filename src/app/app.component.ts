@@ -19,7 +19,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.metaTagService.addTags([
-      { name: 'keywords', content: 'Сервис интеграций, конструктор интеграций по api, интеграция по api' },
+      { name: 'keywords', content: 'Сервис интеграций, интеграция по api' },
       { name: 'robots', content: 'all' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { charset: 'UTF-8' }

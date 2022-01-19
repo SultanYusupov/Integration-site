@@ -45,7 +45,7 @@ export class SingleSystemComponent implements OnInit {
     this.metaTagService.updateTag(
       {
         name: 'description',
-        content: `Нужно объединить ${this.product1.name} с другими системами? Наш сайт позволяет самостоятельно интегрировать и автоматизировать бизнес процессы`
+        content: `Нужно объединить ${this.product1.name} с другими системами? Мы поможем вам интегрировать и автоматизировать бизнес процессы`
       },
     );
     this.metaTagService.updateTag(
