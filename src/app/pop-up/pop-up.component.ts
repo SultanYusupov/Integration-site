@@ -3,12 +3,12 @@ import { IntegrationService } from '../integration.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from "@angular/common/http";
 import {animate, state, style, transition, trigger} from "@angular/animations";
+import { Router } from '@angular/router';
 
 import {RequestService} from "../services/request.service";
 import {ApplicationStorageService} from "../services/application-storage.service";
 import {installStep} from "../model/install-step";
 import {CommonOptions, NgxMetrikaService} from "@kolkov/ngx-metrika";
-
 
 @Component({
   selector: 'app-pop-up',
@@ -50,14 +50,15 @@ export class PopUpComponent implements OnInit {
   public wrongNumber:boolean = false;
   buttonText:string = 'Отправить';
   loading:boolean = false; // анимация загрузки
-
   constructor(public integrationService: IntegrationService,
               private formBuilder: FormBuilder,
               private http: HttpClient,
               private bs: RequestService,
               private as: ApplicationStorageService,
-              private ym: NgxMetrikaService) {
+              private ym: NgxMetrikaService,
+              private router: Router) {
   }
+  currentUrl = this.router.url.replace(/\/products\//, '');
 
   ngOnInit(): void {
     this.initForm();
@@ -160,6 +161,7 @@ export class PopUpComponent implements OnInit {
       // this.installStep(0, {
       //   anketa: this.anketa
       // })
+      this.reactiveForm.value.comment += ' '+this.currentUrl;
       this.installStep();
       this.loading = !this.loading;
     }

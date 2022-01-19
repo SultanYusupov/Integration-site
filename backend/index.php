@@ -16,7 +16,7 @@ $error = '';
 //}
  $array = json_decode($received, true);
 
-if (str_replace($array['telephone'])) {
+if (preg_match('/\+?[0-9]+/', $array['telephone'])) {
   $code = 1;
 }
 else {
@@ -30,7 +30,7 @@ else {
       'name' => test_input($array['name']),
       'email' => test_input($array['email']),
       'telephone' => test_input($array['telephone']),
-      'comment' => test_input($array['comment'])
+      'comment' => test_input($array['comment']),
     ],
     'code' => $code,
     'message' => $code ? 'Ваша заявка отправлена' : $error,
