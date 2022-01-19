@@ -7,8 +7,7 @@ import { Router } from '@angular/router';
 
 import {RequestService} from "../services/request.service";
 import {ApplicationStorageService} from "../services/application-storage.service";
-import {installStep} from "../model/install-step";
-import {CommonOptions, NgxMetrikaService} from "@kolkov/ngx-metrika";
+import {NgxMetrikaService} from "@kolkov/ngx-metrika";
 
 @Component({
   selector: 'app-pop-up',
@@ -37,7 +36,7 @@ export class PopUpComponent implements OnInit {
       show: false
     },
   ];*/
-  installErrorMsg: any = 'Введите номер телефона';
+  installErrorMsg: any = 'Введите правильный номер телефона';
 
   reactiveForm: any;
   public msg: string = '';
@@ -58,6 +57,7 @@ export class PopUpComponent implements OnInit {
               private ym: NgxMetrikaService,
               private router: Router) {
   }
+  // текущий адрес. убираем лишнее, чтобы остались только названия систем
   currentUrl = this.router.url.replace(/\/products\//, '');
 
   ngOnInit(): void {
@@ -68,16 +68,13 @@ export class PopUpComponent implements OnInit {
 // получаем данные формы
   initForm() {
     return this.reactiveForm = this.formBuilder.group({
-      name: ['', [
-        Validators.pattern(/[А-я]|[A-z]/)
-      ]
-      ],
+      name: ['', [Validators.pattern(/[А-я]|[A-z]/), Validators.maxLength(12)]],
       email: [''],
       telephone: ['', [
         Validators.required,
         // Validators.pattern('^(8|\+7)[\- ]?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$')
-      ]
-      ],
+        Validators.pattern(/^\+?[^a-zA-Z|А-Я]+/),
+        Validators.maxLength(18)]],
       comment: ['', [Validators.maxLength(80)]]
     });
   }
@@ -88,7 +85,7 @@ export class PopUpComponent implements OnInit {
     if (this.reactiveForm.invalid) {
       Object.keys(controls)
         .forEach(controlName => controls[controlName].markAsTouched());
-      this.installErrorMsg = 'Введите правильный номер телефона';
+      this.installErrorMsg = 'В номере телефона не должно быть букв';
       return;
     }
   }
@@ -161,6 +158,7 @@ export class PopUpComponent implements OnInit {
       // this.installStep(0, {
       //   anketa: this.anketa
       // })
+      // к комментарию добавляем какие системы выбрал пользователь
       this.reactiveForm.value.comment += ' '+this.currentUrl;
       this.installStep();
       this.loading = !this.loading;

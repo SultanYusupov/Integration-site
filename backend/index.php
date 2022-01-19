@@ -11,16 +11,17 @@ $received = file_get_contents('php://input');
 $code = 0;
 $error = '';
 
-//if (empty($received)) {
-//  $error = 'Ошибка. Получены пустые данные';
-//}
  $array = json_decode($received, true);
 
-if (preg_match('/\+?[0-9]+/', $array['telephone'])) {
-  $code = 1;
+$phoneNumber = preg_replace('![^0-9]+!', '', $array['telephone']);
+if (strlen($phoneNumber) < 6) {
+  $error = 'Номер телефона слишком короткий';
+}
+else if (strlen($phoneNumber) > 12) {
+  $error = 'Номер телефона слишком длинный';
 }
 else {
-  $error = 'Неверно указан номер телефона';
+  $code = 1;
 }
 
   $arResult = [
@@ -29,7 +30,7 @@ else {
       'next' => 2,
       'name' => test_input($array['name']),
       'email' => test_input($array['email']),
-      'telephone' => test_input($array['telephone']),
+      'telephone' => $phoneNumber,
       'comment' => test_input($array['comment']),
     ],
     'code' => $code,
