@@ -37,6 +37,9 @@ export class SingleSystemComponent implements OnInit {
         referer: 'http://stazhirovka-2021-0611.solo-it.ru'
     }});
   }
+  scroll() {
+    window.scrollTo(0, 0);
+  }
 
   ngOnInit(): void {
     this.title = `${this.product1.name} интеграция`;

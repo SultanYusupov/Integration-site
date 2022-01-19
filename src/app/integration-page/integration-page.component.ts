@@ -60,7 +60,9 @@ export class IntegrationPageComponent implements OnInit {
 
     this.ym.hit.emit();
   }
-
+  scroll() {
+    window.scrollTo(0, 0);
+  }
   onSectionClick(product1: any, product2: any) {
     this.router.navigate(['/path/', product1, product2], {
       relativeTo: this.route,

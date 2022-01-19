@@ -119,7 +119,7 @@
         {{system1.name}} <span>({{system1.connectors}} готовых коннекторов)</span>
       </div>
       <ul class="lists" *ngIf="system2">
-        <li class="system_item" *ngFor="let system of systems">
+        <li class="system_item" *ngFor="let system of systems" (click)="scroll()">
           <span [style]="' background: url('+ system.icon +');' "></span><a routerLink="/products/{{system.url}}/{{system2.url}}" queryParamsHandling="merge" title='{{system.name}}' (click)="changeSystem()">{{system.name}}</a>
         </li>
       </ul>
@@ -131,7 +131,7 @@
         {{system2.name}} <span>({{system2.connectors}} готовый коннектор)</span>
       </div>
       <ul class="lists" *ngIf="system1">
-        <li class="system_item" *ngFor="let system of systems">
+        <li class="system_item" *ngFor="let system of systems" (click)="scroll()">
           <span [style]="' background: url('+ system.icon +') 0 0 no-repeat;' "></span><a routerLink="/products/{{system1.url}}/{{system.url}}" queryParamsHandling="merge" title='{{system.name}}' (click)="changeSystem()">{{system.name}}</a>
         </li>
       </ul>

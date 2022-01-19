@@ -25,7 +25,7 @@
   <p class="subtitle">
     Свяжите {{ product1.name }} с одной из <b>{{systems.length-1}}</b> готовых систем. Начните прямо сейчас!
   </p>
-  <a title="Начать сейчас" class="button start_now_btn" (click)="integrationService.clickEvent()"
+  <a title="Начать сейчас" class="button start_now_btn" (click)="integrationService.clickEvent();"
   >Начать сейчас</a>
 </div>
 <app-pop-up [class.show]="integrationService.status"></app-pop-up>
@@ -116,7 +116,7 @@
         <span
           [style]="' background: url('+ system.icon +') 0 0 no-repeat;' "
         ></span
-        ><a [routerLink]="[system.url]" [title]="system.name">{{system.name}}</a>
+        ><a (click)="scroll()" [routerLink]="[system.url]" [title]="system.name">{{system.name}}</a>
       </li>
       <!--Маршрутизация в компонент integration-page-->
     </ul>
