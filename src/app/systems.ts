@@ -454,7 +454,7 @@ export const systems = [
   {
     name: 'Criteo',
     url: 'criteo',
-    image: 'assets/images/criteo_ru.png',
+    image: 'assets/images/criteo-logo.jpeg',
     icon: 'https://www.google.com/s2/favicons?domain=criteo.com',
     amount: 238,
     connectors: 199,
@@ -958,7 +958,7 @@ export const systems = [
   {
     name: 'Livetex',
     url: 'livetex',
-    image: 'assets/images/_ru.png',
+    image: 'assets/images/livetex_ru.png',
     icon: 'https://www.google.com/s2/favicons?domain=livetex.ru',
     amount: 238,
     connectors: 199,

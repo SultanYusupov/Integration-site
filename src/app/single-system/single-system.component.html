@@ -17,13 +17,13 @@
       </g>
     </svg>
     <p *ngIf="product1">
-      <span>{{ product1.amount }}</span
+      <span>{{ systems.length-1 }}</span
       ><br />
       готовых систем
     </p>
   </div>
   <p class="subtitle">
-    Свяжите {{ product1.name }} с одной из <b>216</b> готовых систем. Начните прямо сейчас!
+    Свяжите {{ product1.name }} с одной из <b>{{systems.length-1}}</b> готовых систем. Начните прямо сейчас!
   </p>
   <a title="Начать сейчас" class="button start_now_btn" (click)="integrationService.clickEvent()"
   >Начать сейчас</a>
@@ -108,7 +108,7 @@
 <div class="container">
   <h1 class="header">Возможные интеграции</h1>
   <div class="integrations_title">
-    {{ product1.name }} <span>({{ product1.amount }} готовых коннекторов)</span>
+    {{ product1.name }} <span>({{ systems.length-1 }} готовых коннекторов)</span>
   </div>
   <div id="lists">
     <ul class="list">
@@ -137,7 +137,7 @@
         <li>
           Далее выбираете в веб интерфейсе с каким сервисом нужно сделать
           интеграцию {{ product1.name }} (на данный момент доступно
-          {{ product1.amount }} готовых коннекторов)
+          {{ systems.length }} готовых коннекторов)
         </li>
         <li>Выбираете какие данные из одной системы передавать в другую</li>
         <li>Ожидайте нашего звонка</li>
@@ -167,7 +167,7 @@
         <p>Сколько доступно интеграций доступно для {{product1.name}}?</p>
       </summary>
       <p class="answer">
-        На данный момент у нас доступно {{ product1.amount }} интеграций
+        На данный момент у нас доступно {{ systems.length-1 }} интеграций
         {{ product1.name }} c другими системами
       </p>
     </details>

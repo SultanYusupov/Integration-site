@@ -20,8 +20,8 @@
   </div>
   <h1 class="title" *ngIf="system2">{{ system1.name }} + {{ system2.name }}</h1>
   <p class="subtitle">
-    Свяжите <a *ngIf="system1" href="#" [title]="system1.name + 'интеграция'">{{system1.name}}</a> и
-    <a  *ngIf="system2" href="#" [title]="system2.name + 'интеграция'">{{system2.name}}</a>. Начните прямо сейчас!
+    Свяжите <a *ngIf="system1" href="#" [title]="system1.name + ' интеграция'">{{system1.name}}</a> и
+    <a  *ngIf="system2" href="#" [title]="system2.name + ' интеграция'">{{system2.name}}</a>. Начните прямо сейчас!
   </p>
   <a title="Начать сейчас" class="button start_now_btn" (click)="integrationService.clickEvent()"
   >Начать сейчас</a
@@ -116,7 +116,7 @@
     <div class="systems_list">
       <!--Список 1-->
       <div class="integrations_title">
-        {{system1.name}} <span>(197 готовых коннекторов)</span>
+        {{system1.name}} <span>({{system1.connectors}} готовых коннекторов)</span>
       </div>
       <ul class="lists" *ngIf="system2">
         <li class="system_item" *ngFor="let system of systems">
@@ -128,7 +128,7 @@
     <div class="systems_list">
       <!--Список 2-->
       <div class="integrations_title" *ngIf="system2">
-        {{system2.name}} <span>(181 готовый коннектор)</span>
+        {{system2.name}} <span>({{system2.connectors}} готовый коннектор)</span>
       </div>
       <ul class="lists" *ngIf="system1">
         <li class="system_item" *ngFor="let system of systems">
@@ -179,7 +179,7 @@
         <p>Сколько доступно интеграций доступно на нашем сайте?</p>
       </summary>
       <p class="answer">
-        На данный момент у нас доступно {{systems.length}} интеграций помимо {{system1.name}} и
+        На данный момент у нас доступно {{systems.length - 2}} интеграций помимо {{system1.name}} и
         {{system2.name}}
       </p>
     </details>
