@@ -15,15 +15,12 @@
   position: fixed;
   z-index: 40;
   top: 15%;
-  /*transform: translateY(-50%);*/
-  /*left: 30%;*/
   margin: auto;
   left: 0;
   right: 0;
   border-radius: 5px;
   box-shadow: 0 0 30px 0 rgb(0 0 0.35);
   padding: 15px;
-  /*недавно добавил*/
   text-align: center;
 }
 h3 {
@@ -31,7 +28,6 @@ h3 {
   position: relative;
   /*left: 37%;*/
   bottom: 20px;
-
 }
 .field {
   margin: 0 auto 16px auto;
@@ -193,7 +189,11 @@ textarea {
 @media screen and (max-width: 860px) {
   .popup-window {
     /*left: 20%;*/
+    top: 0;
     width: 400px;
+    height: 100vh;
+    max-height: calc(100% - 210px);
+    overflow-y: scroll;
   }
   input, textarea {
     width: 80%;
@@ -208,13 +208,25 @@ textarea {
   .cl-btn-2 div {
     left: 170px;
   }
+  .alert-success, .alert-fail {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 417px) {
   .popup-window {
-    width: 300px;
+    /*width: 300px;*/
+    width: 100%;
+    top: 0;
+    padding: 8px;
+    height: 100vh;
+    max-height: calc(100% - 290px);
+    overflow-y: scroll;
   }
   .cl-btn-2 div {
-    left: 125px;
+    /*left: 125px;*/
+  }
+  .field {
+    padding: 0;
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IntegrationService } from '../integration.service';
-import { FormBuilder, Validators } from '@angular/forms';
+import {FormBuilder, FormControl, ValidationErrors, Validators} from '@angular/forms';
 import { HttpClient } from "@angular/common/http";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import { Router } from '@angular/router';
@@ -16,7 +16,7 @@ import {NgxMetrikaService} from "@kolkov/ngx-metrika";
   animations: [
     trigger('sizeOfForm', [
       state('big', style({
-        minHeight: '510px'
+        height: '510px'
       })),
       state('small', style({
         height: '105px'
@@ -36,7 +36,7 @@ export class PopUpComponent implements OnInit {
       show: false
     },
   ];*/
-  installErrorMsg: any = 'Введите правильный номер телефона';
+  installErrorMsg: any = 'Неправильный номер телефона';
 
   reactiveForm: any;
   public msg: string = '';
@@ -72,11 +72,25 @@ export class PopUpComponent implements OnInit {
       email: [''],
       telephone: ['', [
         Validators.required,
-        // Validators.pattern('^(8|\+7)[\- ]?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$')
-        Validators.pattern(/^\+?[^a-zA-Z|А-Я]+/),
+        Validators.pattern('^[+?][0-9]+|\(|\)| |-'),
+        // Validators.pattern(/^\+?[^a-z|A-Z|А-Я]+/),
         Validators.maxLength(18)]],
       comment: ['', [Validators.maxLength(80)]]
     });
+  }
+
+  private numberValidator(control: FormControl) {
+    const value = control.value;
+    if (value.length == 0) {
+      this.installErrorMsg = 'Номер телефона должен быть обязательным'
+    }
+    const hasCapitalLetter = /[A-Z]/.test(value);
+    const hasLowercaseLetter = /[a-z]/.test(value);
+    const numberNotValid = hasCapitalLetter && hasLowercaseLetter;
+
+    if (numberNotValid) {
+      this.installErrorMsg = 'В номере телефона не должно быть букв';
+    }
   }
 
   onSubmit() {
@@ -139,22 +153,22 @@ export class PopUpComponent implements OnInit {
 
   start(){
     // this.disabled = true;
-    const controls = this.reactiveForm.controls;
-    if (!this.reactiveForm.value.telephone) {
-      this.onSubmit();
-      this.installErrorMsg = 'Номер телефона должен быть обязателен';
-      this.disabled = false;
-    }
-    else if (this.reactiveForm.invalid) {
-      Object.keys(controls)
-        .forEach(controlName => controls[controlName].markAsTouched());
-      this.installErrorMsg = 'Введите правильный номер телефона';
-      // this.disabled = false;
-      return;
-    }
-    else {
+    // const controls = this.reactiveForm.controls;
+    // if (!this.reactiveForm.value.telephone) {
+    //   this.onSubmit();
+    //   this.installErrorMsg = 'Номер телефона должен быть обязателен';
+    //   this.disabled = false;
+    // }
+    // else if (this.reactiveForm.invalid) {
+    //   Object.keys(controls)
+    //     .forEach(controlName => controls[controlName].markAsTouched());
+    //   this.installErrorMsg = 'Введите правильный номер телефона';
+    //   // this.disabled = false;
+    //   return;
+    // }
+    //else {
       this.wrongNumber = false;
-      this.installErrorMsg = '';
+      // this.installErrorMsg = '';
       // this.installStep(0, {
       //   anketa: this.anketa
       // })
@@ -162,7 +176,7 @@ export class PopUpComponent implements OnInit {
       this.reactiveForm.value.comment += ' '+this.currentUrl;
       this.installStep();
       this.loading = !this.loading;
-    }
+    //}
     this.ym.reachGoal.next({target: 'FORM_SUBMISSION'});
   }
   installStep(){
