@@ -13,17 +13,10 @@ import { IntegrationPageComponent } from './integration-page/integration-page.co
 import { IntegrationService } from "./integration.service";
 import { PopUpComponent } from './pop-up/pop-up.component';
 
-import {BackendService} from './services/backend.service';
-import {SettingsService} from "./services/settings.service";
-import {SzgmDataService} from "./services/szgm-data.service";
-import {ApplicationService} from "./services/application.service";
-import {KpGeneratorService} from "./services/kp-generator.service";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {installStep} from "./model/install-step";
 import { RequestService } from "./services/request.service";
 import {ApplicationStorageService} from "./services/application-storage.service";
 import {environment} from "../environments/environment.prod";
-import {defer} from "rxjs";
 
 
 @NgModule({
@@ -53,8 +46,7 @@ import {defer} from "rxjs";
       webvisor:true
     })
   ],
-  providers: [IntegrationService, BackendService, SettingsService, SzgmDataService,
-    ApplicationService, KpGeneratorService, RequestService, ApplicationStorageService,
+  providers: [IntegrationService, RequestService, ApplicationStorageService,
     {provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]
 })

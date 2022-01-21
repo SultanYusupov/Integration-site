@@ -1,5 +1,5 @@
 <div class="shadow" (click)="integrationService.clickEvent(); rollback()"></div>
-  <div class="popup-window" [@sizeOfForm]="size">
+  <div class="popup-window" [@sizeOfForm]="size" [style.top.px]="integrationService.place">
     <div class="cl-btn-2" title="Закрыть" (click)="integrationService.clickEvent(); rollback()">
       <div>
         <div class="leftright"></div>

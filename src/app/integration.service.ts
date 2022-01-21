@@ -5,12 +5,12 @@ import {NgxMetrikaService} from "@kolkov/ngx-metrika";
 })
 export class IntegrationService {
   public status: boolean = true;
-
+  public place:number = 0;
 
   clickEvent() {
     // по клику появляется окно формы
     this.status = !this.status;
-    // this.ym.reachGoal.next({target: 'FORM_OPENING'});
+    this.place = document.documentElement.scrollTop + 120;
   }
   constructor(
     private ym: NgxMetrikaService
