@@ -36,7 +36,7 @@ export class PopUpComponent implements OnInit {
       show: false
     },
   ];*/
-  installErrorMsg: any = 'Неправильный номер телефона';
+  installErrorMsg: any = '';
 
   reactiveForm: any;
   public msg: string = '';
@@ -72,7 +72,7 @@ export class PopUpComponent implements OnInit {
       email: [''],
       telephone: ['', [
         Validators.required,
-        Validators.pattern('^[+?][0-9]+|\(|\)| |-'),
+        // Validators.pattern('^[+?][0-9]+|\(|\)| |-'),
         // Validators.pattern(/^\+?[^a-z|A-Z|А-Я]+/),
         Validators.maxLength(18)]],
       comment: ['', [Validators.maxLength(80)]]
@@ -152,6 +152,8 @@ export class PopUpComponent implements OnInit {
 
 
   start(){
+    // перед тем, как отправить данные, хотел сделать валидацию при нажатии "Отправить"
+
     // this.disabled = true;
     // const controls = this.reactiveForm.controls;
     // if (!this.reactiveForm.value.telephone) {
